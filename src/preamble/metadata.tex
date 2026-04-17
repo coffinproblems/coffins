@@ -1,0 +1,49 @@
+\usepackage{xcolor}
+\definecolor{urlblue}{rgb}{0,0,0.75}
+
+\ifpdfa
+  \usepackage[pdfa]{hyperref}
+  \usepackage[a-2u]{pdfx}  % PDF/A-2 is stricter than PDF/A-3u
+\else
+  \usepackage{hyperref}
+\fi
+
+\hypersetup{
+  colorlinks = true,
+  linktoc    = all,
+  linkcolor  = black,
+  citecolor  = black,
+  urlcolor   = urlblue,
+}
+
+\usepackage{bookmark}
+\bookmarksetup{
+  depth = 2,
+  open = true,
+  openlevel = 2,
+}
+
+\usepackage{tocbibind}
+
+
+\ifpdftex
+  \pdfsuppressptexinfo-1  % Remove PTEX metadata
+  \pdfinfoomitdate=1      % Remove /CreationDate and /ModDate
+  %\pdftrailerid{}        % Remove pdftrailerid
+\fi
+
+\ifluatex
+  \pdfvariable suppressoptionalinfo \numexpr
+        0
+    +   1   % PTEX.FullBanner
+    +   2   % PTEX.FileName
+    +   4   % PTEX.PageNumber
+    +   8   % PTEX.InfoDict
+    +  16   % Creator
+%   +  32   % CreationDate
+%   +  64   % ModDate
+    + 128   % Producer
+    + 256   % Trapped
+%   + 512   % ID (pdftrailerid)
+  \relax
+\fi

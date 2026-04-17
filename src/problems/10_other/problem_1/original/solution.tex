@@ -1,0 +1,13 @@
+Since the function $S \to T : y \mapsto f\paren{a, y}$ is not constant,
+there exists $c \in S$ such that $f\paren{a, c} \neq f\paren{a, b}$.
+And since the function $R \to T : x \mapsto f\paren{x, b}$ is not constant,
+there exists $d \in R$ such that $f\paren{d, b} \neq f\paren{a, b}$.
+
+Now, if $c$ and $d$ can be chosen in such a way that $f\paren{b, d} \neq f\paren{a, c}$,
+then $p = a$, $q = b$, $r = d$, $s = t$ satisfy the requirements.\newline
+Otherwise, it means that for every $\paren{x, y} \in R \times S \smallsetminus \set{\paren{a, b}}$
+$f\paren{x, b} = f\paren{a, y} = v$ (for some $v \in T$).
+Since $\card\paren{\img\paren{f}} \geq 3$, there exists $\paren{r, q} \in R \times S$
+such that $f\paren{r, q}$, $v$, and $f\paren{a, b}$ are all distinct.
+Necessarily, then, $r \neq a$ and $q \neq b$.
+Now, the requirements are satisfied by taking $\paren{p, s} = \paren{a, b}$.

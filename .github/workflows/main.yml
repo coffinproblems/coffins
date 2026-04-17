@@ -1,0 +1,295 @@
+name: Compile, test, and upload
+
+
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+
+  workflow_dispatch:
+
+
+jobs:
+
+  build_environment:
+    name: Get build environment information
+
+    runs-on: ubuntu-latest
+
+    outputs:
+      texlive_digest: ${{ steps.get_digest.outputs.texlive_digest }}
+      timestamp: ${{ steps.get_timestamp.outputs.timestamp }}
+      commitsha: ${{ steps.get_sha.outputs.commitsha }}
+
+    steps:
+      - name: Fetch latest TeXLive Docker image digest
+        id: get_digest
+        run: echo "texlive_digest=$(docker manifest inspect texlive/texlive:latest | jq -r '.manifests[] | select(.platform.architecture=="amd64") | .digest')" >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Fetch commit timestamp
+        id: get_timestamp
+        run: echo "timestamp=$(git log -1 --pretty=%ct)" >> $GITHUB_OUTPUT
+
+      - name: Fetch commit SHA
+        id: get_sha
+        run: echo "commitsha=${{ github.sha }}" >> $GITHUB_OUTPUT
+
+
+  environment:
+    name: Record build environment
+    needs: build_environment
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Write build environment information
+        run: |
+          echo "Reproducible builds information" >> "build_env.txt"
+          echo "" >> "build_env.txt"
+          echo "TeXLive Docker image: texlive/texlive@${{ needs.build_environment.outputs.texlive_digest }}" >> "build_env.txt"
+          echo "SOURCE_DATE_EPOCH: ${{ needs.build_environment.outputs.timestamp }}" >> "build_env.txt"
+          echo "Commit SHA: ${{ needs.build_environment.outputs.commitsha }}" >> "build_env.txt"
+          echo "Workflow run ID: ${{ github.run_id }}" >> "build_env.txt"
+          echo "" >> "build_env.txt"
+          echo "Compilation information for each target:" >> "build_env.txt"
+
+      - name: Upload build environment information
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-environment
+          path: build_env.txt
+
+
+  process_targets:
+    name: Process all targets as matrix
+    needs: build_environment
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        include:
+
+          # Files for testing only
+          - target: '_u'
+            flags: ''
+            pre_tex: '\def\ALL{} \def\MOREREFS{} \def\FORUMREFS{}'
+            flavours: '2u'
+            publish: false
+
+          - target: '_UA'
+            flags: ''
+            pre_tex: '\def\ALL{} \def\MOREREFS{} \def\FORUMREFS{} \def\TAGPDF{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: false
+
+          - target: '_A'
+            flags: ''
+            pre_tex: '\def\ALL{} \def\MOREREFS{} \def\FORUMREFS{} \def\PDFAA{}'
+            flavours: '3a ua1'
+            publish: false
+
+          - target: '_p'
+            flags: '-pdflatex'
+            pre_tex: '\def\ALL{} \def\MOREREFS{} \def\FORUMREFS{}'
+            flavours: '2u'
+            publish: false
+
+
+          # Problems and solutions
+          - target: '_problems_and_solutions'
+            flags: ''
+            pre_tex: '\def\TAGPDF{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          - target: '_problems_and_solutions_minimal'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\MINIMAL{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          # Problems only
+          - target: '_no_solutions'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\NOSOLUTIONS{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          - target: '_no_solutions_minimal'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\NOSOLUTIONS{} \def\MINIMAL{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          # Solutions
+          - target: '_solutions'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\ONLYSOLUTIONS{} \def\NOSOURCES{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          - target: '_solutions_minimal'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\ONLYSOLUTIONS{} \def\MINIMAL{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+
+          # Generalised problems and solutions
+          - target: '_generalised_problems_with_solutions'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          - target: '_generalised_problems_with_solutions_minimal'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\MINIMAL{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          # Generalised problems only
+          - target: '_generalised_problems_no_solutions'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\NOSOLUTIONS{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          - target: '_generalised_problems_no_solutions_minimal'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\NOSOLUTIONS{} \def\MINIMAL{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          # Solutions to the generalised problems
+          - target: '_generalised_solutions'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\ONLYSOLUTIONS{} \def\NOSOURCES{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          - target: '_generalised_solutions_minimal'
+            flags: ''
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\ONLYSOLUTIONS{} \def\MINIMAL{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+
+    uses: ./.github/workflows/process.yml
+    with:
+      texlive_digest: ${{ needs.build_environment.outputs.texlive_digest }}
+      timestamp: ${{ needs.build_environment.outputs.timestamp }}
+      target: coffins{{ matrix.target }}
+      flags: ${{ matrix.flags }}
+      pre_tex: ${{ matrix.pre_tex }}
+      flavours: ${{ matrix.flavours }}
+      publish: ${{ matrix.publish }}
+
+
+  upload:
+    name: Deploy to GitHub Pages
+    needs: [environment, process_targets]
+    if: github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Download PDFs
+        uses: actions/download-artifact@v4
+        with:
+          path: publish
+          pattern: pdf-first-build-publish-true-*
+          merge-multiple: true
+
+      - name: Download ebooks
+        uses: actions/download-artifact@v4
+        with:
+          path: publish
+          pattern: ebook-publish-true-*
+          merge-multiple: true
+
+      - name: Download build environment information
+        uses: actions/download-artifact@v4
+        with:
+          name: build-environment
+          path: publish
+
+      - name: Download compilation information
+        uses: actions/download-artifact@v4
+        with:
+          name: compilation-info-*
+          path: compilation_info
+          merge-multiple: true
+
+      - name: Aggregate build environment and compilation information
+        run: cat ./compilation_info/*.txt >> ./publish/build_env.txt
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: publish
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+
+  sync-alt:
+    name: Sync changes from 'main' to 'alt' branch
+    needs: process_targets
+    if: github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout everything
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Sync "alt" branch
+        run: |
+          git fetch origin
+          git switch alt
+          git read-tree -u -m origin/main
+
+          # Use the include_problems.tex file that does not use \QueryFiles
+          git restore --source=origin/alt -- src/commands/include_problems.tex
+
+          # Rename the directories for the categories
+          shopt -s nullglob
+          i=1
+          while true; do
+            sections=("./src/sections/${i}_"*)
+            if (( ${#sections[@]} == 0 )); then
+              break
+            fi
+            mv "${sections[0]}" "./src/sections/section_${i}"
+            ((i++))
+          done
+
+          # Remove the line "\usepackage{l3sys-query}" from preamble/preamble.tex
+          sed -i '/\\usepackage{l3sys-query}/d' ./src/preamble/preamble.tex
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit --author="$(git log -1 --pretty=format:'%an' origin/main)" -m "Sync: $(git log -1 --pretty=%s origin/main)"
+            git push origin alt
+          fi

@@ -1,0 +1,95 @@
+Let $b = 2r$; thus $1 \leq b \leq a$.
+Square both sides of the equation:
+\begin{equation*}
+\paren{1 - \frac{1}{a} \cos^2\paren{x}}^{b} = \sin^2\paren{x}
+\end{equation*}
+Make the substitution $y = 1 - \mfrac{1}{a} \cos^2\paren{x}$.
+The range of possibe values of $y$ is $\cinterval{1 - \mfrac{1}{a}}{1}$.
+\newline
+Using that $\sin^2\paren{x} = 1 - \cos^2\paren{x}$ and $\cos^2\paren{x} = a - a y$,
+the substitution yields the equation
+\begin{equation*}
+y^b - a y + a - 1 = 0
+\end{equation*}
+Clearly, $1$ is a solution.
+For $b = 1$ it is clearly the only solution (since $a \neq 1$).
+For $b>1$, let $q : \mathbb{R}^{+} \to \mathbb{R}$ be the function defined by:
+\begin{equation*}
+ q\paren{y} =
+ \begin{cases}
+  \dfrac{y^b - a y + a - 1}{y - 1} =
+  \dfrac{1 - y^b}{1 - y} - a
+  &\text{for $y \neq 1$} \\
+  b - a &\text{for $y = 1$}
+ \end{cases}
+\end{equation*}
+which is well defined and continuous everywhere,
+and satisfies the relation $y^b - a y + a - 1= \paren{y - 1} q\paren{y}$
+for every $y \in \mathbb{R}^{+}$.
+
+Claim: $q$ is strictly increasing. \newline
+To prove this, first observe that $q$ is differentiable, with derivative:
+\begin{equation*}
+ q^{\prime}\paren{y} =
+ \begin{cases}
+  \dfrac{\paren{b-1} y^b - b y^{b-1} + 1}{\paren{y - 1}^2}
+  &\text{for $y \neq 1$} \\
+  \dfrac{1}{2} b \paren{b - 1} &\text{for $y = 1$}
+ \end{cases}
+\end{equation*}
+It sufficies to show that $q^{\prime}$ is positive.
+$q^{\prime}\paren{1} = \mfrac{1}{2} b \paren{b-1} > 0$,
+so it remains to prove that $q^{\prime}\paren{y} > 0$ for $y \neq 1$.
+For this, it is enough to prove that the numerator
+$h\paren{y} = \paren{b-1} y^b - b y^{b-1} + 1$ is positive for $y \neq 1$
+(because the denominator is $\paren{y - 1}^2$,
+which is always positive for $y \neq 1$). \newline
+The derivative $h^{\prime}\paren{y} = b\paren{b-1}\paren{y-1}y^{b-2}$
+is negative for $0 < y < 1$,
+positive for $y > 1$,
+and is zero at $1$,
+so $1$ is a point of global minimum for $h$;
+thus $h\paren{y} > h\paren{1} = 0$ for $y \neq 1$, as required.
+
+In particular, $q$ is strictly increasing in $\cinterval{1 - \mfrac{1}{a}}{1}$,
+thus it admits at most one root in that range.
+\begin{itemize}
+  \item For $1 < b < a$,
+        $q$ does not have any roots in the interval,
+        because $q\paren{1} = b - a < 0$,
+        so $q < 0$ on the whole interval (since it is increasing).
+  \item For $b = a$,
+        the root is $1$, since $q\paren{1} = b - a = 0$.
+  \item For $b > a$,
+        there is a root $\beta$ in the range,
+        and it is neither $1 - \mfrac{1}{a}$ nor $1$.
+        This is because $q\paren{1 - \mfrac{1}{a}} < 0$ and $q\paren{1} = b - a > 0$:
+        \begin{equation*}
+          q\paren{1 - \frac{1}{a}} =
+          \frac{1 - \paren{1 - \mfrac{1}{a}}^b}{1 - 1 + \mfrac{1}{a}} - a =
+          \frac{a^b - \paren{a - 1}^b}{a^{b-1}} - a =
+          - \frac{\paren{a - 1}^b}{a^{b-1}} < 0
+        \end{equation*}
+\end{itemize}
+
+So, in conclusion, in the interval $\cinterval{1 - \mfrac{1}{a}}{1}$:
+\begin{itemize}
+  \item for $\mfrac{1}{2} \leq r \leq \mfrac{1}{2} a$,
+        the equation $y^{2 r} - a y + a - 1 = 0$
+        admits only the solution $y = 1$;
+  \item for $r > \mfrac{1}{2} a$,
+        the equation $y^{2 r} - a y + a - 1 = 0$
+        admits the two solutions $y = \beta$ and $y = 1$.
+\end{itemize}
+
+The solution $y = 1$ corresponds to $\cos\paren{x} = 0$,
+that is $x = \mfrac{\pi}{2} + k \pi$ for $k \in \mathbb{Z}$.
+Of those values of $x$,
+the ones for which $k$ is even are indeed solutions to the original equation,
+while those for which $k$ is odd are not, due to $\sin\paren{x}$ being negative in that case.
+So this leaves the solutions
+$x = \mfrac{\pi}{2} + 2 m \pi$ for $m \in \mathbb{Z}$.
+
+The solution $y = \beta$ corresponds to $\cos\paren{x} = \pm \sqrt{a \paren{1 - \beta}}$.
+Of the corresponding values of $x$, those for which $\sin\paren{x}$ is positive are solutions to the original equation,
+while the others are not.

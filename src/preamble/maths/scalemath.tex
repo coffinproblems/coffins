@@ -1,0 +1,100 @@
+% Placeholder implementation of intermediate-size Math
+
+\RequirePackage{scalerel}
+\RequirePackage{xfakebold}
+
+\makeatletter
+
+% Default scale factor
+\newcommand{\mediumscalefactor}{0.8}
+
+% Command to change the default scaling factor for \mediumstyle
+\newcommand{\setdefaultscalefactor}[1]{
+  \renewcommand{\mediumscalefactor}{#1}
+}
+
+% Default boldening compensation factors
+\newcommand{\boldcompensation}{
+  \mathchoice{0.12}{0.09}{0.05}{0.03}
+}
+
+% Default raise compensation factor
+\newcommand{\raisefactor}{0.6}
+
+% Calculate the boldenind amount for a given scaling factor
+%   #1 is the scaling factor
+%   #2 is a constant to be adjusted empirically
+\newcommand{\calcboldness}[2]{\fpeval{(#1 < 1) * #2 * (1 - #1)}}  % no boldening if the scaling factor is greater than 1
+
+% Scale math content by a certain factor
+%   #1 is the scaling factor
+%   #2 is a constant used to calculate the boldening compensation
+%   #3 is the content to be scaled
+% The starred version of the command applies the boldening compensation
+\newcommand{\@scalemath}[3]{%
+  \@ifstar{%
+    \raisebox{\fpeval{\raisefactor * (1 - #1)} ex}{\scaleobj{#1}{\setBold[\calcboldness{#1}{#2}] #3 \unsetBold}}%
+    %\scaleobj{#1}{\setBold[\calcboldness{#1}{#2}] #3 \unsetBold}%
+  }{%
+    \raisebox{\fpeval{\raisefactor * (1 - #1)} ex}{\scaleobj{#1}{#3}}%
+    %\scaleobj{#1}{#3}%
+  }%
+}
+
+% Scale math content by a given factor
+%   #1 is the scaling factor, and it is 1 by default
+%   #2 is the content to be scaled
+% The starred version of the command applies boldening compensation
+\newcommand{\scalestyle}[2][1]{%
+  \@ifstar{%
+    \mathchoice
+      {\@scalemath*{#1}{\boldcompensation}{\displaystyle{#2}}}
+      {\@scalemath*{#1}{\boldcompensation}{\textstyle{#2}}}
+      {\@scalemath*{#1}{\boldcompensation}{\scriptstyle{#2}}}
+      {\@scalemath*{#1}{\boldcompensation}{\scriptscriptstyle{#2}}}
+  }{%
+    \mathchoice
+      {\@scalemath{#1}{}{\displaystyle{#2}}}
+      {\@scalemath{#1}{}{\textstyle{#2}}}
+      {\@scalemath{#1}{}{\scriptstyle{#2}}}
+      {\@scalemath{#1}{}{\scriptscriptstyle{#2}}}
+  }%
+}
+
+% Default medium-sized Math
+%   #1 is the scaling factor, which defaults to \mediumscalefactor, which itself is 0.8 by default
+%   #2 is the Math content
+% The starred version of the command applies boldening compensation
+\newcommand{\mediumstyle}[2][\mediumscalefactor]{%
+  \@ifstar{%
+    \scalestyle*[#1]{\displaystyle{#2}}%
+  }{%
+    \scalestyle[#1]{\displaystyle{#2}}%
+  }%
+}
+
+% Medium-sized fraction
+% The starred version of the command applies boldening compensation
+\newcommand{\mfrac}[3][\mediumscalefactor]{%
+  \@ifstar{%
+    \mediumstyle*[#1]{\frac{#2}{#3}}%
+  }{%
+    \mediumstyle[#1]{\frac{#2}{#3}}%
+  }%
+}
+
+% Medium-sized binomial
+% The starred version of the command applies boldening compensation
+\AddToHook{begindocument/before}{
+  \ifdefined\binom
+    \newcommand{\mbinom}[3][\mediumscalefactor]{%
+      \@ifstar{%
+        \mediumstyle*[#1]{\binom{#2}{#3}}%
+      }{%
+        \mediumstyle[#1]{\binom{#2}{#3}}%
+      }%
+    }
+  \fi
+}
+
+\makeatother

@@ -1,0 +1,29 @@
+name: Error report
+description: Report a mistake in the information presented in this project
+labels:
+    - "error"
+body:
+    - type: markdown
+      attributes:
+        value: |
+          In order to report a mistake:
+          - verify that the mistake is present in the latest version of the project;
+          - check that an equivalent report has not already been submitted among the open or closed [issues and pull requests](github.com/TODO/TODO/issues);
+          - state where the error is located;
+          - describe the error, explaining why it is incorrect.
+
+    - type: textarea
+      id: description
+      attributes:
+        label: Description
+        description: Describe the error, where it occurs, and why it is an error.
+      validations:
+        required: true
+
+    - type: textarea
+      id: additionalinfo
+      attributes:
+        label: Additional information
+        description: Any additional information that may be useful.
+      validations:
+        required: false

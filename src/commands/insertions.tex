@@ -1,0 +1,54 @@
+% Command to insert multiple solutions for a problem
+% The argument is the path to the problem
+\newcommand{\insertmultiplesolutions}[1]{
+  % Solutions counter
+  \newcount\s
+  \s=1
+
+  \newif\ifsol
+  \soltrue
+
+  {
+  \loop
+    \IfFileExists{#1/solution_\the\s.tex}{
+      \solution  % This command creates a subsubsection for the solution
+                 % The command is defined in preamble/custom_sections.tex
+      \input{#1/solution_\the\s.tex}
+    }{\solfalse}
+  \advance\s by 1
+  \ifsol
+  \repeat
+  }
+}
+
+
+% Command to insert the solution(s) to a problem
+% The argument is the path to the problem
+\newcommand{\insertsolution}[1]{
+  \IfFileExists{#1/solution.tex}{
+    \singlesolution  % This command creates a subsubsection for the solution
+                     % The command is defined in preamble/custom_sections.tex
+    \input{#1/solution.tex}
+  }{
+    % Multiple solutions
+    \insertmultiplesolutions{#1}
+  }
+}
+
+
+% Command to insert a problem with its solution(s)
+% The argument is the path to the problem
+\newcommand{\insertproblem}[1]{
+  \problem  % This command creates a subsubsection for the solution
+            % The command is defined in preamble/custom_sections.tex
+
+  \ifprintsources  % flag defined in main.tex
+    \problemsource{\input{#1/../reference.tex}}
+  \fi
+
+  \input{#1/statement.tex}
+
+  \ifsolutions  % flag defined in main.tex
+    \insertsolution{#1}
+  \fi
+}

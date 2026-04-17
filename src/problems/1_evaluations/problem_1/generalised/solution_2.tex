@@ -1,0 +1,32 @@
+For $r$ not a multiple of $\pi$:
+\begin{equation*}
+  \sum\limits_{k = 0}^{n - 1} {\frac{1}{\cos\paren{a + k r} \cos\paren{a + \paren{k+1} r}}}
+  = \frac{\sin\paren{n r}}{\sin\paren{r} \cos\paren{a} \cos\paren{a + n r}}
+  = \frac{\tan\paren{a + n r} - \tan\paren{a}}{\sin\paren{r}}
+\end{equation*}
+This can be proven by induction on $n$.
+For $n = 0$ the sum is $0$, so it is trivial.
+Then:
+\begin{align*}
+  \sum\limits_{k = 0}^{n} &{\frac{1}{\cos\paren{a + k r} \cos\paren{a + \paren{k+1} r}}}
+   = \frac{1}{\cos\paren{a + n r} \cos\paren{a + n r + r}}
+     + \sum\limits_{k = 0}^{n - 1} {\frac{1}{\cos\paren{a + k r} \cos\paren{a + \paren{k+1} r}}} = \\
+  &= \frac{1}{\cos\paren{a + n r} \cos\paren{a + n r + r}}
+     + \frac{\sin\paren{n r}}{\sin\paren{r} \cos\paren{a} \cos\paren{a + n r}} = \\
+  &= \frac{\mfrac{\sin\paren{n r}}{\sin\paren{r}} \cos\paren{a + n r + r} + \cos\paren{a}}
+          {\cos\paren{a} \cos\paren{a + n r} \cos\paren{a + n r + r}} = \\
+  &= \frac{\mfrac{\sin\paren{n r}}{\sin\paren{r}} \cos\paren{a + n r + r} + \cos\paren{a + n r - n r}}
+          {\cos\paren{a} \cos\paren{a + n r} \cos\paren{a + n r + r}} = \\
+  &= \frac{\mfrac{\sin\paren{n r}}{\sin\paren{r}} \paren{\cos\paren{a + n r} \cos\paren{r} - \sin\paren{a + n r} \sin\paren{r}}
+            + \cos\paren{a + n r} \cos\paren{n r} + \sin\paren{a + n r} \sin\paren{n r}}
+          {\cos\paren{a} \cos\paren{a + n r} \cos\paren{a + n r + r}} = \\
+  &= \frac{\cos\paren{a + n r} \paren{\mfrac{\sin\paren{n r}}{\sin\paren{r}} \cos\paren{r} + \cos\paren{n r}}
+            + \sin\paren{a + n r} \paren{\sin\paren{n r} - \mfrac{\sin\paren{n r}}{\sin\paren{r}} \sin\paren{r}}}
+          {\cos\paren{a} \cos\paren{a + n r} \cos\paren{a + n r + r}} = \\
+  &= \frac{\cos\paren{a + n r} \mfrac{\sin\paren{n r} \cos\paren{r} + \sin\paren{r} \cos\paren{n r}}{\sin\paren{r}} + \sin\paren{a + n r} \cdot 0}
+          {\cos\paren{a} \cos\paren{a + n r} \cos\paren{a + n r + r}} = \\
+  &= \frac{\sin\paren{n r} \cos\paren{r} + \sin\paren{r} \cos\paren{n r}}
+          {\sin\paren{r} \cos\paren{a} \cos\paren{a + n r + r}}
+   = \frac{\sin\paren{\paren{n + 1} r}}
+          {\sin\paren{r} \cos\paren{a} \cos\paren{a + \paren{n + 1} r}}
+\end{align*}

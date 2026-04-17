@@ -1,0 +1,47 @@
+\generalfalse  % Flag for printing the original problems
+
+% Statements
+\ifdefined\ONLYSOLUTIONS
+\else
+
+  \problemlist{Problems}
+  \ifdefined\NOSOURCES
+    \printsourcesfalse  % Disable printing the sources for each problem statement
+  \else
+    \printsourcestrue   % Enable printing the sources for each problem statement
+  \fi
+
+  \solutionsfalse  % Disable printing the solutions
+
+  \addproblems  % This is the command that prints the problems
+
+\fi
+
+
+% Solutions
+\ifdefined\NOSOLUTIONS
+\else
+
+  \ifdefined\ONLYSOLUTIONS
+    % This is the beginning of the document:
+    % do not force a new page (applies when the document is "MINIMAL")
+  \else
+    \newpage
+  \fi
+
+  \problemlist{Solutions}
+  \ifdefined\ONLYSOLUTIONS
+    \ifdefined\NOSOURCES
+      \printsourcesfalse
+    \else
+      \printsourcestrue
+    \fi
+  \else
+    \printsourcesfalse  % Avoid printing the sources again if they were already included in the statements-only part
+  \fi
+
+  \solutionstrue  % Enable printing the solutions
+
+  \addproblems  % This is the command that prints the problems
+
+\fi

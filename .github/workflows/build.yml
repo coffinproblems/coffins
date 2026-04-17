@@ -1,0 +1,70 @@
+name: Build one PDF
+
+
+on:
+  workflow_call:
+    inputs:
+
+      texlive_digest:
+        required: true
+        type: string
+
+      timestamp:
+        required: true
+        type: string
+
+      filename:
+        required: true
+        type: string
+
+      flags:
+        required: true
+        type: string
+
+      pre_tex:
+        required: true
+        type: string
+
+      label:
+        required: true
+        type: string
+
+      publish:
+        required: true
+        type: boolean
+
+
+jobs:
+
+  build:
+    name: Build ${{ inputs.filename }}
+
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive@${{ inputs.texlive_digest }}
+    defaults:
+      run:
+        working-directory: ./src
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Build ${{ inputs.filename }}
+        env:
+          SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
+          FORCE_SOURCE_DATE: 1
+        run: latexmk ${{ inputs.flags }} -g -usepretex="${{ inputs.pre_tex }}" main.tex -jobname="${{ inputs.filename }}"
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-${{ inputs.label }}-build-publish-${{ inputs.publish }}-${{ inputs.filename }}
+          path: ../output/${{ inputs.filename}}.pdf
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.label }}-build-logs-${{ inputs.filename }}
+          path: ../build/*.log

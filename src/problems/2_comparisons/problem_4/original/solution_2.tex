@@ -1,0 +1,34 @@
+Let $\displaystyle{\alpha = \sqrt[3]{413 \mspace{1mu}} \mspace{2mu} - \mspace{-1mu} \sqrt[3]{3 \mspace{1mu}} \mspace{1mu}}$.
+Then:
+$\displaystyle{ \mspace{2mu}
+  \alpha^3 \mspace{2mu}
+  = \mspace{2mu} 413 - 3 \cdot \mspace{-2mu} \sqrt[3]{3} \cdot \mspace{-2mu} \sqrt[3]{413} \cdot \mspace{-2mu} \paren{\mspace{-2mu} \sqrt[3]{413} \mspace{2mu} - \mspace{-1mu} \sqrt[3]{3 \mspace{1mu}} \mspace{1mu}} - 3 \mspace{2mu}
+  = \mspace{2mu} 410 - 3 \sqrt[3]{1239 \mspace{1mu}} \mspace{1mu} \alpha
+\mspace{1mu}}$.
+
+Therefore, $\alpha$ is a root of the polynomial function
+$p\paren{x} = x^3 + 3 \sqrt[3]{1239 \mspace{1mu}} \mspace{1mu} x - 410$.
+This function is strictly increasing, as a function $\mathbb{R} \to \mathbb{R}$, hence $\alpha$ is its only real root,
+and, moreover, for every $x \in \mathbb{R}$,
+$x < \alpha$ if and only $p\paren{x} < 0$,
+and $x > \alpha$ if and only $p\paren{x} > 0$.
+
+Putting $x = 6$, it needs to be determined whether $216 + 18 \sqrt[3]{1239} - 410$ is positive or negative,
+which simplifies to determining whether $97$ is, respectively, less or greater than $9 \sqrt[3]{1239}$.
+Now:
+\begin{align*}
+  \paren{\frac{97}{9}}^3
+  &= \paren{10 + \frac{7}{9}}^3
+   > 1000 + 3 \cdot 100 \cdot \frac{7}{9} + 3 \cdot 10 \cdot \frac{49}{81} = \\
+  &= 1000 + \frac{700}{3} + \frac{490}{27}
+   > 1000 + 233 + 10 > \\
+  &> 1239
+\end{align*}
+It follows that $97 > 9 \sqrt[3]{1239 \mspace{1mu}} \mspace{1mu}$, so $p\paren{6} < 0$,
+which means that $6 < \alpha = \sqrt[3]{413} \mspace{2mu} - \mspace{-1mu} \sqrt[3]{3}$.
+So, in conclusion:
+\begin{equation*}
+  6 \mspace{2mu} + \mspace{-1mu} \sqrt[3]{3 \mspace{1mu}} \mspace{2mu}
+  <
+  \sqrt[3]{413 \mspace{1mu}}
+\end{equation*}

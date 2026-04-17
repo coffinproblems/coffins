@@ -1,0 +1,22 @@
+The following is an infinite sequence of solutions $\paren{a_n, b_n}$:
+\begin{equation*}
+\begin{cases}
+  \paren{a_0,       b_0}       &= \, \paren{0, 1} \\
+  \paren{a_{n + 1}, b_{n + 1}} &= \, \paren{3 a_{n} + 2 b_{n} + 1, \, 4 a_{n} + 3 b_{n} + 2}
+\end{cases}
+\end{equation*}
+This can be seen by induction on $n$:
+for $n = 0$ it is trivial;
+then, assuming that the relation holds for $n$:
+\begin{align*}
+  a_{n + 1}^2 + \paren{a_{n + 1} + 1}^2
+  &= 2 a_{n + 1}^2 + 2 a_{n + 1} + 1 = \\
+  &= 2 \paren{3 a_{n} + 2 b_{n} + 1}^2 + 2 \paren{3 a_{n} + 2 b_{n} + 1} + 1 = \\
+  &= 18 a_{n}^{2} + 8 b_{n}^{2} + 24 a_{n} b_{n} + 18 a_{n} + 12 b_{n} + 5 \\[1ex]
+  %
+  b_{n + 1}^2
+  &= \paren{4 a_{n} + 3 b_{n} + 2}^2 = \\
+  &= 16 a_{n}^{2} + 9 b_{n}^{2} + 24 a_{n} b_{n} + 16 a_{n} + 12 b_{n} + 4
+\end{align*}
+They are equal, since their difference is $b_{n}^2 - 2 a_{n}^2 - 2 a_{n} - 1$,
+which is $0$, by the inductive hypothesis.

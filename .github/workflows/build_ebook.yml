@@ -1,0 +1,93 @@
+name: Build ebook
+
+
+on:
+  workflow_call:
+    inputs:
+
+      texlive_digest:
+        required: true
+        type: string
+
+      timestamp:
+        required: true
+        type: string
+
+      filename:
+        required: true
+        type: string
+
+      pre_tex:
+        required: true
+        type: string
+
+      publish:
+        required: true
+        type: boolean
+
+
+jobs:
+
+  build:
+    name: Build ${{ inputs.filename }}
+
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive@${{ inputs.texlive_digest }}
+    defaults:
+      run:
+        working-directory: ./src
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Build ${{ inputs.filename }} ebook with MathML
+        id: build_mathml
+        env:
+          SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
+          FORCE_SOURCE_DATE: 1
+          PRE_TEX: ${{ inputs.pre_tex }}
+        run: |
+          NOSOURCES_FLAG='\def\NOSOURCES'
+          PRE_TEX_NEW="${PRE_TEX//\\def\\TAGPDF\{\}/} ${NOSOURCES_FLAG}"  # remove TAGPDF flag and add NOSOURCES flag
+          PRE_TEX_FINAL="${PRE_TEX_NEW//\\/\\\\}"  # escape the backslash for tex4ebook
+          tex4ebook -B ../build_mathml -d ../output -jobname="${{ inputs.filename }}-mathml" -f epub3 main.tex mathml "" "" "$PRE_TEX_FINAL"
+
+      - name: Build ${{ inputs.filename }} ebook in SVG
+        id: build_svg
+        env:
+          SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
+          FORCE_SOURCE_DATE: 1
+          PRE_TEX: ${{ inputs.pre_tex }}
+        run: |
+          NOSOURCES_FLAG='\def\NOSOURCES'
+          PRE_TEX_NEW="${PRE_TEX//\\def\\TAGPDF\{\}/} ${NOSOURCES_FLAG}"
+          PRE_TEX_FINAL="${PRE_TEX_NEW//\\/\\\\}"
+          tex4ebook -B ../build_svg -d ../output -jobname="${{ inputs.filename }}-svg" -f epub main.tex svg "" "" "$PRE_TEX_FINAL"
+
+      - name: Upload MathML ebook
+        uses: actions/upload-artifact@v4
+        with:
+          name: ebook-publish-${{ inputs.publish }}-${{ inputs.filename }}-mathml
+          path: ../output/${{ inputs.filename}}-mathml.epub
+
+      - name: Upload SVG ebook
+        uses: actions/upload-artifact@v4
+        with:
+          name: ebook-publish-${{ inputs.publish }}-${{ inputs.filename }}-svg
+          path: ../output/${{ inputs.filename}}-svg.epub
+
+      - name: Upload logs on failure of MathML build
+        if: failure() && steps.build_mathml.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-mathml-logs-${{ inputs.filename }}
+          path: ../build_mathml/*.log
+
+      - name: Upload logs on failure of SVG build
+        if: failure() && steps.build_svg.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-svg-logs-${{ inputs.filename }}
+          path: ../build_svg/*.log

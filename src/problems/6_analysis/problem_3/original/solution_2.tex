@@ -1,0 +1,30 @@
+Let $f$ be a function satisfying the stated condition.
+Observe that for any $x, y \in \mathbb{R}$ it holds that
+$\abs{f\paren{x} - f\paren{y}} \leq \paren{x - y}^{2}$,
+since $f\paren{x} - f\paren{y} \leq \paren{x - y}^{2}$
+and $f\paren{y} - f\paren{x} \leq \paren{y - x}^{2} = \paren{x - y}^{2}$.
+
+Let $x, y \in \mathbb{R}$.
+Let $\varepsilon > 0$.
+Let $n \in \mathbb{N}$ such that
+$n > \mfrac{\paren{y - x}^{2}}{\varepsilon}$.
+Let $x_0, \dotsc, x_n$ be a uniform partition
+of the interval between $x$ and $y$:
+$x_0 = x$, and for each $k \in \braces{1, \dotsc, n}$
+$x_k = x_{k-1} + \mfrac{y - x}{n}$.
+In particular, $x_n = y$.
+Then:
+\begin{equation*}
+  \abs{f\paren{y} - f\paren{x}}
+  \leq \sum\limits_{k = 1}^{n} {\abs{f\paren{x_k} - f\paren{x_{k-1}}}}
+  \leq \sum\limits_{k = 1}^{n} {\paren{x_k - x_{k-1}}^{2}}
+  = n \cdot \paren{\frac{y - x}{n}}^{2}
+  = \frac{\paren{y - x}^2}{n}
+  < \varepsilon
+\end{equation*}
+So, for any $x, y \in \mathbb{R}$ and for any $\varepsilon > 0$
+it holds that $\abs{f\paren{y} - f\paren{x}} < \varepsilon$.
+Hence for any $x, y \in \mathbb{R}$, $f\paren{y} = f\paren{x}$.
+This means that $f$ is constant.
+Therefore, every function $f$ that satisfies the given condition is constant.
+Viceversa, every constant function clearly satisfies the condition.

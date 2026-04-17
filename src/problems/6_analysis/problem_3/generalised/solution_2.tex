@@ -1,0 +1,30 @@
+Let $f$ be a function satisfying the stated condition.
+Observe that for any $x, y \in \mathbb{R}$ it holds that
+$\abs{f\paren{x} - f\paren{y}} \leq \abs{x - y}^{a}$,
+since $f\paren{x} - f\paren{y} \leq \abs{x - y}^{a}$
+and $f\paren{y} - f\paren{x} \leq \abs{y - x}^{a} = \abs{x - y}^{a}$.
+
+Let $x, y \in I$.
+Let $\varepsilon > 0$.
+Let $n \in \mathbb{N}$ such that
+$n^{a - 1} > \mfrac{\abs{y - x}^{a}}{\varepsilon}$.
+Let $x_0, \dotsc, x_n$ be a uniform partition
+of the interval between $x$ and $y$:
+$x_0 = x$, and for each $k \in \braces{1, \dotsc, n}$
+$x_k = x_{k-1} + \mfrac{y - x}{n}$.
+In particular, $x_n = y$.
+Then:
+\begin{equation*}
+  \abs{f\paren{y} - f\paren{x}}
+  \leq \sum\limits_{k = 1}^{n} {\abs{f\paren{x_k} - f\paren{x_{k-1}}}}
+  \leq \sum\limits_{k = 1}^{n} {\abs{x_k - x_{k-1}}^{a}}
+  = n \cdot \abs{\frac{y - x}{n}}^{a}
+  = \frac{\abs{y - x}^a}{n^{a-1}}
+  < \varepsilon
+\end{equation*}
+So, for any $x, y \in I$ and for any $\varepsilon > 0$
+it holds that $\abs{f\paren{y} - f\paren{x}} < \varepsilon$.
+Hence for any $x, y \in I$, $f\paren{y} = f\paren{x}$.
+This means that $f$ is constant.
+Therefore, every function $f$ that satisfies the given condition is constant.
+Viceversa, every constant function clearly satisfies the condition.

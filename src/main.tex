@@ -1,0 +1,105 @@
+\input{pdfinfo}
+
+\documentclass{article}
+
+% Preamble
+\input{preamble/preamble}
+
+% Customisation flags
+\input{commands/flags}
+
+% Commands for inserting the problems
+\input{commands/include_problems}
+
+
+% Title
+\newcommand{\titlestring}{Coffin problems}
+\author{}
+\ifdefined\MINIMAL
+  \title{\texorpdfstring{\huge \titlestring}{\titlestring}}
+  \date{}
+\else
+  \title{\texorpdfstring{\Huge \titlestring}{\titlestring}}
+  \date{\num[minimum-integer-digits = 2]{\number\day}/\num[minimum-integer-digits = 2]{\number\month}/\number\year}  % \num is provided by siunitx package
+\fi
+
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+\pagenumbering{roman}
+
+% Title
+\thispagestyle{empty}
+\maketitle
+\vspace{3cm}
+
+\ifdefined\MINIMAL
+\else
+  \section*{Introduction} \addcontentsline{toc}{section}{Introduction}
+  \input{sections/introduction}
+
+  % Table of Contents
+  \clearpage
+  \tableofcontents
+  \clearpage
+\fi
+
+\pagenumbering{arabic}
+
+
+% Original problems
+\ifdefined\ORIGINAL
+  \input{sections/problems_original}
+\fi
+
+% Generalised problems
+\ifdefined\GENERALISED
+  \input{sections/problems_generalised}
+\fi
+
+
+% References
+\ifdefined\MINIMAL
+\else
+
+  \ifdefined\MOREREFS
+
+    \newpage
+    \nocite{*}
+    \printbibliography[heading=bibintoc, category=main]
+
+    \newpage
+    \nocite{*}
+    \printbibliography[heading=bibintoc, title={Further reading}, category=additional]
+
+    \ifdefined\FORUMREFS
+      \newpage
+      \nocite{*}
+      \printbibliography[heading=bibintoc, title={Discussions}, category=discussions]
+    \fi
+
+  \else
+
+    \ifdefined\FORUMREFS
+
+      \newpage
+      \nocite{*}
+      \printbibliography[heading=bibintoc, category=main]
+
+      \newpage
+      \nocite{*}
+      \printbibliography[heading=bibintoc, title={Discussions}, category=discussions]
+
+    \else
+
+      \newpage
+      \nocite{*}
+      \printbibliography[heading=bibintoc]
+
+    \fi
+
+  \fi
+\fi
+
+\end{document}

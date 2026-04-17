@@ -1,0 +1,40 @@
+Let the polynomial $p\paren{x, y, z} = \paren{x - y}^2 + \paren{y - z}^2 + \paren{z - x}^2$,
+and recall the polynomial identity:
+\begin{equation*}
+  x^3 + y^3 + z^3 - 3 x y z = \paren{x + y + z} \cdot \frac{1}{2} \mspace{2mu} p\paren{x, y, z}
+\end{equation*}
+Note that the polynomial $p$ evaluated at real values is always positive, since it is a sum of squares.
+Substituting $x = \sqrt[3]{413}$, $y = - 6$, $z = - \sqrt[3]{3}$ in the above identity gives:
+\begin{align*}
+  \frac{1}{2} \mspace{2mu} \paren{\mspace{-2mu} \sqrt[3]{413} - \paren*[\big]{6 \mspace{2mu} + \mspace{-1mu} \sqrt[3]{3} \mspace{2mu}} \mspace{-2mu}}
+  \mspace{-2mu} \cdot \mspace{-1.2mu} p\paren*[\big]{\mspace{-2mu} \sqrt[3]{413} \mspace{1mu}, \mspace{1mu} - 6, \mspace{1mu} - \sqrt[3]{3} \mspace{2mu}}
+  &= 413 - 216 - 3 - 3 \cdot 6 \cdot \mspace{-1.5mu} \sqrt[3]{3 \cdot 413} = \\
+  &= 194 - 18 \sqrt[3]{1239} = \\
+  &= 2 \cdot \mspace{-2mu} \paren*[\big]{97 - 9 \sqrt[3]{1239} \mspace{2mu}}
+\end{align*}
+Hence, $\sqrt[3]{413}$ is greater than $6 \mspace{2mu} + \mspace{-1mu} \sqrt[3]{3}$ if and only if $97 > 9 \sqrt[3]{1239}$
+(and analogously for the opposite inequality).
+Now:
+\begin{align*}
+  \paren{\frac{97}{9}}^3
+  &= \paren{10 + \frac{7}{9}}^3
+   > 1000 + 3 \cdot 100 \cdot \frac{7}{9} + 3 \cdot 10 \cdot \frac{49}{81} = \\
+  &= 1000 + \frac{700}{3} + \frac{490}{27}
+   > 1000 + 233 + 10 > \\
+  &> 1239
+\end{align*}
+It follows that $97 > 9 \sqrt[3]{1239 \mspace{1mu}} \mspace{1mu}$.
+So, in conclusion:
+\begin{equation*}
+  6 \mspace{2mu} + \mspace{-1mu} \sqrt[3]{3 \mspace{1mu}} \mspace{2mu}
+  <
+  \sqrt[3]{413 \mspace{1mu}}
+\end{equation*}
+
+\paragraph{Addendum}
+The values of the two expressions are approximately:
+\begin{align*}
+  \sqrt[3]{413} \mspace{2mu}                                &\approx   7.447034238 \\
+  6 \mspace{2mu} + \mspace{-1mu} \sqrt[3]{3} \mspace{2mu}   &\approx   7.442249570
+\end{align*}
+Their difference is approximately $0.004784668$.

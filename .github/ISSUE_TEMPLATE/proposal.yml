@@ -1,0 +1,45 @@
+name: Proposal
+description: Make a proposal or suggestion
+labels:
+    - "proposal"
+body:
+    - type: markdown
+      attributes:
+        value: |
+          In order to submit a bug report:
+          - check that an equivalent suggestion has not already been made in the open or closed [issues and pull requests](github.com/TODO/TODO/issues);
+          - describe the proposal in a clear way;
+          - explain the purpose of the proposal;
+          - provide information on how to implement the suggestion, if known.
+
+    - type: textarea
+      id: description
+      attributes:
+        label: Description
+        description: Describe the proposal in a clear manner.
+      validations:
+        required: true
+
+    - type: textarea
+      id: purpose
+      attributes:
+        label: Steps to reproduce
+        description: Explain the purpose and potential usefulness of the proposed change.
+      validations:
+        required: true
+
+    - type: textarea
+      id: expected
+      attributes:
+        label: Possible implementation
+        description: Provide details on how the proposal could be implemented, if known.
+      validations:
+        required: false
+
+    - type: textarea
+      id: additionalinfo
+      attributes:
+        label: Additional information
+        description: Any additional information that may be useful.
+      validations:
+        required: false

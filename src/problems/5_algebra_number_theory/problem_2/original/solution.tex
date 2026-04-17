@@ -1,0 +1,18 @@
+For every $n \in \mathbb{Z}^{+}$, let
+\begin{alignat*}{2}
+ & a_n = 2^{n + 1} - 2 = 2 \cdot \paren{2^n - 1} \mspace{2mu} ,  && \qquad
+ b_n = 2^{n + 1} a_n = 2^{2 n + 2} - 2^{n + 2}
+\end{alignat*}
+and observe that $b_n + 1 = \paren{2^{n + 1} - 1}^2 = \paren{a_n + 1}^2$.
+Now:
+\begin{itemize}
+  \item $a_n \neq b_n$, since clearly $b_n > a_n$;
+  \item $\operatorname{P}\paren{a} = \braces{2} \cup \operatorname{P}\paren{2^n - 1} \mspace{2mu}$
+        and $\mspace{2mu} \operatorname{P}\paren{b} = \braces{2} \cup \operatorname{P}\paren{a} = \operatorname{P}\paren{a}$;
+  \item $\operatorname{P}\paren{b + 1}
+         = \operatorname{P}\paren{\mspace{-2.2mu} \paren{a+1}^2 \mspace{-0.5mu}}
+         = \operatorname{P}\paren{a + 1}$.
+\end{itemize}
+
+In conclusion, the infinite family $\set*[\big]{\paren{a_n, b_n}}_{n \in \mathbb{Z}^{+}}$
+is a subset of the set $S$, which is therefore infinite.

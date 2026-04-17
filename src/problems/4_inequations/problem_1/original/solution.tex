@@ -1,0 +1,46 @@
+Notice that $x = -1$ does not satisfy the inequality;
+thus the range of values of $x$ can be restricted to $\ocinterval{-1}{1}$.
+The inequality is equivalent to the following,
+obtained by dividing by $\sqrt{1 + x}$, which is always strictly positive for $x \in \ocinterval{-1}{1}$:
+\begin{equation*}
+ x \cdot \paren{8 \frac{\sqrt{1 - x}}{\sqrt{1 + x}} + 1}
+ \leq
+ 11 - 16 \frac{\sqrt{1 - x}}{\sqrt{1 + x}}
+\end{equation*}
+Let $y = \mfrac{\sqrt{1 - x}}{\sqrt{1 + x}}$.
+Hence $x = \mfrac{1 - y^2}{1 + y^2}$.
+The inequality becomes:
+\begin{equation*}
+ \frac{1 - y^2}{1 + y^2} \cdot \paren{8 y + 1}
+ \leq
+ 11 - 16 y
+\end{equation*}
+and it is equivalent to the following,
+obtained by multiplying by $1 + y^2$ (which is always strictly positive):
+\begin{equation*}
+ \paren{1 - y^2} \paren{8 y + 1}
+ \leq
+ \paren{1 + y^2} \paren{11 - 16 y}
+\end{equation*}
+which, expanded, is:
+\begin{equation*}
+ 8 y^3 - 12 y^2 + 24 y - 10 \leq 0
+\end{equation*}
+The polynomial $8 y^3 - 12 y^2 + 24 y - 10$ has a root at $y = \mfrac{1}{2}$,
+which yields the factorisation
+$8 y^3 - 12 y^2 + 24 y - 10 = 2 \paren{2 y - 1} \paren{2 y^2 - 2y + 5}$.
+Thus, the inequality can be written as:
+\begin{equation*}
+ 2 \paren{2 y - 1} \paren{2 y^2 - 2y + 5} \leq 0
+\end{equation*}
+The quantity $2 y^2 - 2y + 5$ is always strictly positive,
+so the inequality is equivalent to $2 y - 1 \leq 0$,
+that is: $2 \mfrac{\sqrt{1 - x}}{\sqrt{1 + x}} \leq 1$.
+Since $\mfrac{\sqrt{1 - x}}{\sqrt{1 + x}}$ is positive,
+the inequality is equivalent to $4 \mfrac{1 - x}{1 + x} \leq 1$,
+obtained by squaring.
+Since $x > -1$, the inequality is equivalent to $4 \paren{1 - x} \leq 1 + x$,
+obtained by multiplying by $1 + x$, which is positive.
+This simplifies to $5 x \geq 3$, that is: $x \geq \mfrac{3}{5}$.
+
+In conclusion, the solution set is $\cinterval{\mfrac{3}{5}}{1}$.

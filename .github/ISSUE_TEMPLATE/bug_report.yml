@@ -1,0 +1,85 @@
+name: Bug report
+description: Report a bug
+labels:
+    - "bug"
+body:
+    - type: markdown
+      attributes:
+        value: |
+          In order to submit a bug report:
+          - verify that the bug occurs in the latest version of the project;
+          - check that an equivalent report has not already been submitted among the open or closed [issues and pull requests](github.com/TODO/TODO/issues);
+          - provide a description of the bug;
+          - describe how to reproduce the bug;
+          - include software information: operating system, TeX distribution, including version and installation source.
+
+    - type: textarea
+      id: description
+      attributes:
+        label: Description
+        description: Briefly describe the bug.
+      validations:
+        required: true
+
+    - type: textarea
+      id: reproducing
+      attributes:
+        label: Steps to reproduce
+        description: Explain how to trigger the bug.
+      validations:
+        required: true
+
+    - type: textarea
+      id: expected
+      attributes:
+        label: Expected behaviour
+        description: Describe the expected result.
+      validations:
+        required: true
+
+    - type: textarea
+      id: actual
+      attributes:
+        label: Actual behaviour
+        description: Describe the result that actually happens upon following the steps.
+      validations:
+        required: true
+
+    - type: input
+      id: texdistribution
+      attributes:
+        label: TeX distribution
+        placeholder: e.g. TeXLive, MiKTeX, ...
+      validations:
+        required: true
+
+    - type: input
+      id: texversion
+      attributes:
+        label: Version
+        description: The version of the TeX distribution
+      validations:
+        required: true
+
+    - type: input
+      id: texinstallsource
+      attributes:
+        label: Installation source
+        placeholder: Where the TeX distribution was installed from
+      validations:
+        required: true
+
+    - type: input
+      id: os
+      attributes:
+        label: Operating system
+      validations:
+        required: true
+
+    - type: textarea
+      id: additionalinfo
+      attributes:
+        label: Additional information
+        description: Any additional information that may be useful.
+      validations:
+        required: false

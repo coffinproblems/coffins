@@ -1,0 +1,149 @@
+name: Process one target
+
+
+on:
+  workflow_call:
+    inputs:
+
+      texlive_digest:
+        required: true
+        type: string
+
+      timestamp:
+        required: true
+        type: string
+
+      target:
+        required: true
+        type: string
+
+      flags:
+        required: true
+        type: string
+
+      pre_tex:
+        required: true
+        type: string
+
+      flavours:
+        required: true
+        type: string
+
+      publish:
+        required: true
+        type: boolean
+
+
+jobs:
+
+  record:
+    name: Record compilation information in file
+    if: inputs.publish == true
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Write information
+        run: |
+          ENV_FILE="compilation_info-${{ inputs.target }}.txt"
+          echo "" >> $ENV_FILE
+          echo "jobname: ${{ inputs.target }}" >> $ENV_FILE
+          #echo "flags: ${{ inputs.flags }}" >> $ENV_FILE
+          echo "pre-tex: ${{ inputs.pre_tex }}" >> $ENV_FILE
+          echo "PDF standards: ${{ inputs.flavours }}" >> $ENV_FILE
+
+      - name: Upload file
+        uses: actions/upload-artifact@v4
+        with:
+          name: compilation-info-${{ inputs.target }}
+          path: compilation_info-${{ inputs.target }}.txt
+
+
+  build:
+    name: Build ${{ inputs.target }}
+
+    uses: ./.github/workflows/build.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      filename: ${{ inputs.target }}
+      flags: ${{ inputs.flags }}
+      pre_tex: ${{ inputs.pre_tex }}
+      label: first
+      publish: ${{ inputs.publish }}
+
+
+  validate:
+    name: Validate ${{ inputs.target }}
+    needs: build
+
+    runs-on: ubuntu-latest
+    container:
+      image: verapdf/cli:latest
+
+    steps:
+      - name: Download PDF from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: pdf-first-build-publish-${{ inputs.publish }}-${{ inputs.target }}
+          path: output
+
+      - name: Validate PDF standards
+        run: |
+          for flav in ${{ inputs.flavours }}; do
+            output=$(verapdf --flavour $flav --format text "output/${{ inputs.target }}.pdf")
+            if [[ "$output" != PASS* ]]; then
+              exit 1
+            fi
+          done
+
+
+  reproduce:
+    name: Build ${{ inputs.target }} again
+    needs: validate
+
+    uses: ./.github/workflows/build.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      filename: ${{ inputs.target }}
+      flags: ${{ inputs.flags }}
+      pre_tex: ${{ inputs.pre_tex }}
+      label: second
+      publish: ${{ inputs.publish }}
+
+
+  compare:
+    name: Check if builds match
+    needs: reproduce
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download first PDF build
+        uses: actions/download-artifact@v4
+        with:
+          name: pdf-first-build-publish-${{ inputs.publish }}-${{ inputs.target }}
+          path: ./first/
+
+      - name: Download second PDF build
+        uses: actions/download-artifact@v4
+        with:
+          name: pdf-second-build-publish-${{ inputs.publish }}-${{ inputs.target }}
+          path: ./second/
+
+      - name: Compare
+        run: cmp -s "./first/${{ inputs.target }}.pdf" "./second/${{ inputs.target }}.pdf"
+
+
+  build_ebook:
+    name: Build ebook ${{ inputs.target }}
+    if: inputs.publish == true || endsWith(inputs.target, '_p')
+
+    uses: ./.github/workflows/build_ebook.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      filename: ${{ inputs.target }}
+      pre_tex: ${{ inputs.pre_tex }}
+      publish: ${{ inputs.publish }}

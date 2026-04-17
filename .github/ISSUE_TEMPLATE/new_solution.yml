@@ -1,0 +1,42 @@
+name: New solution
+description: Submit a solution to one of the Coffin problems different from the already presented solutions
+labels:
+    - "new_solution"
+body:
+    - type: markdown
+      attributes:
+        value: |
+          To submit a solution to one of the documented coffin prroblems:
+          - check that it has not already been submitted in another open or closed [issue or pull request](TODO);
+          - specify which problem the solution is for;
+          - hide the proposed solution and any related comments in an expandable block of text.
+
+    - type: textarea
+      id: problem
+      attributes:
+        label: Problem
+        description: Specify which problem the solution is for.
+      validations:
+        required: true
+
+    - type: textarea
+      id: solution
+      attributes:
+        label: Solution
+        description: Describe the solution in a clear way.
+        value: |
+          <details><summary>Show solution</summary><p>
+
+          [Write the solution here]
+
+          </p></details>
+      validations:
+        required: true
+
+    - type: textarea
+      id: additionalinfo
+      attributes:
+        label: Additional information
+        description: Any additional information that may be useful.
+      validations:
+        required: false

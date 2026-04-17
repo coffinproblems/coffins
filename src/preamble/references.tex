@@ -1,0 +1,99 @@
+\usepackage[
+      backend = biber,
+        style = numeric,
+   giveninits = false,
+      sorting = nyt,
+          doi = true,
+          url = true,
+  maxbibnames = 99,
+  minbibnames = 99,
+     hyperref = true
+]{biblatex}
+
+
+\ifdefined\MOREREFS
+  \ifdefined\FORUMREFS
+    % Main references, additional references, and references to user discussions
+    \DeclareSourcemap{
+      \maps[datatype=bibtex]{
+        \map{
+          \perdatasource{references/references.bib}
+          \step[fieldset=keywords, fieldvalue={, main}, append]
+        }
+        \map{
+          \perdatasource{references/further_reading.bib}
+          \step[fieldset=keywords, fieldvalue={, additional}, append]
+        }
+        \map{
+          \perdatasource{references/discussions.bib}
+          \step[fieldset=keywords, fieldvalue={, discussions}, append]
+        }
+      }
+    }
+    \DeclareBibliographyCategory{main}
+    \DeclareBibliographyCategory{additional}
+    \DeclareBibliographyCategory{discussions}
+    \AtDataInput{
+      \ifkeyword{main}{\addtocategory{main}{\thefield{entrykey}}}{}
+      \ifkeyword{additional}{\addtocategory{additional}{\thefield{entrykey}}}{}
+      \ifkeyword{discussions}{\addtocategory{discussions}{\thefield{entrykey}}}{}
+    }
+    \addbibresource{references/references.bib}
+    \addbibresource{references/further_reading.bib}
+    \addbibresource{references/discussions.bib}
+
+  \else
+    % Main references and additional references
+    \DeclareSourcemap{
+      \maps[datatype=bibtex]{
+        \map{
+          \perdatasource{references/references.bib}
+          \step[fieldset=keywords, fieldvalue={, main}, append]
+        }
+        \map{
+          \perdatasource{references/further_reading.bib}
+          \step[fieldset=keywords, fieldvalue={, additional}, append]
+        }
+      }
+    }
+    \DeclareBibliographyCategory{main}
+    \DeclareBibliographyCategory{additional}
+    \AtDataInput{
+      \ifkeyword{main}{\addtocategory{main}{\thefield{entrykey}}}{}
+      \ifkeyword{additional}{\addtocategory{additional}{\thefield{entrykey}}}{}
+    }
+    \addbibresource{references/references.bib}
+    \addbibresource{references/further_reading.bib}
+
+  \fi
+
+\else
+
+  \ifdefined\FORUMREFS
+    % Main references and references to user discussions
+    \DeclareSourcemap{
+      \maps[datatype=bibtex]{
+        \map{
+          \perdatasource{references/references.bib}
+          \step[fieldset=keywords, fieldvalue={, main}, append]
+        }
+        \map{
+          \perdatasource{references/discussions.bib}
+          \step[fieldset=keywords, fieldvalue={, discussions}, append]
+        }
+      }
+    }
+    \DeclareBibliographyCategory{main}
+    \DeclareBibliographyCategory{discussions}
+    \AtDataInput{
+      \ifkeyword{main}{\addtocategory{main}{\thefield{entrykey}}}{}
+      \ifkeyword{discussions}{\addtocategory{discussions}{\thefield{entrykey}}}{}
+    }
+    \addbibresource{references/references.bib}
+    \addbibresource{references/discussions.bib}
+
+  \else
+    % Only the main references
+    \addbibresource{references/references.bib}
+  \fi
+\fi

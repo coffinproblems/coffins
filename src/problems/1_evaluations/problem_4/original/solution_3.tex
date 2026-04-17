@@ -1,0 +1,38 @@
+The number of digits of a positive integer $n$ in base $b$ is
+$\floor{\log_{b}\paren{n} + 1}$.
+Thus, the required number of digits is $\floor{100 \log_{10}\paren{125} + 1}$,
+(and the problem is essentially that of evaluating
+$\log_{10}\paren{125}$ to two decimal places).
+
+First notice that $\log_{10}\paren{2} > \mfrac{3}{10}$,
+since $2^{10} = 1024 > 1000 = 10^3$.
+Then, observe that
+$3 = \log_{10}\paren{1000}
+   = \log_{10}\paren{2^3 \cdot 5^3}
+   = \log_{10}\paren{125} + 3 \log_{10}\paren{2}$.
+From this, the following upper bound is deduced:
+$100 \log_{10}\paren{125}
+ = 300 - 300 \log_{10}\paren{2}
+ < 300 - 300 \cdot \mfrac{3}{10}
+ = 210$.
+
+Now observe that
+$\log_{10}\paren{125}
+ = \log_{10}\paren{100 \cdot \mfrac{5}{4}}
+ = 2 + \log_{10}\paren{\mfrac{5}{4}}$.
+The following steps show that $100 \log_{10}\paren{\mfrac{5}{4}} > 9$:
+\begin{align*}
+ \paren{\frac{5}{4}}^{4}   &= \paren{1 + \frac{1}{4}}^{4} = \paren{1 + \frac{1}{2} + \frac{1}{16} }^2
+   > 1 + 1 + \frac{1}{4} + \frac{1}{8} = 2 + \frac{3}{8} \\
+ \paren{\frac{5}{4}}^{8}   &> \paren{2 + \frac{3}{8}}^2
+   > 4 + \frac{3}{2} = 5 + \frac{1}{2} \\
+ \paren{\frac{5}{4}}^{16}  &> \paren{5 + \frac{1}{2}}^2 > 25 + 5 = 30 \\
+ \paren{\frac{5}{4}}^{33}  &> \frac{5}{4} \cdot 30^2 > 1000 \\
+ \paren{\frac{5}{4}}^{100} &> \paren{\frac{5}{4}}^{99} > 1000^3 = 10^9
+\end{align*}
+In conclusion:
+$100 \log_{10}\paren{125}
+ = 200 + 100 \log_{10}\paren{\mfrac{5}{4}}
+ > 200 + 9 = 209$.\newline
+Therefore, $209 < \log_{10}\paren{125^{100}} < 210$.
+It follows that $\floor{\log_{10}\paren{125^{100}} + 1} = 210$.
