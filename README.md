@@ -56,24 +56,25 @@ Other formats are also available:
 -->
 
 > [!NOTE]
-> At the moment, EPUB files with MathML are very poorly formatted,
-> and those with SVG have some formatting issues.
+> At the moment, EPUB file are problematic:
+> - EPUB files with MathML are not provided, due to issue in generating them;
+> - EPUB files with SVG are provided, but they exhibit some formatting issues.
 
 |                        | PDF              | Minimal PDF      | EPUB MathML      | EPUB SVG         |
 |:----------------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions_minimal.pdf)        | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions-mathml.epub)  | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions-svg.epub)  |
-| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions_minimal.pdf)                    | [Download](https://coffinproblems.github.io/coffins/coffins_solutions-mathml.epub)              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions-svg.epub)              |
-| Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions_minimal.pdf)       | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions-svg.epub) |
+| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions_minimal.pdf)        | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions-svg.epub)  |
+| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions_minimal.pdf)                    | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_solutions-svg.epub)              |
+| Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions_minimal.pdf)       | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions-svg.epub) |
 
 <br>
 
 The same are also available for the **generalisations of the problems**:
 
-|                        | PDF              | Minimal PDF      | EPUB MathML      | EPUB SVG         |
-|:----------------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions_minimal.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-mathml.epub)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-svg.epub)  |
-| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-mathml.epub)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
-| Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions_minimal.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-svg.epub) |
+|                        | PDF              | Minimal PDF       | EPUB MathML       | EPUB SVG         |
+|:----------------------:|:----------------:|:-----------------:|:-----------------:|:----------------:|
+| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions_minimal.pdf)  | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-svg.epub)  |
+| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
+| Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions_minimal.pdf) | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-svg.epub) |
 
 
 ## Contributing
@@ -149,7 +150,7 @@ or change `$pdf_mode = 4` to `$pdf_mode = 1` in the `latexmkrc` file (located in
 ### Generate ebook
 
 > [!WARNING]
-> Ebook generation is currently not reliable.
+> ebook generation is currently not reliable.
 
 > [!NOTE]
 > The following instructions utilize the [`tex4ebook`](https://github.com/michal-h21/tex4ebook) command,
@@ -164,7 +165,8 @@ tex4ebook --build-dir ../build_epub3 --output-dir ../output -f epub3 main.tex ma
 This generates the document in `EPUB` version 3, with mathematical notation encoded in the `MathML` format.
 > [!IMPORTANT]
 > The `MathML`-encoded results are currently broken:
-> the generated documents have incomplete formulas, and messed up text and formatting.  
+> the generated documents have incomplete formulas, and messed up text and formatting,
+> or fail to build entirely.  
 > Encoding Maths content as `svg` or `png` produces more usable results,
 > though some issues persist.
 

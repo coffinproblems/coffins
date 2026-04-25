@@ -114,13 +114,13 @@ jobs:
             publish: true
 
           # Problems only
-          - target: '_no_solutions'
+          - target: '_problems_no_solutions'
             flags: ''
             pre_tex: '\def\TAGPDF{} \def\NOSOLUTIONS{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
-          - target: '_no_solutions_minimal'
+          - target: '_problems_no_solutions_minimal'
             flags: ''
             pre_tex: '\def\TAGPDF{} \def\NOSOLUTIONS{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
