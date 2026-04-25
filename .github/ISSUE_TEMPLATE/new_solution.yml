@@ -7,7 +7,7 @@ body:
       attributes:
         value: |
           To submit a solution to one of the documented coffin prroblems:
-          - check that it has not already been submitted in another open or closed [issue or pull request](TODO);
+          - check that it has not already been submitted in another open or closed [issue](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) or [pull request](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
           - specify which problem the solution is for;
           - hide the proposed solution and any related comments in an expandable block of text.
 

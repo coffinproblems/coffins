@@ -8,7 +8,7 @@ body:
         value: |
           When submitting a new source/reference/document:
           - verify that it is not already cited by the latest version of this project;
-          - check that it has not already been submitted in another open or closed [issue](TODO);
+          - check that it has not already been submitted in another open or closed [issue](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) or [pull request](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
           - provide as many details as possible, such as the author(s), title, publishing date, etc.;
           - provide a link to the reference, if possible, and/or other details on where/how to consult it;
           - if multiple versions of the document are available, mention all of them, even if they do not appear to have any differences;

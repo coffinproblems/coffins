@@ -159,7 +159,7 @@ or change `$pdf_mode = 4` to `$pdf_mode = 1` in the `latexmkrc` file (located in
 
 For generating an ebook in `EPUB3` format, run this command from within the `src` directory:
 ```shell
-tex4ebook -B ../build_epub3 -d ../output -f epub3 main.tex mathml
+tex4ebook --build-dir ../build_epub3 --output-dir ../output -f epub3 main.tex mathml
 ```
 This generates the document in `EPUB` version 3, with mathematical notation encoded in the `MathML` format.
 > [!IMPORTANT]
@@ -170,12 +170,12 @@ This generates the document in `EPUB` version 3, with mathematical notation enco
 
 For `SVG` Maths, use this command:
 ```shell
-tex4ebook -B ../build_ebook_svg -d ../output -f epub main.tex svg
+tex4ebook --build-dir ../build_ebook_svg --output-dir ../output -f epub main.tex svg
 ```
 
 For `PNG` Maths, use this command:
 ```shell
-tex4ebook -B ../build_ebook_png -d ../output -f epub main.tex png
+tex4ebook --build-dir ../build_ebook_png --output-dir ../output -f epub main.tex png
 ```
 
 > [!NOTE]
@@ -227,7 +227,7 @@ To specify options in ebook generation,
 add `"" "" '\\def\\OPTION{} \\def\\OPTION{}'`
 at the end of the `tex4ebook` command, like this:
 ```shell
-tex4ebook -B ../build_ebook_svg -d ../output -f epub -e main.tex svg "" "" '\\def\\OPTION{} \\def\\OPTION{}'
+tex4ebook --build-dir ../build_ebook_svg --output-dir ../output -f epub -e main.tex svg "" "" '\\def\\OPTION{} \\def\\OPTION{}'
 ```
 > [!IMPORTANT]
 > Make sure to enclose the string of options in single quotes,
@@ -284,14 +284,14 @@ set the environment variable `SOURCE_DATE_EPOCH` to match that of the target bui
 set the same compilation options (if any),
 and use the same `-jobname`:
 ```shell
-SOURCE_DATE_EPOCH=0 FORCE_SOURCE_DATE=1 latexmk -g -usepretex='\def\OPTION{} \def\OPTION{}' main.tex
+SOURCE_DATE_EPOCH=0 FORCE_SOURCE_DATE=1 latexmk -g -usepretex='\def\OPTION{} \def\OPTION{}' main.tex -jobname="jobname"
 ```
 All the required parameters are kept up-to-date [here](https://coffinproblems.github.io/coffins/build_env.txt).
 
 
 ### PDF standards compliance
 
-The PDF files that are made available are conformant with
+The PDF files are conformant with
 the [PDF/A-4f](https://pdfa.org/resource/iso-19005-4-pdf-a-4/) standard,
 and the accessibility standards
 [PDF/UA-2](https://pdfa.org/iso-14289-2-pdfua-2/)
@@ -302,7 +302,7 @@ When building the project from source, by default the standard is set to
 [PDF/A-2u](https://pdfa.org/resource/iso-19005-2-pdf-a-2/),
 with PDF version [PDF 1.7](https://pdfa.org/resource/iso-32000-1/).
 
-For building PDFs satisfying the other standards (PDF/A-4f, PDF/UA-2, WTPDF-1.0, PDF 2.0)
+For building PDFs satisfying the other standards (`PDF/A-4f`, `PDF/UA-2`, `WTPDF-1.0`, `PDF 2.0`)
 use the compilation option `TAGPDF` (together with any other desired compilation options):
 ```shell
 latexmk -g -usepretex='\def\TAGPDF{}' main.tex

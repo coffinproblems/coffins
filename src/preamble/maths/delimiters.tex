@@ -47,6 +47,7 @@
 % Sets
 \providecommand{\suchthat}{}
 \DeclarePairedDelimiterX{\set}[1]{\{}{\}}{%
+  \begingroup%
   \renewcommand{\suchthat}{%
     \mathchoice{\mspace{6mu}}{\mspace{4mu}}{\mspace{3mu}}{\mspace{2mu}}%
     \delimsize\vert%
@@ -55,6 +56,7 @@
     \mathopen{}%
   }%
   #1%
+  \endgroup%
 }
 \swapstar{set}
 
@@ -74,5 +76,4 @@
 % Distance
 \DeclareMathOperator{\distance}{d}
 \DeclarePairedDelimiterXPP{\dist}[2]{\distance}{\lparen}{\rparen}{}{#1, #2}
-
 \swapstar{dist}

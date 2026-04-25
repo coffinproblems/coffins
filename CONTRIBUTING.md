@@ -36,7 +36,7 @@ contacting people that have first-hand experiences would be of great value.
 If you know of any resource not already mentioned in this project,
 even if it doesn't contain any additional information,
 and even if it is only tangentially related,
-please submit it by opening an issue with [`this issue template`](https://github.com/coffinproblems/coffins/issues/new?template=new_reference.yml), or by contacting the project.
+please submit it by opening an issue with [this issue template](https://github.com/coffinproblems/coffins/issues/new?template=new_reference.yml), or by contacting the project.
 Include with your submission any related information, such as
 authors, publishing date, and a citation to the source.
 
@@ -48,7 +48,7 @@ please share what you know about that, with as much information as you are able 
 
 If you know of alternate versions of some of the resources documented in this project,
 even if they do not appear to contain extra information,
-submit them by opening an issue with [`this issue template`](https://github.com/coffinproblems/coffins/issues/new?template=alt_reference.yml), or by contacting the project.
+submit them by opening an issue with [this issue template](https://github.com/coffinproblems/coffins/issues/new?template=alt_reference.yml), or by contacting the project.
 Please make sure to mention the source where the document comes from.
 
 
@@ -116,19 +116,19 @@ Some of the comparisons to be performed are the following:
 
 ## Report errors
 
-Errors, typos, inaccuracies, etc. can be reported by opening an issue with [`this issue template`](https://github.com/coffinproblems/coffins/issues/new?template=error_report.yml).
+Errors, typos, inaccuracies, etc. can be reported by opening an issue with [this issue template](https://github.com/coffinproblems/coffins/issues/new?template=error_report.yml).
 
 
 
 ## Report code issues
 
-Bugs in the source code can be reported via [`this issue template`](https://github.com/coffinproblems/coffins/issues/new?template=bug_report.yml).
+Bugs in the source code can be reported via [this issue template](https://github.com/coffinproblems/coffins/issues/new?template=bug_report.yml).
 
 
 ## Suggest improvements
 
 Suggestions for improvements in the wording, phrasing, grammar, etc.
-can be made by opening an issue with [`this issue template`](https://github.com/coffinproblems/coffins/issues/new?template=proposal.yml), or by opening a pull request.
+can be made by opening an issue with [this issue template](https://github.com/coffinproblems/coffins/issues/new?template=proposal.yml), or by opening a pull request.
 
 
 ## Code contributions
@@ -144,9 +144,9 @@ Particularly, help is needed for the following:
 ## Submit solutions
 
 If you know of solutions to some problems that are different from the already documented ones,
-you can submit them via [`this issue template`](https://github.com/coffinproblems/coffins/issues/new?template=new_solution.yml) or by opening a pull request.
+you can submit them via [this issue template](https://github.com/coffinproblems/coffins/issues/new?template=new_solution.yml) or by opening a pull request.
 
-> [! NOTE]
+> [!NOTE]
 > The maintainer of the project wishes to solve each problem independently,
 > so submissions of solutions may remain unread for some time.
 

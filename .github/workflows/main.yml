@@ -13,7 +13,7 @@ on:
 jobs:
 
   build_environment:
-    name: Get build environment information
+    name: Obtain build environment information
 
     runs-on: ubuntu-latest
 
@@ -30,7 +30,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Fetch commit timestamp
+      - name: Fetch latest commit timestamp
         id: get_timestamp
         run: echo "timestamp=$(git log -1 --pretty=%ct)" >> $GITHUB_OUTPUT
 
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Write build environment information
+      - name: Write build environment information to file
         run: |
           echo "Reproducible builds information" >> "build_env.txt"
           echo "" >> "build_env.txt"
@@ -58,14 +58,14 @@ jobs:
           echo "Compilation information for each target:" >> "build_env.txt"
 
       - name: Upload build environment information
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-environment
           path: build_env.txt
 
 
   process_targets:
-    name: Process all targets as matrix
+    name: Process
     needs: build_environment
 
     strategy:
@@ -184,7 +184,7 @@ jobs:
     with:
       texlive_digest: ${{ needs.build_environment.outputs.texlive_digest }}
       timestamp: ${{ needs.build_environment.outputs.timestamp }}
-      target: coffins{{ matrix.target }}
+      target: coffins${{ matrix.target }}
       flags: ${{ matrix.flags }}
       pre_tex: ${{ matrix.pre_tex }}
       flavours: ${{ matrix.flavours }}
@@ -203,47 +203,59 @@ jobs:
       id-token: write
 
     steps:
+      - name: Create directory for documents to be published
+        run: sudo mkdir publish
+
       - name: Download PDFs
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
-          path: publish
+          path: .
           pattern: pdf-first-build-publish-true-*
           merge-multiple: true
 
+      - name: Move PDFs to publish directory
+        run: sudo mv *.pdf ./publish
+
       - name: Download ebooks
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
-          path: publish
+          path: .
           pattern: ebook-publish-true-*
           merge-multiple: true
 
+      - name: Move ebooks to publish directory
+        run: sudo mv *.epub ./publish
+
       - name: Download build environment information
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: build-environment
-          path: publish
+          path: .
+
+      - name: Move build environment information file to publish directory
+        run: sudo mv build_env.txt ./publish
 
       - name: Download compilation information
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
-          name: compilation-info-*
-          path: compilation_info
+          path: .
+          pattern: compilation-info-*
           merge-multiple: true
 
       - name: Aggregate build environment and compilation information
-        run: cat ./compilation_info/*.txt >> ./publish/build_env.txt
+        run: sudo cat ./*.txt >> ./publish/build_env.txt
 
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
-      - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload artifacts to GitHub Pages
+        uses: actions/upload-pages-artifact@v5
         with:
           path: publish
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
 
   sync-alt:
@@ -262,7 +274,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Sync "alt" branch
+      - name: Sync alt branch
         run: |
           git fetch origin
           git switch alt
@@ -279,12 +291,12 @@ jobs:
             if (( ${#sections[@]} == 0 )); then
               break
             fi
-            mv "${sections[0]}" "./src/sections/section_${i}"
+            sudo mv "${sections[0]}" "./src/sections/section_${i}"
             ((i++))
           done
 
           # Remove the line "\usepackage{l3sys-query}" from preamble/preamble.tex
-          sed -i '/\\usepackage{l3sys-query}/d' ./src/preamble/preamble.tex
+          sudo sed -i '/\\usepackage{l3sys-query}/d' ./src/preamble/preamble.tex
 
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

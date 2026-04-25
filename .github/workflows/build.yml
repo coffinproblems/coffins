@@ -37,7 +37,7 @@ on:
 jobs:
 
   build:
-    name: Build ${{ inputs.filename }}
+    name: Generate PDF document for ${{ inputs.filename }}
 
     runs-on: ubuntu-latest
     container:
@@ -50,21 +50,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Build ${{ inputs.filename }}
+      - name: Build ${{ inputs.filename }} as PDF
         env:
           SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
           FORCE_SOURCE_DATE: 1
         run: latexmk ${{ inputs.flags }} -g -usepretex="${{ inputs.pre_tex }}" main.tex -jobname="${{ inputs.filename }}"
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
+      - name: Upload PDF of ${{ inputs.filename }}
+        uses: actions/upload-artifact@v7
         with:
           name: pdf-${{ inputs.label }}-build-publish-${{ inputs.publish }}-${{ inputs.filename }}
-          path: ../output/${{ inputs.filename}}.pdf
+          path: output/${{ inputs.filename}}.pdf
 
-      - name: Upload logs on failure
+      - name: Upload logs on build failure
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ inputs.label }}-build-logs-${{ inputs.filename }}
-          path: ../build/*.log
+          path: build/*.log

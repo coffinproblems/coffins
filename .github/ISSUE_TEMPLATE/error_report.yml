@@ -8,7 +8,7 @@ body:
         value: |
           In order to report a mistake:
           - verify that the mistake is present in the latest version of the project;
-          - check that an equivalent report has not already been submitted among the open or closed [issues and pull requests](github.com/TODO/TODO/issues);
+          - check that an equivalent report has not already been submitted among the open and closed [issues](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) and [pull requests](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
           - state where the error is located;
           - describe the error, explaining why it is incorrect.
 

@@ -7,7 +7,7 @@ body:
       attributes:
         value: |
           When submitting an alternate version of source/reference/document:
-          - check that it has not already been submitted in another open or closed [issue](TODO);
+          - check that it has not already been submitted in another open or closed [issue](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) or [pull request](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
           - provide as many details as possible on this alternate version;
           - describe the differences, if known, compared to the version(s) of the document already cited in this project;
           - provide a link to the reference, if possible, and/or other details on where/how to consult it.

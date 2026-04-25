@@ -29,7 +29,7 @@ on:
 jobs:
 
   build:
-    name: Build ${{ inputs.filename }}
+    name: Generate EPUB document for ${{ inputs.filename }}
 
     runs-on: ubuntu-latest
     container:
@@ -42,52 +42,54 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Build ${{ inputs.filename }} ebook with MathML
-        id: build_mathml
-        env:
-          SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
-          FORCE_SOURCE_DATE: 1
-          PRE_TEX: ${{ inputs.pre_tex }}
-        run: |
-          NOSOURCES_FLAG='\def\NOSOURCES'
-          PRE_TEX_NEW="${PRE_TEX//\\def\\TAGPDF\{\}/} ${NOSOURCES_FLAG}"  # remove TAGPDF flag and add NOSOURCES flag
-          PRE_TEX_FINAL="${PRE_TEX_NEW//\\/\\\\}"  # escape the backslash for tex4ebook
-          tex4ebook -B ../build_mathml -d ../output -jobname="${{ inputs.filename }}-mathml" -f epub3 main.tex mathml "" "" "$PRE_TEX_FINAL"
+      # - name: Build ${{ inputs.filename }} as ebook with MathML formulas
+      #   id: build_mathml
+      #   env:
+      #     SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
+      #     FORCE_SOURCE_DATE: 1
+      #     PRE_TEX: ${{ inputs.pre_tex }}
+      #   shell: bash
+      #   run: |
+      #     NOSOURCES_FLAG='\def\NOSOURCES{}'
+      #     PRE_TEX_NEW="${PRE_TEX//\\def\\TAGPDF\{\}/} ${NOSOURCES_FLAG}"  # remove TAGPDF flag and add NOSOURCES flag
+      #     PRE_TEX_FINAL="${PRE_TEX_NEW//\\/\\\\}"  # escape the backslash for tex4ebook
+      #     tex4ebook --build-dir ../build_mathml --output-dir ../output --jobname "${{ inputs.filename }}-mathml" -f epub3 main.tex mathml "" "" "$PRE_TEX_FINAL"
 
-      - name: Build ${{ inputs.filename }} ebook in SVG
+      - name: Build ${{ inputs.filename }} as ebook with SVG formulas
         id: build_svg
         env:
           SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
           FORCE_SOURCE_DATE: 1
           PRE_TEX: ${{ inputs.pre_tex }}
+        shell: bash
         run: |
-          NOSOURCES_FLAG='\def\NOSOURCES'
+          NOSOURCES_FLAG='\def\NOSOURCES{}'
           PRE_TEX_NEW="${PRE_TEX//\\def\\TAGPDF\{\}/} ${NOSOURCES_FLAG}"
           PRE_TEX_FINAL="${PRE_TEX_NEW//\\/\\\\}"
-          tex4ebook -B ../build_svg -d ../output -jobname="${{ inputs.filename }}-svg" -f epub main.tex svg "" "" "$PRE_TEX_FINAL"
+          tex4ebook --build-dir ../build_svg --output-dir ../output --jobname "${{ inputs.filename }}-svg" -f epub main.tex svg "" "" "$PRE_TEX_FINAL"
 
-      - name: Upload MathML ebook
-        uses: actions/upload-artifact@v4
-        with:
-          name: ebook-publish-${{ inputs.publish }}-${{ inputs.filename }}-mathml
-          path: ../output/${{ inputs.filename}}-mathml.epub
+      # - name: Upload MathML ebook of ${{ inputs.filename }}
+      #   uses: actions/upload-artifact@v7
+      #   with:
+      #     name: ebook-publish-${{ inputs.publish }}-${{ inputs.filename }}-mathml
+      #     path: output/${{ inputs.filename}}-mathml.epub
 
-      - name: Upload SVG ebook
-        uses: actions/upload-artifact@v4
+      - name: Upload SVG ebook of ${{ inputs.filename }}
+        uses: actions/upload-artifact@v7
         with:
           name: ebook-publish-${{ inputs.publish }}-${{ inputs.filename }}-svg
-          path: ../output/${{ inputs.filename}}-svg.epub
+          path: output/${{ inputs.filename}}-svg.epub
 
-      - name: Upload logs on failure of MathML build
-        if: failure() && steps.build_mathml.outcome == 'failure'
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-mathml-logs-${{ inputs.filename }}
-          path: ../build_mathml/*.log
+      # - name: Upload logs on failure of MathML build
+      #   if: failure() && steps.build_mathml.outcome == 'failure'
+      #   uses: actions/upload-artifact@v7
+      #   with:
+      #     name: build-mathml-logs-${{ inputs.filename }}
+      #     path: build_mathml/*.log
 
       - name: Upload logs on failure of SVG build
         if: failure() && steps.build_svg.outcome == 'failure'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-svg-logs-${{ inputs.filename }}
-          path: ../build_svg/*.log
+          path: build_svg/*.log

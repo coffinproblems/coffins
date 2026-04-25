@@ -7,7 +7,7 @@ body:
       attributes:
         value: |
           When submitting a potential new coffin problem, make sure to:
-          - check that it has not already been submitted in another open or closed [issue or pull request](TODO);
+          - check that it has not already been submitted in another open or closed [issue](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) or [pull request](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
           - provide as much information as possible on the problem, such as to whom it was administered, when, by whom, etc.;
           - the source of the information and the problem;
           - the formulation of the problem as it was originally administered, or as close as possible to it (including its formulation in the original language, if known).

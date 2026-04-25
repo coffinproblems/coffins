@@ -8,7 +8,7 @@ body:
         value: |
           In order to submit a bug report:
           - verify that the bug occurs in the latest version of the project;
-          - check that an equivalent report has not already been submitted among the open or closed [issues and pull requests](github.com/TODO/TODO/issues);
+          - check that an equivalent report has not already been submitted among the open and closed [issues](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) and [pull requests](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
           - provide a description of the bug;
           - describe how to reproduce the bug;
           - include software information: operating system, TeX distribution, including version and installation source.

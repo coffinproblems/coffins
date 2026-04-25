@@ -7,7 +7,7 @@ body:
       attributes:
         value: |
           In order to submit a bug report:
-          - check that an equivalent suggestion has not already been made in the open or closed [issues and pull requests](github.com/TODO/TODO/issues);
+          - check that an equivalent suggestion has not already been made in an open or closed [issue](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) or [pull request](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
           - describe the proposal in a clear way;
           - explain the purpose of the proposal;
           - provide information on how to implement the suggestion, if known.
