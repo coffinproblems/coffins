@@ -141,13 +141,13 @@ jobs:
 
 
           # Generalised problems and solutions
-          - target: '_generalised_problems_with_solutions'
+          - target: '_generalised_problems_and_solutions'
             flags: ''
             pre_tex: '\def\TAGPDF{} \def\GENERALISED{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
-          - target: '_generalised_problems_with_solutions_minimal'
+          - target: '_generalised_problems_and_solutions_minimal'
             flags: ''
             pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
