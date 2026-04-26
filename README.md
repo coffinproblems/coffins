@@ -109,7 +109,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 ### Requirements
 A TeX distribution is needed.
 Some features are not available in TeX distribution versions prior to 2024;
-for compiling with those older versions, the branch [`alt`](httpss://github.com/coffinproblems/coffins/tree/alt) is provided (and the build instructions are the same).
+for compiling with those older versions, the branch [`alt`](https://github.com/coffinproblems/coffins/tree/alt) is provided (and the build instructions are the same).
 
 <details><summary>More info</summary>
 <p>
