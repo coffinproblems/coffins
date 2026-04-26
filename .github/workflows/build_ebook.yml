@@ -80,15 +80,15 @@ jobs:
           name: ebook-publish-${{ inputs.publish }}-${{ inputs.filename }}-svg
           path: output/${{ inputs.filename}}-svg.epub
 
-      # - name: Upload logs on failure of MathML build
-      #   if: failure() && steps.build_mathml.outcome == 'failure'
+      # - name: Upload logs of MathML build
+      #   #if: failure() && steps.build_mathml.outcome == 'failure'
       #   uses: actions/upload-artifact@v7
       #   with:
       #     name: build-mathml-logs-${{ inputs.filename }}
       #     path: build_mathml/*.log
 
-      - name: Upload logs on failure of SVG build
-        if: failure() && steps.build_svg.outcome == 'failure'
+      - name: Upload logs SVG build
+        #if: failure() && steps.build_svg.outcome == 'failure'
         uses: actions/upload-artifact@v7
         with:
           name: build-svg-logs-${{ inputs.filename }}

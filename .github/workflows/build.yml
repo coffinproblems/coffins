@@ -62,8 +62,8 @@ jobs:
           name: pdf-${{ inputs.label }}-build-publish-${{ inputs.publish }}-${{ inputs.filename }}
           path: output/${{ inputs.filename}}.pdf
 
-      - name: Upload logs on build failure
-        if: failure()
+      - name: Upload build logs
+        #if: failure()
         uses: actions/upload-artifact@v7
         with:
           name: ${{ inputs.label }}-build-logs-${{ inputs.filename }}
