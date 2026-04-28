@@ -56,8 +56,8 @@ Other formats are also available:
 -->
 
 > [!NOTE]
-> At the moment, EPUB file are problematic:
-> - EPUB files with MathML are not provided, due to issue in generating them;
+> At the moment, EPUB files are problematic:
+> - EPUB files with MathML are not provided, due to issues in generating them;
 > - EPUB files with SVG are provided, but they exhibit some formatting issues.
 
 |                        | PDF              | Minimal PDF      | EPUB MathML      | EPUB SVG         |

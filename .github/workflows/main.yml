@@ -4,8 +4,20 @@ name: Compile, test, and upload
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - "LICENSE"
+      - ".github/ISSUE_TEMPLATE/**"
+      - ".gitignore"
 
   pull_request:
+    paths-ignore:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - "LICENSE"
+      - ".github/ISSUE_TEMPLATE/**"
+      - ".gitignore"
 
   workflow_dispatch:
 
