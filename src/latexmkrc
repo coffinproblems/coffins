@@ -1,0 +1,6 @@
+$pdf_mode    = 4;  # 1: PDFLaTeX;  4: LuaLaTeX
+$aux_dir     = '../build';
+$out_dir     = '../output';
+$emulate_aux = 1;
+$silent      = 1;
+set_tex_cmds("-halt-on-error -file-line-error -interaction=nonstopmode %O %S")

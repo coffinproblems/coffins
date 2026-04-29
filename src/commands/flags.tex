@@ -1,0 +1,68 @@
+% Supported compilation options:
+%
+%   ORIGINAL:          print the original problems (this is the default)
+%   GENERALISED:       print the generalised problems
+%   ALL:               print both the original and the generalised problems
+%
+%   UNCATEGORISED:     do not divide the problems in categories (sections)
+%   NUMBERCATEGORIES:  categories sections are numbered
+%   GLOBALNUMBERING:   problems are numbered globally instead of within sections
+%
+%   NOSOLUTIONS:       do not print the solutions
+%   ONLYSOLUTIONS:     only print the solutions
+%
+%   NOSOURCES:         omit printing the sources at each problem statement
+%
+%   MOREREFS:          print additional references at the end of the document for further reading
+%   FORUMREFS          print references to user discussions
+%
+%   MINIMAL:           omit introduction, table of contents, sources, and references
+
+
+
+% Flags for document customisation
+
+\newif\ifcategorise    % Whether to subdivide problems into categories based on topic
+\ifdefined\UNCATEGORISED
+  \categorisefalse
+\else
+  \categorisetrue
+\fi
+
+\newif\ifcategnum      % Whether to number the categories, if they exist
+\ifdefined\NUMBERCATEGORIES
+  \categnumtrue
+\else
+  \categnumfalse
+\fi
+
+\newif\ifglobalnum     % Whether to number problems globally or within categories
+\ifcategorise
+  \ifdefined\GLOBALNUMBERING
+    \globalnumtrue
+  \else
+    \globalnumfalse    % By default, numbering is done within categories
+  \fi
+\else
+  \globalnumtrue
+\fi
+
+\newif\ifsolutions     % Whether or not to print solutions
+
+\newif\ifgeneral       % Whether to print original problems or generalised
+
+\newif\ifprintsources  % Whether or not to print the references for each problem
+
+\ifdefined\ALL
+  \def\ORIGINAL{}
+  \def\GENERALISED{}
+\else
+  \ifdefined\GENERALISED
+  \else
+    \def\ORIGINAL{}  % Print the original problems by default if nothing is specified
+  \fi
+\fi
+
+\ifdefined\MINIMAL
+  \def\NOSOURCES{}
+\fi

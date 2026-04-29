@@ -1,0 +1,25 @@
+Let $b = a + n$.
+The equation can be equivalently rewritten as follows (by completing the square):
+\begin{equation*}
+  \paren{a - n + 1}^2 = 2 n \paren{n - 1}
+\end{equation*}
+It follows that for an integer $n > 0$ there is a solution $a$ if and only if $2 n \paren{n - 1}$ is a square;
+since $n$ and $n - 1$ do not have any common factors, and one of them is even, this is equivalent to
+\begin{itemize}
+  \item[--] $n$ and $2 \paren{n - 1}$ are perfect squares, when $n$ is odd;
+  \item[--] $2 n$ and $n - 1$ are perfect squares, when $n$ is even.
+\end{itemize}
+In the first case, $n - 1$ is twice a square, and $n$ is a square,
+so there are $m, r \in \mathbb{N}$ such that $n = m^2 = 2 r^2 + 1$;
+let $S_{+}$ be the set of pairs $\paren{m, r} \in \mathbb{N}^2$ such that $m^2 = 2 r^2 + 1$.
+In the second case, $n$ is twice a square, and $n - 1$ is a square,
+so there are $m, r \in \mathbb{N}$ such that $n - 1 = m^2 = 2 r^2 - 1$;
+let $S_{-}$ be the set of pairs $\paren{m, r} \in \mathbb{N}^2$ such that $m^2 = 2 r^2 - 1$.
+Observe that if $\paren{m, r} \in S_{+}$, then $\paren{m + 2 r, m + r} \in S_{-}$,
+and if $\paren{m, r} \in S_{-}$, then $\paren{m + 2 r, m + r} \in S_{+}$:
+\begin{itemize}
+  \item[--] if $m^2 = 2 r^2 + 1$, then $\paren{m + 2 r}^2 = m^2 + 4 m r + 4 r^2 = 2 m^2 + 4 m r + 2 r^2 - 1 = 2 \paren{m + r}^2 - 1$;
+  \item[--] if $m^2 = 2 r^2 - 1$, then $\paren{m + 2 r}^2 = m^2 + 4 m r + 4 r^2 = 2 m^2 + 4 m r + 2 r^2 + 1 = 2 \paren{m + r}^2 + 1$.
+\end{itemize}
+Since $\paren{1, 0} \in S_{+}$, there is an infinite sequence of distinct elements of $S = S_{+} \cup S_{-}$,
+each of which corresponds to a distinct $n$, and thus to a distinct solution $\paren{a, b}$.

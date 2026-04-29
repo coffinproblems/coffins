@@ -1,0 +1,217 @@
+Observe that
+$\ang{1} = \ang{10} - \ang{9}$,
+and $\ang{10} = \mfrac{\pi}{18}$.
+Hence:
+\begin{align*}
+ \sin\paren{\ang{1}}
+ &= \sin\paren{\ang{10} - \ang{9}}
+  = \sin\paren{\ang{10}} \cos\paren{\ang{9}}
+    - \cos\paren{\ang{10}} \sin\paren{\ang{9}} = \\
+ &= \frac{1}{2 i}
+    \paren{e^{i \frac{\pi}{18}} - e^{ -i \frac{\pi}{18}}}
+    \cos\paren{\ang{9}}
+    - \frac{1}{2} \paren{e^{i \frac{\pi}{18}} + e^{ -i \frac{\pi}{18}}}
+    \sin\paren{\ang{9}} = \\
+ &= \frac{1}{2}
+    e^{i \frac{\pi}{18}}
+    \paren{ - \sin\paren{\ang{9}} - i \cos\paren{\ang{9}}}
+    + \frac{1}{2}
+    e^{ -i \frac{\pi}{18}}
+    \paren{ - \sin\paren{\ang{9}} + i \cos\paren{\ang{9}}}
+\end{align*}
+and:
+\begin{align*}
+ \cos\paren{\ang{1}}
+ &= \cos\paren{\ang{10} - \ang{9}}
+  = \cos\paren{\ang{10}} \cos\paren{\ang{9}}
+    + \sin\paren{\ang{10}} \sin\paren{\ang{9}} = \\
+ &= \frac{1}{2}
+    \paren{e^{i \frac{\pi}{18}} + e^{ -i \frac{\pi}{18}}}
+    \cos\paren{\ang{9}}
+    + \frac{1}{2 i}
+    \paren{e^{i \frac{\pi}{18}} - e^{ -i \frac{\pi}{18}}}
+    \sin\paren{\ang{9}} = \\
+ &= \frac{1}{2}
+    e^{i \frac{\pi}{18}}
+    \paren{ \cos\paren{\ang{9}} - i \sin\paren{\ang{9}}}
+    + \frac{1}{2}
+    e^{ -i \frac{\pi}{18}}
+    \paren{\cos\paren{\ang{9}} + i \sin\paren{\ang{9}}}
+\end{align*}
+The term $e^{i \frac{\pi}{18}}$
+is the principal cube root of
+$e^{i \frac{\pi}{6}} = \mfrac{\sqrt{3}}{2} + \mfrac{1}{2} i$,
+and the term $e^{- i \frac{\pi}{18}}$
+is the principal cube root of
+$e^{- i \frac{\pi}{6}} = \mfrac{\sqrt{3}}{2} - \mfrac{1}{2} i$,
+so they can be written as:
+\begin{alignat*}{2}
+ & e^{i \frac{\pi}{18}}
+ = \sqrt[3]{\frac{\sqrt{3} + i}{2}} \; , && \qquad
+ e^{- i \frac{\pi}{18}}
+ = \sqrt[3]{\frac{\sqrt{3} - i}{2}}
+\end{alignat*}
+The values of $\sin\paren{\ang{9}}$ and $\cos\paren{\ang{9}}$ are the following
+(they can be calculated using the angle difference formulas
+from $\ang{9} = \ang{45} - \ang{36}$):
+\begin{align*}
+ \sin\paren{\ang{9}}
+ &= \frac{1}{8} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+    - \frac{1}{4} \sqrt{5 - \sqrt{5}}
+ \\
+ \cos\paren{\ang{9}}
+ &= \frac{1}{8} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+    + \frac{1}{4} \sqrt{5 - \sqrt{5}}
+\end{align*}
+Altogether:
+\begin{equation*}
+\begin{split}
+ \sin\paren{\ang{1}} \,
+ &= \, \frac{1}{8} \, \sqrt[3]{\frac{\sqrt{3} + i}{2}}
+   \, \cdot
+   \Bigg( \!
+     - \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     + \sqrt{5 - \sqrt{5}} \;\;
+     - \,\; i \, \bigg(
+     \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     + \sqrt{5 - \sqrt{5}} \,
+     \bigg) \!
+   \Bigg) \,\; +
+ \\
+   &\, + \, \frac{1}{8} \, \sqrt[3]{\frac{\sqrt{3} - i}{2}}
+   \, \cdot
+   \Bigg( \!
+     - \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     + \sqrt{5 - \sqrt{5}} \;\;
+     + \,\; i \, \bigg(
+     \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     + \sqrt{5 - \sqrt{5}} \,
+     \bigg) \!
+   \Bigg)
+\end{split}
+\end{equation*}
+and:
+\begin{equation*}
+\begin{split}
+ \cos\paren{\ang{1}} \,
+ &= \, \frac{1}{8} \, \sqrt[3]{\frac{\sqrt{3} + i}{2}}
+   \, \cdot
+   \Bigg( \,
+     \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     + \sqrt{5 - \sqrt{5}} \;\;
+     - \,\; i \, \bigg(
+     \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     - \sqrt{5 - \sqrt{5}} \,
+     \bigg) \!
+   \Bigg) \,\; +
+ \\
+   &\, + \, \frac{1}{8} \, \sqrt[3]{\frac{\sqrt{3} - i}{2}}
+   \, \cdot
+   \Bigg( \,
+     \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     + \sqrt{5 - \sqrt{5}} \;\;
+     + \,\; i \, \bigg(
+     \frac{1}{2} \sqrt{2} \, \big(\sqrt{5} + 1 \big)
+     - \sqrt{5 - \sqrt{5}} \,
+     \bigg) \!
+   \Bigg)
+\end{split}
+\end{equation*}
+
+
+For $\ang{2}$, observe that
+$\ang{2} = \ang{20} - \ang{18}$,
+and $\ang{20} = \mfrac{\pi}{9}$.
+Hence:
+\begin{align*}
+ \sin\paren{\ang{2}}
+ &= \sin\paren{\ang{20} - \ang{18}}
+  = \sin\paren{\ang{20}} \cos\paren{\ang{18}}
+    - \cos\paren{\ang{20}} \sin\paren{\ang{18}} = \\
+ &= \frac{1}{2 i}
+    \paren{e^{i \frac{\pi}{9}} - e^{ -i \frac{\pi}{9}}}
+    \cos\paren{\ang{18}}
+    - \frac{1}{2}
+    \paren{e^{i \frac{\pi}{9}} + e^{ -i \frac{\pi}{9}}}
+    \sin\paren{\ang{18}} = \\
+ &= \frac{1}{2}
+    e^{i \frac{\pi}{9}}
+    \paren{ - \sin\paren{\ang{18}} - i \cos\paren{\ang{18}}}
+    + \frac{1}{2}
+    e^{ -i \frac{\pi}{9}}
+    \paren{ - \sin\paren{\ang{18}} + i \cos\paren{\ang{18}}}
+\end{align*}
+and:
+\begin{align*}
+ \cos\paren{\ang{2}}
+ &= \cos\paren{\ang{20} - \ang{18}}
+  = \cos\paren{\ang{20}} \cos\paren{\ang{18}}
+    + \sin\paren{\ang{20}} \sin\paren{\ang{18}} = \\
+ &= \frac{1}{2}
+    \paren{e^{i \frac{\pi}{9}} + e^{ -i \frac{\pi}{9}}}
+    \cos\paren{\ang{18}}
+    + \frac{1}{2 i}
+    \paren{e^{i \frac{\pi}{9}} - e^{ -i \frac{\pi}{9}}}
+    \sin\paren{\ang{18}} = \\
+ &= \frac{1}{2}
+    e^{i \frac{\pi}{9}}
+    \paren{\cos\paren{\ang{18}} - i \sin\paren{\ang{18}}}
+    + \frac{1}{2}
+    e^{ -i \frac{\pi}{9}}
+    \paren{\cos\paren{\ang{18}} + i \sin\paren{\ang{18}}}
+\end{align*}
+The term $e^{i \frac{\pi}{9}}$
+is the principal cube root of
+$e^{i \frac{\pi}{3}} = \mfrac{1}{2} + i \mfrac{\sqrt{3}}{2}$,
+and the term $e^{- i \frac{\pi}{9}}$
+is the principal cube root of
+$e^{- i \frac{\pi}{3}} = \mfrac{1}{2} - i \mfrac{\sqrt{3}}{2}$,
+so they can be written as:
+\begin{alignat*}{2}
+ & e^{i \frac{\pi}{9}}
+ = \sqrt[3]{\frac{1 + i \sqrt{3}}{2}} \; , && \qquad
+ e^{- i \frac{\pi}{9}}
+ = \sqrt[3]{\frac{1 - i \sqrt{3}}{2}}
+\end{alignat*}
+The values of $\sin\paren{\ang{18}}$ and $\cos\paren{\ang{18}}$ are the following:
+\begin{align*}
+ \sin\paren{\ang{18}}
+ &= \frac{1}{8} \big(\sqrt{5} - 1 \big)
+ \\
+ \cos\paren{\ang{18}}
+ &= \frac{1}{4} \sqrt{2} \, \sqrt{5 + \sqrt{5}}
+\end{align*}
+Altogether:
+\begin{equation*}
+ \sin\paren{\ang{2}}
+ \, = \, \frac{1}{8} \, \sqrt[3]{\frac{1 + i \sqrt{3}}{2}}
+   \, \cdot
+   \Bigg( \!\!
+     - \frac{\sqrt{5} - 1}{2}
+     \, - \, i \, \sqrt{2} \, \sqrt{5 + \sqrt{5}} \,
+   \Bigg)
+ \, + \;
+   \frac{1}{8} \, \sqrt[3]{\frac{1 - i \sqrt{3}}{2}}
+   \, \cdot
+   \Bigg( \!\!
+     - \frac{\sqrt{5} - 1}{2}
+     \, + \, i \, \sqrt{2} \, \sqrt{5 + \sqrt{5}} \,
+   \Bigg)
+\end{equation*}
+and:
+\begin{equation*}
+ \cos\paren{\ang{2}}
+ \, = \, \frac{1}{8} \, \sqrt[3]{\frac{1 + i \sqrt{3}}{2}}
+   \, \cdot
+   \Bigg( \!
+     \sqrt{2} \, \sqrt{5 + \sqrt{5}}
+     \, - \, i \, \frac{\sqrt{5} - 1}{2}
+   \Bigg)
+ \, + \;
+   \frac{1}{8} \, \sqrt[3]{\frac{1 - i \sqrt{3}}{2}}
+   \, \cdot
+   \Bigg( \!
+     \sqrt{2} \, \sqrt{5 + \sqrt{5}}
+     \, + \, i \, \frac{\sqrt{5} - 1}{2}
+   \Bigg)
+\end{equation*}

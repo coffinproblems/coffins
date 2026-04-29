@@ -1,0 +1,19 @@
+Let $r \in \ointerval{0}{1}$,
+and consider the function $f : \mathbb{R}^{+} \to \mathbb{R}^{+} : x \mapsto x^r$.
+Let $a \in \mathbb{R}^{+}$,
+and consider the function $g : \mathbb{R}^{+} \to \mathbb{R}^{+} : x \mapsto f\paren{x + a} - f\paren{x}$.
+
+\paragraph{Claim:} $g$ is decreasing. \newline
+This can be proven by showing that $g^{\prime} < 0$.
+Now: $g^{\prime}\paren{x} = f^{\prime}\paren{x + a} - f^{\prime}\paren{x}$,
+so it is sufficient for $f^{\prime}$ to be decreasing,
+which is the case if $f^{\prime\prime} < 0$.
+This is the case: $f^{\prime\prime}\paren{x} = r \paren{r - 1} x^{r - 2} < 0$,
+because $r > 0$, $r - 1 < 0$, $x > 0$.
+
+Since $g$ is decreasing, then, in particular, $g\paren{x} < g\paren{x - a}$,
+that is: $f\paren{x + a} - f\paren{x} < f\paren{x} - f\paren{x - a}$,
+which can be rewritten as $f\paren{x + a} + f\paren{x - a} < 2 f\paren{x} $.
+
+With $r = \dfrac{1}{3}$, $a = \sqrt[3]{3}$, and $x = 3$,
+the claimed inequality follows.

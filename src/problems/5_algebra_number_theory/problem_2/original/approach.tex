@@ -1,0 +1,21 @@
+One sufficient condition for two integers $n$ and $m$ to satisfy
+$\operatorname{P}\paren{n} = \operatorname{P}\paren{m}$
+is that $m$ is a power of $n$: $m = n^k$.
+Trying to take $b = a^k$ and assuming that $\paren{a,b} \in S$ gives the following:
+$\operatorname{P}\paren{a + 1} = \operatorname{P}\paren{b + 1} = \operatorname{P}\paren{a^k + 1}$.
+This seems promising for $k$ odd, since $a + 1$ divides $a^k + 1$,
+so the conditions are satisfied for $a$ and $k$ such that
+$\operatorname{P}\paren{\mfrac{a^k + 1}{a + 1}} \subseteq \operatorname{P}\paren{a + 1}$.
+
+Trying to take $b + 1 = \paren{a + 1}^k$ and assuming that $\paren{a,b} \in S$ gives the following:
+$\operatorname{P}\paren{a} = \operatorname{P}\paren{b} = \operatorname{P}\paren{\paren{a + 1}^k - 1}$.
+This seems promising, since $a$ divides $\paren{a + 1}^k - 1$;
+the conditions are satisfied for $a$ and $k$ such that
+$\operatorname{P}\paren{\mfrac{\paren{a + 1}^k - 1}{a}} \subseteq \operatorname{P}\paren{a}$.
+
+The simplest case is that of $k = 2$, that is: $b + 1 = \paren{a + 1}^2$.
+The condition for this to work is that $\operatorname{P}\paren{a + 2} \subseteq \operatorname{P}\paren{a}$.
+This means that all prime divisors of $a + 2$ must be prime divisors of $a$ as well.
+So those prime divisors must also divide the difference $\paren{a + 2} - a = 2$,
+thus necessarily $\operatorname{P}\paren{a + 2} = \set{2}$,
+which is equivalent to saying that $a + 2$ is a power of $2$.

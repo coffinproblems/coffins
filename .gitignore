@@ -1,0 +1,88 @@
+# Build directories
+/build*/
+
+# Output directory
+/output/
+
+# Scripts
+/scripts/
+
+# Auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Bibliography auxiliary files
+*.bbl
+*.bbl-SAVE-ERROR
+*.bcf
+*.bcf-SAVE-ERROR
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Intermediate formats:
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+*.rubbercache
+rubber.cache
+
+# Other auxiliary files
+*.xmpi
+*.xmpdata
+*.html
+*.xhtml
+*.idv
+*.lg
+*.xref
+*.tmp
+*.css
+*.4tc
+*.4ct
+*.ncx
+*.opf
+*.xml
+
+#*.pdf
+#*.ps
+#*.svg
+#*.png
+
+*.bit
+*.glo
+*.glx
+*.gxg
+*.gxs
+*.idx
+*.ilg
+*.ind
+*.url
+*.svn
+*.xcp
+*.brf
+*.thm
+*.nav
+*.pre
+*.snm
+*.vrb
+
+mimetype

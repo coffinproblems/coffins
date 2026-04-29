@@ -1,0 +1,63 @@
+\generaltrue  % Flag for printing the generalised problems
+
+% Statements
+\ifdefined\ONLYSOLUTIONS
+\else
+
+  \ifdefined\ORIGINAL
+    \newpage
+    \problemlist{Generalised problems}
+  \else
+    % This is the beginning of the document: do not force a new page (applies when the document is "MINIMAL")
+    \problemlist{Problems}
+  \fi
+
+  \ifdefined\NOSOURCES
+    \printsourcesfalse  % Disable printing the sources for each problem statement
+  \else
+    \printsourcestrue   % Enable printing the sources for each problem statement
+  \fi
+
+  \solutionsfalse  % Disable printing the solutions
+
+  \addproblems  % This is the command that prints the problems
+
+\fi
+
+
+% Solutions
+\ifdefined\NOSOLUTIONS
+\else
+
+  \ifdefined\ONLYSOLUTIONS
+    \ifdefined\ORIGINAL
+      \newpage
+    \else
+      % This is the beginning of the document:
+      % do not force a new page (applies when the document is "MINIMAL")
+    \fi
+  \else
+    \newpage
+  \fi
+
+  \ifdefined\ORIGINAL
+    \problemlist{Solutions to generalised problems}
+  \else
+    \problemlist{Solutions}
+  \fi
+
+  \ifdefined\ONLYSOLUTIONS
+    \ifdefined\NOSOURCES
+      \printsourcesfalse
+    \else
+      \printsourcestrue
+    \fi
+  \else
+    \printsourcesfalse  % Avoid printing the sources again if they were already included in the statements-only part
+  \fi
+
+  \solutionstrue  % Enable printing the solutions
+
+  \addproblems  % This is the command that prints the problems
+
+\fi

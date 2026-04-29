@@ -1,0 +1,20 @@
+Let $d$ be the maximum distance between any two vertices of the polygon,
+and let $A$ and $B$ be two vertices at distance $d$.
+The vertices of the polygon, and therefore also the polygon itself,
+are contained in the strip delimited by the two lines perpendicular to $\overline{AB}$ that pass, respectively, through $A$ and through $B$.
+This is because any point outside of that region has distance to $A$ or to $B$ greater than $d$.
+
+Let $C$ be a vertex of the polygon at maximal distance to the line $AB$,
+and let $r$ be that distance.
+The vertices of the polygon, and therefore also the polygon itself,
+are contained in the strip delimited by the two lines parallel to $\overline{AB}$ at distance $r$ from the line $AB$.
+This is because any point outside of that region has distance to $AB$ greater than $r$.
+
+Therefore, the polygon is contained in the intersection of the two strips,
+which is a rectangle of side lengths $d$ and $2 r$.
+
+The triangle $ABC$ is contained in the polygon (by convexity),
+and has area $\mfrac{1}{2} r d$.
+The polygon has area less than or equal to $2 r d$
+(the area of the rectangle containing it).
+Hence, the triangle's area is at least one fourth of the polygon's area.

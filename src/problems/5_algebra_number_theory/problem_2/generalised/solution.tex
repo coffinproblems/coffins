@@ -1,0 +1,21 @@
+Clearly, all pairs of the form $\paren{a, a}$ for $a \in \mathbb{N}$ are in $S$;
+and for any $\paren{a, b} \in S$, also $\paren{b, a}$ is in $S$.
+
+The pair $\paren{75, 1215}$ is in $S$, because
+$75 = 3   \cdot 5^2$, $1215 = 3^5 \cdot 5$,
+$76 = 2^2 \cdot 19$,  $1216 = 2^6 \cdot 19$.
+
+The following is a family of elements of $S$,
+parametrised by $n \in \mathbb{Z}^{+}$:
+\begin{alignat*}{2}
+ & a_n = 2^{n + 1} - 2 = 2 \cdot \paren{2^n - 1} \mspace{2mu} ,  && \qquad
+ b_n = 2^{n + 1} a_n = 2^{2 n + 2} - 2^{n + 2}
+\end{alignat*}
+In fact,
+$\operatorname{P}\paren{a} = \braces{2} \cup \operatorname{P}\paren{2^n - 1} \mspace{2mu}$
+and $\mspace{2mu} \operatorname{P}\paren{b} = \braces{2} \cup \operatorname{P}\paren{a} = \operatorname{P}\paren{a}$;
+and $b_n + 1 = \paren{2^{n + 1} - 1}^2 = \paren{a_n + 1}^2$,
+so that $\operatorname{P}\paren{b + 1} = \operatorname{P}\paren{a + 1}$.
+
+\vspace{2ex}
+NOTE: This does not solve the problem yet.

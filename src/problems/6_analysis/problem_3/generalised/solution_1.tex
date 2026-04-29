@@ -1,0 +1,15 @@
+Let $f$ be a function satisfying the stated condition.
+Let $x, y \in I$.
+Then $f\paren{x} - f\paren{y} \leq \abs{x - y}^{a}$,
+and also $f\paren{y} - f\paren{x} \leq \abs{y - x}^{a} = \abs{x - y}^{a}$.
+Hence, for any $x, y \in I$, the relation
+$\abs{f\paren{x} - f\paren{y}} \leq \abs{x - y}^{a}$ holds.
+It follows that $f$ is differentiable and its derivative is $0$ everywhere,
+since for any $x \in I$ (using that $a - 1 > 0$):
+\begin{equation*}
+  \lim\limits_{y \to x} {\abs{\frac{f\paren{x} - f\paren{y}}{x - y}}}
+  \leq \lim\limits_{y \to x} {\abs{x - y}^{a - 1}}
+  = 0
+\end{equation*}
+Therefore, every function $f$ that satisfies the given condition is constant.
+Viceversa, every constant function clearly satisfies the condition.

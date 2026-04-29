@@ -1,0 +1,83 @@
+\newif\ifpdfa        % PDF/A-2u, PDF version 1.7
+\pdfatrue
+
+\newif\ifpdfastrong  % PDF/A-3a and PDF/UA-1, PDF version 1.7
+\pdfastrongfalse
+
+\newif\iftagpdf      % PDF/A-4f and PDF/UA-2, PDF version 2.0
+\tagpdffalse
+
+
+\ifdefined\TAGPDF
+  \tagpdftrue
+  \pdfafalse
+\else
+  \ifdefined\PDFAA
+    \pdfastrongtrue
+    \pdfafalse
+  \fi
+\fi
+
+
+% PDF/A-4f and PDF/UA-2
+\iftagpdf
+  \UseName{sys_gset_rand_seed:n}{0}
+  \DocumentMetadata{
+    lang        = en,
+    tagging     = on,
+    pdfversion  = 2.0,
+    pdfstandard = A-4f,
+    pdfstandard = UA-2,
+    %uncompress,
+  }
+  \tagpdfsetup{math/setup=mathml-AF}
+
+  \SetKeys[hyp]{
+    pdftitle  = {Coffin problems},
+    pdfauthor = {},
+  }
+  \AddToDocumentProperties[hyperref]{pdfkeywords}{Mathematics, Competitive Mathematics, Coffin problems, Problem-solving, University admission exams}
+  \AddToDocumentProperties[hyperref]{pdfsubject}{Mathematical problems from discriminatory admission examinations at some Soviet universities in the 1960s, 1970s, and 1980s}
+  \AddToDocumentProperties[hyperref]{pdfcopyrighted}{False}
+\fi
+
+
+% PDF/A-3a and PDF/UA-1
+\ifpdfastrong
+  \UseName{sys_gset_rand_seed:n}{0}
+  \DocumentMetadata{
+    lang        = en,
+    tagging     = on,
+    pdfversion  = 1.7,
+    pdfstandard = A-3a,
+    pdfstandard = UA-1,
+    %uncompress,
+  }
+
+  \SetKeys[hyp]{
+    pdftitle  = {Coffin problems},
+    pdfauthor = {},
+  }
+  \AddToDocumentProperties[hyperref]{pdfkeywords}{Mathematics, Competitive Mathematics, Coffin problems, Problem-solving, University admission exams}
+  \AddToDocumentProperties[hyperref]{pdfsubject}{Mathematical problems from discriminatory admission examinations at some Soviet universities in the 1960s, 1970s, and 1980s}
+  \AddToDocumentProperties[hyperref]{pdfcopyrighted}{False}
+\fi
+
+
+% PDF/A-2u
+\ifpdfa
+\begin{filecontents}[force]{\jobname.xmpdata}
+  \Title{Coffin problems}
+  \Author{}
+  \Keywords{%
+    Mathematics\sep
+    Competitive Mathematics\sep
+    Coffin problems\sep
+    Problem-solving\sep
+    University admission exams%
+  }
+  \Subject{Mathematical problems from discriminatory admission examinations at some Soviet universities in the 1960s, 1970s, and 1980s}
+  \Language{en}
+  \Copyrighted{False}%
+\end{filecontents}
+\fi

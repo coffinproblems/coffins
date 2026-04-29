@@ -1,0 +1,87 @@
+% Custom section headings
+
+\usepackage{sectsty}
+
+\ifdefined\MINIMAL
+  \partfont{\centering\huge}
+\else
+  \partfont{\centering\Huge}
+\fi
+
+% Part title: "Problems" / "Solutions"
+\newcounter{plistcount}
+\newcommand{\problemlist}[1]{
+  \refstepcounter{plistcount}
+  \ifdefined\MINIMAL
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}
+    \part*{#1}
+    \vspace{2ex}
+  \else
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}
+    \vspace*{\stretch{1}}
+    \part*{#1}
+    \thispagestyle{empty}
+    \vspace*{\stretch{6}}
+    \clearpage
+  \fi
+}
+
+% Section for category of problems
+\newcounter{categorycount}[plistcount]
+\newcommand{\problemcategory}[1]{
+  \ifcategorise  % whether to subdivide the problems in categories or not
+    \refstepcounter{categorycount}
+    \vspace{3ex}
+    \ifdefined\MINIMAL
+    \else
+      \newpage
+    \fi
+    \ifcategnum  % whether to number the categories; defined in main.tex
+      \section*{\thecategorycount \quad #1}
+      \addcontentsline{toc}{subsection}{\protect\numberline{\thecategorycount}#1}
+    \else
+      \section*{#1}
+      \addcontentsline{toc}{subsection}{#1}
+    \fi
+  \fi
+}
+
+% Subsection for individual problem
+\newcounter{problemcounter}[categorycount]
+\newcounter{globalproblemcounter}[plistcount]
+\newcommand{\problem}{
+  \refstepcounter{problemcounter}
+  \refstepcounter{globalproblemcounter}
+  \vspace{\spaceproblems}
+  \ifglobalnum  % whether to use global numbering or numbering within sections
+    \subsection*{Problem \theglobalproblemcounter}
+  \else
+    \subsection*{Problem \thecategorycount.\theproblemcounter}
+  \fi
+}
+
+% Subsubsection for solution
+\newcounter{solutioncounter}[globalproblemcounter]
+\newcommand{\solution}{
+  \refstepcounter{solutioncounter}
+  \subsubsection*{Solution \thesolutioncounter}
+}
+\newcommand{\singlesolution}{\subsubsection*{Solution}}
+
+% How much space to leave between problems
+\newcommand{\spaceproblems}{
+  1\baselineskip
+  plus 0.25\baselineskip
+  minus 0.12\baselineskip
+}
+
+% Style for the citation of sources for individual problems
+\newcommand{\sourceheading}{Source:}
+\newcommand{\problemsource}[1]{
+  \vspace{-1.2ex}
+  {\small \hspace{0.04em} \textsl{\sourceheading\ #1}}
+  \vspace{0.8ex}
+}

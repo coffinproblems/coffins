@@ -1,0 +1,16 @@
+Let $f$ be a function satisfying the stated condition.
+Let $x, y \in \mathbb{R}$.
+Then $f\paren{x} - f\paren{y} \leq \paren{x - y}^{2}$,
+and also $f\paren{y} - f\paren{x} \leq \paren{y - x}^{2} = \paren{x - y}^{2}$.
+Hence, for any $x, y \in \mathbb{R}$, the relation
+$\abs{f\paren{x} - f\paren{y}} \leq \paren{x - y}^{2}$ holds.
+\newline
+It follows that $f$ is differentiable and its derivative is $0$ everywhere,
+since for any $x \in \mathbb{R}$:
+\begin{equation*}
+  \lim\limits_{y \to x} {\abs{\frac{f\paren{x} - f\paren{y}}{x - y}}}
+  \leq \lim\limits_{y \to x} {\abs{x - y}}
+  = 0
+\end{equation*}
+Therefore, every function $f$ that satisfies the given condition is constant.
+Viceversa, every constant function clearly satisfies the condition.

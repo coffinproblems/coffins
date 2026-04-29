@@ -1,0 +1,33 @@
+The number of digits is $210$.
+To prove this, it needs to be shown that
+$10^{209} \leq 125^{100} < 10^{210}$.
+
+For the first inequality, first observe that $5^5 > 3 \cdot 2^{10}$
+(since $5^5 = 3125$, and $3 \cdot 2^{10} = 3 \cdot 1024 = 3072$).
+Squaring yields:
+$5^{10}
+ > 9 \cdot 2^{20}
+ > 8 \cdot 2^{20}
+ = 2^{23}$.
+Multiplying by $5^{23}$ gives:
+$125^{11}
+ = 5^{33}
+ = 5^{10} \cdot 5^{23}
+ > 2^{23} \cdot 5^{23}
+ = 10^{23}$.
+Raising to the power of $9$ gives
+$125^{99}
+ > 10^{9 \cdot 23}
+ = 10^{207}$.
+Finally,
+$125^{100}
+ = 125 \cdot 125^{99}
+ > 100 \cdot 125^{99}
+ > 100 \cdot 10^{207}
+ = 10^{209}$.
+
+The second inequality is equivalent to
+$5^{10} < 10^{7} = 2^7 \cdot 5^7$
+(by raising to the power of $30$),
+which is equivalent to $5^3 < 2^7$,
+which is true ($125 < 128$).

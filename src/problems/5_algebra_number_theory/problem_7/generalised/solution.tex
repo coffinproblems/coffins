@@ -1,0 +1,147 @@
+Only for $n = 1, 2, 4$.
+
+To prove this, observe that the area of a polygon with rational vertices is rational
+(this follows from Pick's theorem or the ``shoelace'' area formula).
+
+The area of a regular $n$-gon of side length $l$ is $\mfrac{1}{4} n l^2 \cot\paren{\mfrac{\pi}{n}}$.
+Observe that $l^2$ is rational if the vertices have rational coordinates (by the Pythagorean theorem).
+
+To prove that for a given $n \in \mathbb{N}$, a regular $n$-gon cannot have rational vertices,
+it sufficies to show that $\cot\paren{\mfrac{\pi}{n}}$ is irrational,
+or, equivalently, that $\tan\paren{\mfrac{\pi}{n}}$ is irrational
+(the result will then follow by contradiction). \newline
+Observe that this is the case for $n = 8$:
+$\tan\paren{\mfrac{\pi}{8}} = \sqrt{2} - 1$ is irrational.
+Now it is sufficient to prove the result for $n \geq 3$ prime,
+since the existence of a regular $n$-gon with rational vertices
+implies the existence of a regular $d$-gon with rational vertices
+for each $d \geq 3$ divisor of $n$.
+(Numbers that do not have odd prime factors are powers of $2$,
+so they are taken care of by the case $n = 8$,
+while $n = 1, 2, 4$ are the only exception).
+
+For each $n \in \mathbb{N}$, define the polynomials $p_n$ and $q_n$ as follows:
+\begin{align*}
+  p_n\paren{x} &= \sum\limits_{k=0}^{\floor{\frac{n-1}{2}}}
+     {\paren{-1}^{k} \binom{n}{2 k + 1} x^{2 k + 1}} \\
+  q_n\paren{x} &= \sum\limits_{k=0}^{\floor{\frac{n}{2}}}
+     {\paren{-1}^{k} \binom{n}{2 k} x^{2 k}}
+\end{align*}
+Observe that these polynomials satisfy the following relations,
+for every $n \in \mathbb{N}$:
+\begin{align*}
+  p_{n+1}\paren{x} &= p_n\paren{x} + x \cdot q_n\paren{x} \\
+  q_{n+1}\paren{x} &= q_n\paren{x} - x \cdot p_n\paren{x}
+\end{align*}
+In fact:
+\begin{align*}
+  p_n\paren{x} + x \cdot q_n\paren{x}
+  &= \sum\limits_{k=0}^{\floor{\frac{n-1}{2}}}
+     {\paren{-1}^{k} \binom{n}{2 k + 1} x^{2 k + 1}}
+     + \sum\limits_{k=0}^{\floor{\frac{n}{2}}}
+     {\paren{-1}^{k} \binom{n}{2 k} x^{2 k + 1}} = \\
+  &= \sum\limits_{k=0}^{+ \infty}
+     {\paren{-1}^{k} \paren{\binom{n}{2 k}
+     + \binom{n}{2 k + 1}} x^{2 k + 1}}
+   = \sum\limits_{k=0}^{\floor{\frac{n}{2}}}
+     {\paren{-1}^{k} \binom{n + 1}{2 k + 1} x^{2 k + 1}} = \\
+  &= p_{n+1}\paren{x}
+\end{align*}
+and:
+\begin{align*}
+  q_n\paren{x} - x \cdot p_n\paren{x}
+  &= \sum\limits_{k=0}^{\floor{\frac{n}{2}}}
+     {\paren{-1}^{k} \binom{n}{2 k} x^{2 k}}
+     - \sum\limits_{k=0}^{\floor{\frac{n-1}{2}}}
+     {\paren{-1}^{k} \binom{n}{2 k + 1} x^{2 k + 2}} = \\
+  &= \sum\limits_{k \in \mathbb{Z}}
+     {\paren{-1}^{k} \paren{\binom{n}{2 k - 1}
+     + \binom{n}{2 k}} x^{2 k}}
+   = \sum\limits_{k=0}^{\floor{\frac{n+1}{2}}}
+     {\paren{-1}^{k} \binom{n+1}{2 k} x^{2 k}} = \\
+  &= q_{n+1}\paren{x}
+\end{align*}
+Now observe that for each $n \in \mathbb{N}$,
+the polynomial $p_n$ is a multiple of the polynomial $x$:
+in fact $p_n\paren{x} = x \cdot s_n\paren{x}$, where:
+\begin{align*}
+  s_n\paren{x}
+  = \sum\limits_{k=0}^{\floor{\frac{n-1}{2}}}
+    {\paren{-1}^{k} \binom{n}{2 k + 1} x^{2 k}}
+\end{align*}
+The constant term of $s_n$ is $\mbinom{n}{1} = n$.
+Additionally, for odd $n$, the leading coefficient of $s_n$
+is $\pm \mbinom{n}{n} = \pm 1$.
+This implies that when $r$ is an odd prime,
+the only possible rational roots of $s_r$ are $1, -1, r, -r$
+(by the rational root theorem).
+It is immediate to verify that none of those is a root of the polynomial:
+$1$ and $-1$ are ruled out by reducing modulo $r$
+(using the fact that the binomial coefficients $\mbinom{r}{a}$
+are multiples of $r$ for $1 \leq a \leq r-1$,
+due to $r$ being prime):
+\begin{align*}
+  s_r\paren{1}
+  &= \pm 1 + \sum\limits_{k=0}^{\frac{r-3}{2}}
+     {\paren{-1}^{k} \binom{r}{2 k + 1}}
+   \cong \pm 1 \ncong 0 \pmod{r}
+  \\
+  s_r\paren{-1}
+  &= \pm 1 + \sum\limits_{k=0}^{\frac{r-3}{2}}
+     {\paren{-1}^{k} \binom{r}{2 k + 1}}
+   \cong \pm 1 \ncong 0 \pmod{r}
+\end{align*}
+$r$ and $-r$ are ruled out by reducing modulo $r^2$:
+\begin{align*}
+  s_r\paren{r}
+  &= r + \sum\limits_{k=1}^{\frac{r-1}{2}}
+     {\paren{-1}^{k} \binom{r}{2 k + 1} r^{2 k}}
+   \cong r \ncong 0 \pmod{r^2} \\
+  s_r\paren{-r}
+  &= r + \sum\limits_{k=1}^{\frac{r-1}{2}}
+     {\paren{-1}^{k} \binom{r}{2 k + 1} r^{2 k}}
+   \cong r \ncong 0 \pmod{r^2}
+\end{align*}
+In conclusion, for $r$ odd prime,
+the only rational root of the polynomial $p_r$ is $0$ (with multiplicity $1$).
+
+
+Now observe that for every $\theta \in \mathbb{R}$ and for every $n \in \mathbb{N}$
+such that $\theta, n \theta \in \dom\paren{\tan}$:
+\begin{equation*}
+ \tan\paren{n \theta}
+ = \frac{p_n\paren{\tan\paren{\theta}}}
+        {q_n\paren{\tan\paren{\theta}}}
+\end{equation*}
+This fact can be seen by induction:
+it is trivial for $n = 0$, since $p_0 = 0$ and $q_0 = 1$,
+and $\tan\paren{0} = 0$; then, inductively:
+\begin{align*}
+  \tan\paren{\paren{n + 1} \theta}
+  &= \tan\paren{n \theta + \theta}
+   = \frac{\tan\paren{n \theta} + \tan\paren{\theta}}
+         {1 - \tan\paren{n \theta} \cdot \tan\paren{\theta}}
+   = \frac{\mfrac{p_n\paren{\tan\paren{\theta}}}
+                 {q_n\paren{\tan\paren{\theta}}}
+           + \tan\paren{\theta}}
+          {1 - \mfrac{p_n\paren{\tan\paren{\theta}}}
+                     {q_n\paren{\tan\paren{\theta}}}
+               \cdot \tan\paren{\theta}} = \\
+  &= \frac{p_n\paren{\tan\paren{\theta}} + \tan\paren{\theta} \cdot q_n\paren{\tan\paren{\theta}}}
+          {q_n\paren{\tan\paren{\theta}} - \tan\paren{\theta} \cdot p_n\paren{\tan\paren{\theta}}}
+   = \frac{p_{n+1}\paren{\tan\paren{\theta}}}
+          {q_{n+1}\paren{\tan\paren{\theta}}}
+\end{align*}
+
+Now observe that for $n \geq 1$,
+$\tan\paren{\mfrac{\pi}{n}}$ is a root of the polynomial $p_n$, since:
+\begin{equation*}
+  0 = \tan\paren{\pi}
+    = \tan\paren{n \cdot \frac{\pi}{n}}
+    = \frac{p_n\paren{\tan\paren{\mfrac{\pi}{n}}}}
+           {q_n\paren{\tan\paren{\mfrac{\pi}{n}}}}
+\end{equation*}
+Moreover, since $\tan\paren{\mfrac{\pi}{n}} \neq 0$ for $n \geq 2$,
+it follows that for $r$ odd prime,
+$\tan\paren{\mfrac{\pi}{r}}$ is not a rational root of $p_r$.
+Thus it is irrational.

@@ -1,0 +1,50 @@
+\input{commands/insertions}
+
+% Command for including the problems in the document
+\newcommand{\addproblems}{
+
+  \newcount\categindex  % Index of the current subdirectory of problems/
+  \categindex=0
+
+  \newif\ifcontinue
+
+  \loop  % Loop through the first-level subdirectories of problems/
+    \advance\categindex by 1
+    \continuefalse
+
+    \QueryFiles[type = d]{problems/\the\categindex_*}{
+      \global\continuetrue
+
+      \IfFileExists{####1/sec.tex}{
+        \input{####1/sec}  % this creates a new section
+      }{}
+
+      % Problem counter within this section
+      \newcount\n
+      \n=1
+
+      \newif\ifpfile
+      \pfiletrue
+
+      % Loop through the problems in this category
+      {
+      \loop
+        \def\directory{original}
+        \ifgeneral  % flag defined in main.tex
+          \IfFileExists{####1/problem_\the\n/generalised/statement.tex}{
+            \gdef\directory{generalised}
+          }{}
+        \fi
+        % Insert the problem
+        \IfFileExists{####1/problem_\the\n/\directory/statement.tex}{
+          \insertproblem{####1/problem_\the\n/\directory}  % command defined in insertion_commands.tex
+        }{\global\pfilefalse}
+      \advance\n by 1
+      \ifpfile
+      \repeat
+      }
+    }
+
+  \ifcontinue
+  \repeat
+}

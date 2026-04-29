@@ -1,0 +1,136 @@
+Observe that
+$\ang{1} = \ang{21} - \ang{20}$,
+and $\ang{20} = \mfrac{\pi}{9}$.
+Hence:
+\begin{align*}
+ \sin\paren{\ang{1}}
+ &= \sin\paren{\ang{21} - \ang{20}}
+  = \sin\paren{\ang{21}} \cos\paren{\ang{20}}
+    - \cos\paren{\ang{21}} \sin\paren{\ang{20}} = \\
+ &= \frac{1}{2} \sin\paren{\ang{21}}
+    \paren{e^{i \frac{\pi}{9}} + e^{ -i \frac{\pi}{9}}}
+    - \frac{1}{2 i} \cos\paren{\ang{21}}
+    \paren{e^{i \frac{\pi}{9}} - e^{ -i \frac{\pi}{9}}} = \\
+ &= \frac{1}{2} e^{i \frac{\pi}{9}}
+    \paren{ \sin\paren{\ang{21}} + i \cos\paren{\ang{21}}}
+    + \frac{1}{2} e^{ -i \frac{\pi}{9}}
+    \paren{ \sin\paren{\ang{21}} - i \cos\paren{\ang{21}}}
+\end{align*}
+and:
+\begin{align*}
+ \cos\paren{\ang{1}}
+ &= \cos\paren{\ang{21} - \ang{20}}
+  = \cos\paren{\ang{21}} \cos\paren{\ang{20}}
+    + \sin\paren{\ang{21}} \sin\paren{\ang{20}} = \\
+ &= \frac{1}{2} \cos\paren{\ang{21}}
+    \paren{e^{i \frac{\pi}{9}} + e^{ -i \frac{\pi}{9}}}
+    + \frac{1}{2 i} \sin\paren{\ang{21}}
+    \paren{e^{i \frac{\pi}{9}} - e^{ -i \frac{\pi}{9}}} = \\
+ &= \frac{1}{2} e^{i \frac{\pi}{9}}
+    \paren{ \cos\paren{\ang{21}} - i \sin\paren{\ang{21}}}
+    + \frac{1}{2} e^{ -i \frac{\pi}{9}}
+    \paren{ \cos\paren{\ang{21}} + i \sin\paren{\ang{21}}}
+\end{align*}
+The term $e^{i \frac{\pi}{9}}$
+is the principal cube root of
+$e^{i \frac{\pi}{3}} = \mfrac{1}{2} + i \mfrac{\sqrt{3}}{2}$,
+and the term $e^{- i \frac{\pi}{9}}$
+is the principal cube root of
+$e^{- i \frac{\pi}{3}} = \mfrac{1}{2} - i \mfrac{\sqrt{3}}{2}$,
+so they can be written as:
+\begin{align*}
+ e^{i \frac{\pi}{9}}
+ = \sqrt[3]{\frac{1 + i \sqrt{3}}{2}} \,\, , \,\,\,\,\,\,
+ e^{- i \frac{\pi}{9}}
+ = \sqrt[3]{\frac{1 - i \sqrt{3}}{2}}
+\end{align*}
+The values of $\sin\paren{\ang{21}}$ and $\cos\paren{\ang{21}}$ are the following (they can be calculated using the angle difference formulas from $\ang{21} = \ang{36} - \ang{15}$):
+\begin{align*}
+ \sin\paren{\ang{21}}
+ &= \frac{1}{8} \big( \sqrt{3} + 1 \big) \sqrt{5 - \sqrt{5}}
+     - \frac{1}{16} \sqrt{2} \, \big( \sqrt{3} - 1 \big) \big(\sqrt{5} + 1 \big)
+ \\
+ \cos\paren{\ang{21}}
+ &= \frac{1}{8} \big( \sqrt{3} - 1 \big) \sqrt{5 - \sqrt{5}}
+     + \frac{1}{16} \sqrt{2} \, \big( \sqrt{3} + 1 \big) \big( \sqrt{5} + 1 \big)
+\end{align*}
+Altogether:
+\begin{align*}
+ \sin\paren{\ang{1}}
+ = \frac{1}{16} \, \sqrt[3]{\frac{1 + i \sqrt{3}}{2}}
+ \, \cdot \,
+   &\Bigg( \!
+     \big( \sqrt{3} + 1 \big) \sqrt{5 - \sqrt{5}}
+     - \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} - 1 \big) \big( \sqrt{5} + 1 \big) \, +
+   \\
+   &\,\,\,\,
+     + \, i \, \bigg( \!
+     \big( \sqrt{3} - 1 \big) \sqrt{5 - \sqrt{5}}
+     + \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} + 1 \big) \big( \sqrt{5} + 1 \big) \!
+     \bigg) \!
+   \Bigg) \,\, +
+ \\
+ + \, \frac{1}{16} \, \sqrt[3]{\frac{1 - i \sqrt{3}}{2}}
+ \, \cdot \,
+   &\Bigg( \!
+     \big( \sqrt{3} + 1 \big) \sqrt{5 - \sqrt{5}}
+     - \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} - 1 \big) \big( \sqrt{5} + 1 \big) \, +
+   \\
+   &\,\,\,\,
+     - \, i \, \bigg( \!
+     \big( \sqrt{3} - 1 \big) \sqrt{5 - \sqrt{5}}
+     + \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} + 1 \big) \big( \sqrt{5} + 1 \big) \!
+     \bigg) \!
+   \Bigg)
+\end{align*}
+and:
+\begin{align*}
+ \cos\paren{\ang{1}}
+ = \frac{1}{16} \, \sqrt[3]{\frac{1 + i \sqrt{3}}{2}}
+ \, \cdot \,
+   &\Bigg( \!
+     \big( \sqrt{3} - 1 \big) \sqrt{5 - \sqrt{5}}
+     + \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} + 1 \big) \big( \sqrt{5} + 1 \big) \, +
+   \\
+   &\,\,\,\,
+     - \, i \, \bigg( \!
+     \big( \sqrt{3} + 1 \big) \sqrt{5 - \sqrt{5}}
+     - \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} - 1 \big) \big( \sqrt{5} + 1 \big) \!
+     \bigg) \!
+   \Bigg) \,\, +
+ \\
+ + \, \frac{1}{16} \, \sqrt[3]{\frac{1 - i \sqrt{3}}{2}}
+ \, \cdot \,
+   &\Bigg( \!
+     \big( \sqrt{3} - 1 \big) \sqrt{5 - \sqrt{5}}
+     + \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} + 1 \big) \big( \sqrt{5} + 1 \big) \, +
+   \\
+   &\,\,\,\,
+     + \, i \, \bigg( \!
+     \big( \sqrt{3} + 1 \big) \sqrt{5 - \sqrt{5}}
+     - \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} - 1 \big) \big( \sqrt{5} + 1 \big) \!
+     \bigg) \!
+   \Bigg)
+\end{align*}
+
+\subsubsection*{Solution 2}
+The complex number $\cos\paren{\ang{1}} + i \sin\paren{\ang{1}}$ is:
+\begin{align*}
+ \cos\paren{\ang{1}} + i \sin\paren{\ang{1}}
+ = e^{-i \frac{\pi}{9}}
+ \cdot \big( \! \cos\paren{\ang{21}} &+ i \sin\paren{\ang{21}} \big) = \\
+ = \frac{1}{8} \, \sqrt[3]{\frac{1 - i \sqrt{3}}{2}}
+ \, \cdot \,
+   &\Bigg( \!
+     \big( \sqrt{3} - 1 \big) \sqrt{5 - \sqrt{5}}
+     + \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} + 1 \big) \big( \sqrt{5} + 1 \big) \, +
+   \\
+   &\,\,\,\,
+     + \, i \, \bigg( \!
+     \big( \sqrt{3} + 1 \big) \sqrt{5 - \sqrt{5}}
+     - \frac{1}{2} \sqrt{2} \, \big( \sqrt{3} - 1 \big) \big( \sqrt{5} + 1 \big) \!
+     \bigg) \!
+   \Bigg)
+\end{align*}
+Then, $\sin\paren{\ang{1}}$ and $\cos\paren{\ang{1}}$
+are its imaginary part and its real part, respectively.

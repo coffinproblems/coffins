@@ -1,0 +1,79 @@
+\usepackage{mleftright}
+\mleftright  % Better spacing with \left and \right
+
+
+% Command to swap starred and non-starred versions of a command
+\makeatletter
+\newcommand{\swapstar}[1]{%
+  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+  \expandafter\renewcommand\csname #1\endcsname{\@ifstar{\csname old#1\endcsname}{\csname old#1\endcsname*}}
+}
+\makeatother
+
+
+% Delimiters:
+\DeclarePairedDelimiter{\paren}{\lparen}{\rparen}  % Parentheses
+\DeclarePairedDelimiter{\sqbk}{\lbrack}{\rbrack}   % Square brackets
+\DeclarePairedDelimiter{\braces}{\{}{\}}           % Curly braces
+\DeclarePairedDelimiter{\angl}{\langle}{\rangle}   % Angle brackets
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}      % Absolute value
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}     % Norm
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}  % Floor
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}     % Ceiling
+
+% Swap starred and non-starred versions, for automatic sizing
+\swapstar{paren}
+\swapstar{sqbk}
+\swapstar{braces}
+\swapstar{angl}
+\swapstar{abs}
+\swapstar{norm}
+\swapstar{floor}
+\swapstar{ceil}
+
+
+% Intervals
+\DeclarePairedDelimiterX{\cinterval}[2]{\lbrack}{\rbrack}{\mspace{1.5mu} #1, #2 \mspace{1.5mu}}  % Closed interval
+\DeclarePairedDelimiterX{\ointerval}[2]{\lparen}{\rparen}{#1, #2}                                % Open interval
+\DeclarePairedDelimiterX{\cointerval}[2]{\lbrack}{\rparen}{\mspace{1.5mu} #1, #2}                % Left closed, right open interval
+\DeclarePairedDelimiterX{\ocinterval}[2]{\lparen}{\rbrack}{#1, #2 \mspace{1.5mu}}                % Lef open, right closed interval
+
+\swapstar{cinterval}
+\swapstar{ointerval}
+\swapstar{cointerval}
+\swapstar{ocinterval}
+
+
+% Sets
+\providecommand{\suchthat}{}
+\DeclarePairedDelimiterX{\set}[1]{\{}{\}}{%
+  \begingroup%
+  \renewcommand{\suchthat}{%
+    \mathchoice{\mspace{6mu}}{\mspace{4mu}}{\mspace{3mu}}{\mspace{2mu}}%
+    \delimsize\vert%
+    \allowbreak%
+    \mathchoice{\mspace{6mu}}{\mspace{4mu}}{\mspace{3mu}}{\mspace{2mu}}%
+    \mathopen{}%
+  }%
+  #1%
+  \endgroup%
+}
+\swapstar{set}
+
+% Set builder notation
+\DeclarePairedDelimiterXPP{\setbuild}[2]{}{\{}{\}}{}{
+  #1%
+  \mathchoice{\mspace{6mu}}{\mspace{4mu}}{\mspace{3mu}}{\mspace{2mu}}%
+  \delimsize\vert%
+  \allowbreak%
+  \mathchoice{\mspace{6mu}}{\mspace{4mu}}{\mspace{3mu}}{\mspace{2mu}}%
+  \mathopen{}%
+  #2%
+}
+\swapstar{setbuild}
+
+
+% Distance
+\DeclareMathOperator{\distance}{d}
+\DeclarePairedDelimiterXPP{\dist}[2]{\distance}{\lparen}{\rparen}{}{#1, #2}
+\swapstar{dist}

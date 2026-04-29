@@ -1,0 +1,106 @@
+Consider a coordinate system with the two given points lying on the horizontal axis
+at coordinates $A: \paren{-a, 0}$ and $B: \paren{a, 0}$, for some $a \neq 0$.
+Let $C: \paren{b, c}$ be the center of the given circle,
+and let $s > 0$ be the radius. \newline
+The wanted circle passes through $A$ and $B$,
+so its center must lie on the perpendicular bisector of the two points,
+which is the vertical axis;
+so it has coordinates $P: \paren{0, d}$,
+for some $d \in \mathbb{R}$.
+Let $r$ be its radius.
+The tangency condition between the two circles is equivalent to
+$\dist{P}{C} = r + s$ (for external tangency)
+or $\dist{P}{C} = r - s$ (when the first circle is internally tangent to the wanted circle)
+or $\dist{P}{C} = s - r$ (when the wanted circle is internally tangent to the first circle).
+All in all, the tangency conditions can be summarised as
+$\dist{P}{C}^2 = \paren{r \pm s}^2$.
+Together with the condition $r = \dist{P}{A} = \dist{P}{B}$,
+this yields the following system of equations,
+in the unknowns $d$ and $r$:
+\begin{align*}
+\begin{cases}
+ r^2 = a^2 + d^2 \\
+ r^2 + s^2 \pm 2 r s = b^2 + \paren{c - d}^2
+\end{cases}
+\end{align*}
+Substituting $a^2 + d^2$ for $r^2$ in the second equation,
+and canceling the term $d^2$ yields:
+\begin{equation*}
+ a^2 + s^2 \pm 2 r s = b^2 + c^2 - 2 c d
+\end{equation*}
+So:
+\begin{equation*}
+ \mp r = \frac{c}{s} d + \frac{1}{2 s} \paren{a^2 - b^2 - c^2 + s^2}
+\end{equation*}
+Substituting in the first equation yields a quadratic equation in $d$:
+\begin{equation*}
+ \paren{c^2 - s^2} d^2
+ + c \paren{a^2 - b^2 - c^2 + s^2} d
+ + \frac{1}{4} \paren{a^2 - b^2 - c^2 + s^2}^2 - a^2 s^2
+ = 0
+\end{equation*}
+
+If $c^2 = s^2$, the equation is actually linear:
+\begin{equation*}
+ c \paren{a^2 - b^2} d
+ + \frac{1}{4} \paren{a^2 - b^2}^2 - a^2 s^2
+ = 0
+\end{equation*}
+Note that $a^2 - b^2$ cannot be $0$, since it would imply $a = 0$ or $s = 0$.
+Also, $c \neq 0$, since $c^2 = s^2 \neq 0$.
+The solution in this case is then:
+\begin{equation*}
+d = \frac{a^2 s^2 - \mfrac{1}{4} \paren{a^2 - b^2}^2}{c \paren{a^2 - b^2}}
+   = \frac{a^2 c}{a^2 - b^2} - \frac{a^2 - b^2}{4 c}
+\end{equation*}
+
+Observe that $c^2 = s^2$ if and only if the line $AB$ is tangent to the first circle.
+In this case, the line $AB$ can be considered a degenerate second solution circle.
+
+\vspace{3ex}
+In the case $c^2 \neq s^2$, the solutions are:
+\begin{align*}
+ d &= \frac{- \, c \, \paren{a^2 - b^2 - c^2 + s^2}
+     \pm \sqrt{c^2 \paren{a^2 - b^2 - c^2 + s^2}^2
+               - \paren{c^2 - s^2} \paren{a^2 - b^2 - c^2 + s^2}^2
+               + 4 \paren{c^2 - s^2} a^2 s^2}}
+     {2 \paren{c^2 - s^2}}
+   \\[0.3cm]
+   &= \frac{- \, c \, \paren{a^2 - b^2 - c^2 + s^2}
+     \pm \, s \, \sqrt{\paren{a^2 - b^2 - c^2 + s^2}^2
+                       + 4 a^2 c^2 - 4 a^2 s^2}}
+     {2 \paren{c^2 - s^2}} =
+   \\[0.3cm]
+   &= \frac{- \, c \, \paren{a^2 - b^2 - c^2 + s^2}
+     \pm \, s \, \sqrt{\paren{a^2 + b^2 + c^2 - s^2}^2
+                       - 4 a^2 b^2}}
+     {2 \paren{c^2 - s^2}} =
+   \\[0.3cm]
+   &= \frac{- \, c \, \paren{a^2 - b^2 - c^2 + s^2}
+     \pm \, s \, \sqrt{\paren{\paren{a + b}^2 + c^2 - s^2}
+                       \paren{\paren{a - b}^2 + c^2 - s^2}}}
+     {2 \paren{c^2 - s^2}} =
+   \\[0.3cm]
+   &= \frac{- \, c \, \paren{a^2 - b^2 - c^2 + s^2}
+     \pm \, s \, \sqrt{\paren{\dist{A}{C}^2 - s^2}
+                       \paren{\dist{B}{C}^2 - s^2}}}
+     {2 \paren{c^2 - s^2}}
+\end{align*}
+Observe that
+$\paren{\paren{a + b}^2 + c^2 - s^2} \paren{\paren{a - b}^2 + c^2 - s^2}$
+is positive if and only if $A$ and $B$ are both inside the first circle or both outside.
+It is $0$ if and only if at least one among the points $A$ and $B$ lies on the circle.
+
+In the general case, there are two circles that satisfy the stated conditions,
+and they are each uniquely determined by the coordinate $d$.
+
+If the problem asks to perform the construction with only straightedge and compass,
+then it can be achieved by solving the quadratic equation for $d$ geometrically,
+via, for example, the Carlyle circle construction,
+since all coefficients are constructible.
+Alternatively, the construction can be carried out by following the formula for $d$,
+since it only involves operations that can be performed with straightedge and compass.
+Note that it can be assumed that, for example, $s = 1$, since everything is scale-invariant.
+
+In the case $s^2 = c^2$, the construction can also be performed with straightedge and compass,
+since the formula for $d$ involves constructible operations only.

@@ -1,0 +1,24 @@
+Make the substitution $y = 1 - \mfrac{1}{8} \cos^2\paren{x}$.
+The range of possibe values of $y$ is $\cinterval{1 - \mfrac{1}{8}}{1} = \cinterval{\mfrac{7}{8}}{1}$.
+Using that $\sin^2\paren{x} = 1 - \cos^2\paren{x}$ and $\cos^2\paren{x} = 8 - 8 y$,
+the substitution yields the equation
+\begin{equation*}
+y^8 - 8 y + 7 = 0
+\end{equation*}
+Clearly, $1$ is a solution, and it yields the factorisation
+\begin{equation*}
+  y^8 - 8 y + 7 = \paren{y - 1}\paren{ - 7 + \sum\limits_{k = 1}^{7} {y^k}}
+\end{equation*}
+The term $- 7 + \sum\limits_{k = 1}^{7} {y^k}$
+is a strictly increasing function of $y$ for $y > 0$.
+Thus, in particular, it admits at most one root in the range $\cinterval{\frac{7}{8}}{1}$.
+The root is $1$, trivially.
+Hence, the equation $y^8 - 8 y + 7 = 0$ admits only the solution $y = 1$ (with multiplicity $2$)
+in the range $\cinterval{\frac{7}{8}}{1}$.
+
+The solution $y = 1$ corresponds to $1 - \mfrac{1}{8} \cos^2\paren{x} = 1$,
+that is $\cos\paren{x} = 0$.
+It is immediate to see also that every $x \in \mathbb{R}$ such that $\cos\paren{x} = 0$
+is a solution to the original equation.
+
+In conclusion, the solutions are $x = \mfrac{\pi}{2} + k \pi$ for $k \in \mathbb{Z}$.

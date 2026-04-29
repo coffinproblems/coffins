@@ -1,0 +1,17 @@
+For $r$ not a multiple of $\pi$:
+\begin{equation*}
+  \sum\limits_{k = 0}^{n - 1} {\frac{1}{\cos\paren{a + k r} \cos\paren{a + \paren{k+1} r}}}
+  = \frac{\sin\paren{n r}}{\sin\paren{r} \cos\paren{a} \cos\paren{a + n r}}
+  = \frac{\tan\paren{a + n r} - \tan\paren{a}}{\sin\paren{r}}
+\end{equation*}
+In fact:
+\begin{align*}
+ \sum\limits_{k = 0}^{n - 1} {\frac{\sin\paren{r}}{\cos\paren{a + k r} \cos\paren{a + \paren{k+1} r}}} \,
+ &= \, \sum\limits_{k = 0}^{n - 1} {\frac{\sin\paren*[\big]{\paren{a + \paren{k+1} r} - \paren{a + k r}}}
+                                         {\cos\paren{a + k r} \cos\paren{a + \paren{k+1} r}}} = \\
+ &= \, \sum\limits_{k = 0}^{n - 1} {\frac{\sin\paren*[\big]{a + \paren{k + 1} r} \cos\paren{a + k r}
+                                          - \sin\paren{a + k r} \cos\paren*[\big]{a + \paren{k + 1} r}}
+                                         {\cos\paren{a + k r} \cos\paren{a + \paren{k+1} r}}} = \\
+ &= \, \sum\limits_{k = 0}^{n - 1} {\tan\paren*[\big]{a + \paren{k + 1} r} - \tan\paren{a + k r}} = \\
+ &= \, \tan\paren{a + n r} - \tan\paren{a}
+\end{align*}

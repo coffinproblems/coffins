@@ -1,0 +1,25 @@
+Let $r$ be the common difference of the arithmetic progression.
+If $r$ is a multiple of $\pi$, then, trivially, letting $k \in \mathbb{Z}$ such that $r = k \pi$:
+\begin{equation*}
+  \sum\limits_{i = 1}^{n - 1} {\frac{1}{\cos\paren{a_i} \cos\paren{a_{i+1}}}}
+  = \sum\limits_{i = 1}^{n - 1} {\frac{1}{\paren{-1}^k \cos^2\paren{a_1}}}
+  = \paren{-1}^k \frac{n - 1}{\cos^2\paren{a_1}}
+\end{equation*}
+
+If $r$ is not a multiple of $\pi$, then:
+\begin{equation*}
+  \sum\limits_{i = 1}^{n - 1} {\frac{1}{\cos\paren{a_i} \cos\paren{a_{i+1}}}}
+  = \frac{\sin\paren{a_n - a_1}}{\sin\paren{r} \cos\paren{a_1} \cos\paren{a_n}}
+  = \frac{\tan\paren{a_n} - \tan\paren{a_1}}{\sin\paren{r}}
+\end{equation*}
+In fact:
+\begin{align*}
+  \sin\paren{r}
+  \sum\limits_{i = 1}^{n - 1} {\frac{1}{\cos\paren{a_i} \cos\paren{a_{i+1}}}}
+  &= \sum\limits_{i = 1}^{n - 1} {\frac{\sin\paren{r}}{\cos\paren{a_i} \cos\paren{a_{i+1}}}} = \\
+  &= \sum\limits_{i = 1}^{n - 1} {\frac{\sin\paren{a_{i+1} - a_{i}}}{\cos\paren{a_i} \cos\paren{a_{i+1}}}} = \\
+  &= \sum\limits_{i = 1}^{n - 1} {\frac{\sin\paren{a_{i+1}} \cos\paren{a_i} - \sin\paren{a_i} \cos\paren{a_{i+1}}}
+                                       {\cos\paren{a_i} \cos\paren{a_{i+1}}}} = \\
+  &= \sum\limits_{i = 1}^{n - 1} {\tan\paren{a_{i+1}} - \tan\paren{a_i}} = \\
+  &= \tan\paren{a_{n}} - \tan\paren{a_{1}}
+\end{align*}

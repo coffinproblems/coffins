@@ -1,0 +1,45 @@
+name: New Coffin problem
+description: Submit a Coffin problem not already documented in this project
+labels:
+    - "new_problem"
+body:
+    - type: markdown
+      attributes:
+        value: |
+          When submitting a potential new coffin problem, make sure to:
+          - check that it has not already been submitted in another open or closed [issue](https://github.com/coffinproblems/coffins/issues?q=is%3Aissue) or [pull request](https://github.com/coffinproblems/coffins/pulls?q=is%3Apr);
+          - provide as much information as possible on the problem, such as to whom it was administered, when, by whom, etc.;
+          - the source of the information and the problem;
+          - the formulation of the problem as it was originally administered, or as close as possible to it (including its formulation in the original language, if known).
+
+    - type: textarea
+      id: source
+      attributes:
+        label: Source
+        description: Provide as much information as possible on the source of the problem and related information.
+      validations:
+        required: true
+
+    - type: textarea
+      id: information
+      attributes:
+        label: Information on the problem
+        description: Provide as much information as possible on the problem.
+      validations:
+        required: true
+
+    - type: textarea
+      id: problem
+      attributes:
+        label: The problem statement
+        description: Write the statement of the problem as close as possible to its original formulation, including, if known, in its original language.
+      validations:
+        required: true
+
+    - type: textarea
+      id: additionalinfo
+      attributes:
+        label: Additional information
+        description: Any additional information that may be useful.
+      validations:
+        required: false

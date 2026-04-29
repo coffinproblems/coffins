@@ -1,0 +1,15 @@
+Recall that given two segments, of lengths $r$ and $s$,
+a segment whose length is the geometric mean of $r$ and $s$
+can be constructed with compass and straightedge,
+via the semicircle construction
+(which does not require a segment of length $1$). \newline
+Hence it is possible to construct a segment of length $\sqrt{a b}$,
+and then also segments of lengths
+$\sqrt{a \sqrt{a b}} = \sqrt[4]{a^3 b}$
+and $\sqrt{b \sqrt{a b}} = \sqrt[4]{a b^3}$.
+Finally, a segment of the required length $c$ can be constructed
+by combining the previous segments, since:
+\begin{equation*}
+ c = \paren{\! \sqrt[4]{a} + \sqrt[4]{b} \,}^4
+   = a + 4 \sqrt[4]{a^3 b} + 6 \sqrt{a b} + 4 \sqrt[4]{a b^3} + b
+\end{equation*}
