@@ -47,7 +47,7 @@ Download in PDF format:
 
 
 Alternate download options are also available, for downloading separately the problem statements and the solutions.  
-Other formats are also available:
+Other formats are also provided:
 - **minimal PDF**: PDF file without introduction, table of contents, and references;
 - **EPUB MathML**: reflowable ebook, with math content in MathML format;
 - **EPUB SVG**: reflowable ebook, with math content rendered as SVG;
@@ -82,11 +82,10 @@ The same are also available for the **generalisations of the problems**:
 More details are provided in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 > [!IMPORTANT]
-> Please, when opening an issue or pull request or leaving a comment,
-> do not spoil information that involves the solution to a problem:
-> hide any such comments in an expandable block of text,
-> so that people that stumble upon it can still attempt to solve the problems independently,
-> without having seen anything that could constitute an hint.
+> Please, when opening an issue or leaving a comment
+> about a coffin problems, hide in an expandable block of text
+> any information pertaining to the solution of the problem,
+> so that people who wish to solve the problems independently don't get accidental hints.
 
 A non-exhaustive list of welcomed contributions:
 - Submit coffin problems that are not already documented here.
@@ -133,8 +132,8 @@ The resulting file is placed in the `output` directory (outside of `src`),
 and the intermediate auxiliary files are placed in the `build` directory (outside of `src`).
 
 > [!NOTE]
-> If the build process is carried out in a Docker container, the `output` directory should be mounted in order to get access to the generated output files.
-> Similarly, the `build` needs to be mounted in order to have access to the logs and the other auxiliary files.
+> If the build process is carried out in a Docker container, the `output` directory should be mounted to the container in order to get access to the generated output files.
+> Similarly, the `build` directory needs to be mounted in order to have access to the logs and the other auxiliary files.
 
 #### TeX engines
 Compilation is possible with the pdfLaTeX and LuaLaTeX compilation engines;
@@ -187,34 +186,35 @@ tex4ebook --build-dir ../build_ebook_png --output-dir ../output -f epub main.tex
 > because `tex4ebook` uses the command `ebook-convert`, provided by calibre.
 
 > [!NOTE]
-> The commands described above use PDFTeX as engine.
+> The commands described above use pdfTeX as engine.
 > Compilation with LuaTeX is currently not working.  
 > In any case, to use LuaTeX as engine anyway, use `tex4ebook -l` in place of `tex4ebook` in the commands.
 
 
 ### Compilation variants
 
-Various compilation options are available for customising the document:
-- `ORIGINAL`: to print the original problems.
-- `GENERALISED`: to print the generalised problems.
-- `ALL`: to print both the original and the generalised problems (equivalent to setting both `ORIGINAL` and `GENERALISED`).
+Various compilation options are available for customising the document.
+They are identified by the following keywords:
+- `ORIGINAL`: to print the original problems
+- `GENERALISED`: to print the generalised problems
+- `ALL`: to print both the original and the generalised problems (equivalent to setting both `ORIGINAL` and `GENERALISED`)
 > [!NOTE]
 > `ORIGINAL` is enabled by default if none among `GENERALISED` and `ALL` is set.
 
-- `UNCATEGORISED`: to not subdivide the problems into categories by topic.
-- `NUMBERCATEGORIES`: to make the categories sections numbered (only has effect if `UNCATEGORISED` is not set).
-- `GLOBALNUMBERING`: to number the problems globally instead of within sections (this is automatic if `UNCATEGORISED` is set).
+- `UNCATEGORISED`: to not subdivide the problems into categories by topic
+- `NUMBERCATEGORIES`: to make the categories sections numbered (only has effect if `UNCATEGORISED` is not set)
+- `GLOBALNUMBERING`: to number the problems globally instead of within sections (this is automatic if `UNCATEGORISED` is set)
 
 - `NOSOLUTIONS`: to not print the solutions
 - `ONLYSOLUTIONS`: to only print the solutions
 > [!WARNING]
 > Setting both `NOSOLUTIONS` and `ONLYSOLUTIONS` will result in an empty document.
 
-- `NOSOURCES`: to omit printing the sources at each problem statement.
+- `NOSOURCES`: to omit printing the sources at each problem statement
 - `MOREREFS`: to print additional references for further reading (at the end of the document, after the main references)
 - `FORUMREFS`: to print references to user discussions (at the end of the document, after the other references)
 
-- `MINIMAL`: to omit introduction, table of contents, sources, and references.
+- `MINIMAL`: to omit introduction, table of contents, sources, and references
 
 <br>
 
@@ -380,7 +380,7 @@ See [LICENSE](LICENSE).
 
 - Tanya Khovanova, Alexey Radul: _Jewish Problems_, 2011. (Preprint of _Killer Problems_).
     - doi: [10.48550/arXiv.1110.1556](https://doi.org/10.48550/arXiv.1110.1556)
-    - URL: [https://arxiv.org/abs/1110.1556v2](https://arxiv.org/abs/1110.1556v2)
+    - URL: [https://arxiv.org/abs/1110.1556](https://arxiv.org/abs/1110.1556)
       (archived [here](https://web.archive.org/web/20260211015757/https://arxiv.org/pdf/1110.1556))
 
 - Tanya Khovanova, Alexey Radul: _Killer Problems_, 2012.
