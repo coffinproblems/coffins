@@ -364,7 +364,7 @@ The other options instead are to be applied when compiling the resulting `.tex` 
 
 The project can be contacted at:
 - project email address: [coffin-problems@proton.me](mailto:coffin-problems@proton.me)
-- mantainer: [luciano.spettoli@protonmail.com](mailto:luciano.spettoli@protonmail.com)
+- maintainer: [luciano.spettoli@protonmail.com](mailto:luciano.spettoli@protonmail.com)
 
 
 ## License
