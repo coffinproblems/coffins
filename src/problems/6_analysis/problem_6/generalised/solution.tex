@@ -1,14 +1,26 @@
-Using partial fraction decomposition:
+For each $N \in \mathbb{N}$, using partial fraction decomposition:
 \begin{equation*}
 \begin{split}
-  \sum\limits_{n=1}^{+ \infty} {\, \frac{1}{n^3 + 3 n^2 + 2n}} \,
-  &= \, \sum\limits_{n=1}^{+ \infty} {\, \frac{1}{n \paren{n + 1} \paren{n + 2}}} \,
-   = \, \frac{1}{2} \, \sum\limits_{n=1}^{+ \infty} {\, \frac{1}{n} - \frac{2}{n + 1} + \frac{1}{n + 2}} \, = \\[1.3ex]
-  &= \, \frac{1}{2} \, \sum\limits_{n=1}^{+ \infty} {\, \frac{1}{n}}
-     \, - \, \sum\limits_{n=2}^{+ \infty} {\, \frac{1}{n}}
-     \, + \, \frac{1}{2} \, \sum\limits_{n=3}^{+ \infty} {\, \frac{1}{n}} \,
-   = \frac{1}{2} + \frac{1}{4} - \frac{1}{2}
-     \, + \, \sum\limits_{n=3}^{+ \infty} {\, \frac{1}{n} - \frac{1}{n}} \, = \\[1ex]
+  \sum\limits_{n=1}^{N} {\, \frac{1}{n^3 + 3 n^2 + 2n}} \,
+  &= \, \sum\limits_{n=1}^{N} {\, \frac{1}{n \paren{n + 1} \paren{n + 2}}} \,
+   = \, \frac{1}{2} \, \sum\limits_{n=1}^{N} {\, \frac{1}{n} - \frac{2}{n + 1} + \frac{1}{n + 2}} \, = \\[1.35ex]
+  &= \, \frac{1}{2} \, \sum\limits_{n=1}^{N} {\, \frac{1}{n}}
+     \, + \, \frac{1}{2} \, \sum\limits_{n=3}^{N + 2} {\, \frac{1}{n}}
+     \, - \, \sum\limits_{n=2}^{N + 1} {\, \frac{1}{n}} \, = \\[0.6ex]
+  &= \, \frac{1}{2} \mspace{-1.2mu} + \mspace{-1.2mu} \frac{1}{4}
+     \, + \, \frac{1}{2} \! \cdot \! \frac{1}{N + 1} \mspace{-0.6mu}
+     + \mspace{-0.6mu} \frac{1}{2} \! \cdot \! \frac{1}{N + 2}
+     \, - \mspace{1.5mu} \frac{1}{2} \mspace{-1.2mu} - \mspace{-1.2mu} \frac{1}{N + 1}
+     \, + \, \sum\limits_{n=3}^{N} {\, \frac{1}{n} - \frac{1}{n}} \, = \\[0.3ex]
   &= \frac{1}{4}
+     - \frac{1}{2} \! \cdot \! \frac{1}{N + 1}
+     + \frac{1}{2} \! \cdot \! \frac{1}{N + 2} \\[1.1ex]
+  &= \frac{1}{4} - \frac{1}{2 \paren{N + 1} \paren{N + 2}}
 \end{split}
+\end{equation*}
+Thus the series converges to $\dfrac{1}{4}$, and
+\begin{equation*}
+  \abs{\frac{1}{4} - \sum\limits_{n=1}^{N} {\, \frac{1}{n^3 + 3 n^2 + 2n}}}
+  = \frac{1}{2 \paren{N + 1} \paren{N + 2}}
+  \sim \frac{1}{2 N^2}
 \end{equation*}

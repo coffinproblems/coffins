@@ -5,19 +5,19 @@
 
 \ifluatex
   \usepackage{fontspec}
-  \usepackage[olddefault, varnothing]{fontsetup}
+  \usepackage[default, varnothing]{fontsetup}
   \setmathfont[range=bb, StylisticSet=3]{NewCMMath-Regular.otf}
-  \setmathfont[range=bb/{Latin}]{NewCMMath-Regular.otf}
+  %\setmathfont[range=bb/{Latin}]{NewCMMath-Regular.otf}
 \fi
 
-\usepackage[stretch=16]{microtype}
+\usepackage[stretch=24]{microtype}
 \usepackage[english]{babel}
 \usepackage{csquotes}
 
 % Disable hyphenation
 %\pretolerance    = 100
 \tolerance        = 5000
-\emergencystretch = 0.04\columnwidth
+\emergencystretch = 0.05\columnwidth
 \hyphenpenalty    = 10000
 \exhyphenpenalty  = 5000
 
@@ -34,7 +34,7 @@
 
 % Line spacing
 \usepackage{setspace}
-\setstretch{1.4}
+\onehalfspacing
 
 % Disable indentation at beginning of paragraphs; and customise vertical spacing
 \usepackage[
