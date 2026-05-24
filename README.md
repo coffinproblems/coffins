@@ -13,25 +13,6 @@ Some problems also admit interesting generalisations, which are also catalogued.
 For historical information on the topic, consult the [historical references](#additional-references).
 
 
-## Status
-
-The current number of documented problems is: 107.
-
-Currently, not all solutions have been written.
-
-The problems have been categorised by topic, as follows:
-- **Evaluations** (4 problems): problems that ask to determine the value of an expression;
-- **Comparisons** (6 problems): problems that ask to determine which of two numbers is greater than the other;
-- **Equations** (12 problems): problems that ask to solve an equation or system of equations over the real or complex numbers;
-- **Inequations** (6 problems): problems that ask to solve an inequation;
-- **Algebra and Number Theory** (13 problems): problems in Algebra or in Number Theory;
-- **Analysis** (7 problems): problems in Analysis;
-- **Plane Geometry** (27 problems): problems in planar Euclidean Geometry;
-- **Solid Geometry** (18 problems): problems in 3D Geometry;
-- **Geometric constructions** (12 problems): problems that ask to perform constructions via only straightedge and compass;
-- **Other problems** (2 problems): problems that do not fit in any specific category.
-
-
 ## Download
 
 > [!NOTE]
@@ -75,6 +56,25 @@ The same are also available for the **generalisations of the problems**:
 | Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions_minimal.pdf)  | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-svg.epub)  |
 | Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
 | Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions_minimal.pdf) | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-svg.epub) |
+
+
+## Status
+
+The current number of documented problems is: 111.
+
+Currently, not all solutions have been written.
+
+The problems have been categorised by topic, as follows:
+- **Evaluations** (4 problems): problems that ask to determine the value of an expression;
+- **Comparisons** (6 problems): problems that ask to determine which of two numbers is greater than the other;
+- **Equations** (13 problems): problems that ask to solve an equation or system of equations over the real or complex numbers;
+- **Inequations** (6 problems): problems that ask to solve an inequation;
+- **Algebra and Number Theory** (13 problems): problems in Algebra or in Number Theory;
+- **Analysis** (7 problems): problems in Analysis;
+- **Plane Geometry** (27 problems): problems in planar Euclidean Geometry;
+- **Solid Geometry** (21 problems): problems in 3D Geometry;
+- **Geometric constructions** (12 problems): problems that ask to perform constructions via only straightedge and compass;
+- **Other problems** (2 problems): problems that do not fit in any specific category.
 
 
 ## Contributing
@@ -546,7 +546,7 @@ For a more complete historical overview, below are some additional resources.
   In _Science_, volume 203.4380, page 501.
     - doi: [10.1126/science.203.4380.501.b](https://doi.org/10.1126/science.203.4380.501.b)
     - URL: [https://www.science.org/doi/10.1126/science.203.4380.501.b](https://www.science.org/doi/10.1126/science.203.4380.501.b)
-      (archived [here](https://web.archive.org/web/20240310231109im_/https://www.science.org/cms/10.1126/science.203.4380.501.a/asset/660b82a2-8d72-45c6-b611-f99c4f61ba33/assets/science.203.4380.501.a.fp.png))
+      (archived [here](https://web.archive.org/web/20260521211118im_/https://www.science.org/cms/10.1126/science.203.4380.501.b/asset/f7a439ea-4571-4bc3-b63e-f051f0d89576/assets/science.203.4380.501.b.fp.png))
 
 - Gina Bari Kolata: _Response: Problems_, 1979 (in response to _Problems_ by George Greene).
   In _Science_, volume 203.4380, page 501.
@@ -735,6 +735,10 @@ For a more complete historical overview, below are some additional resources.
 - Tanya Khovanova: _The Oral Exam_, 2011.
     - URL: [https://blog.tanyakhovanova.com/2011/05/the-oral-exam/](https://blog.tanyakhovanova.com/2011/05/the-oral-exam/)
       (archived [here](https://web.archive.org/web/20210224202653/https://blog.tanyakhovanova.com/2011/05/the-oral-exam/))
+
+- Tanya Khovanova: _Arnold’s Advice_, 2022.
+    - URL: [https://blog.tanyakhovanova.com/2022/04/arnolds-advice/](https://blog.tanyakhovanova.com/2022/04/arnolds-advice/)
+      (archived [here](https://web.archive.org/web/20260217211323/https://blog.tanyakhovanova.com/2022/04/arnolds-advice/))
 
 
 - Yevgeni Berkovich: _Editor's word_, 2003.
