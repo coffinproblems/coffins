@@ -15,8 +15,10 @@ For historical information on the topic, consult the [historical references](#ad
 
 ## Download
 
+<!--
 > [!NOTE]
 > Solutions have not yet been written for all problems.
+-->
 
 Download in PDF format:
 <h3 align="center">
@@ -594,7 +596,7 @@ For a more complete historical overview, below are some additional resources.
 - Valery Anatolievich Senderov: _Without partaking of the Buffalo — In memory of Bella Abramovna Subbotovskaya_, 2011.
     - URL: [https://volgograd.yabloko.ru/news/index.phtml?id=1871](https://web.archive.org/web/20190927215546/https://volgograd.yabloko.ru/news/index.phtml?id=1871)
 
-- _Bella Subbotovskaya and her University_, 2007.
+- _Bella Subbotovskaya and her University_ (Bella Subbotovskaya Memorial Conference), Haifa, 2007.
     - Part 1: [https://www.youtube.com/watch?v=Xyak7yINMsI](https://www.youtube.com/watch?v=Xyak7yINMsI)
     - Part 2: [https://www.youtube.com/watch?v=8CEN6nIN4Dk](https://www.youtube.com/watch?v=8CEN6nIN4Dk)
     - Part 3: [https://www.youtube.com/watch?v=NDmzWMM_8wQ](https://www.youtube.com/watch?v=NDmzWMM_8wQ)

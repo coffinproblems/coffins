@@ -137,8 +137,7 @@ Suggestions for improvements in the LaTeX source code or in the project structur
 can be made by opening an issue or a pull request.
 
 Particularly, help is needed for the following:
-- making the MathML via "Structured Elements" (`mathml-SE`) work;
-- making EPUB generation work correctly for MathML, SVG and PNG Math rendering.
+- making EPUB generation work correctly for MathML-encoded mathematical content.
 
 
 ## Submit solutions
