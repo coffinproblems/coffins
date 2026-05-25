@@ -45,19 +45,7 @@
 
 
 % Sets
-\providecommand{\suchthat}{}
-\DeclarePairedDelimiterX{\set}[1]{\{}{\}}{%
-  \begingroup%
-  \renewcommand{\suchthat}{%
-    \mathchoice{\mspace{6mu}}{\mspace{4mu}}{\mspace{3mu}}{\mspace{2mu}}%
-    \delimsize\vert%
-    \allowbreak%
-    \mathchoice{\mspace{6mu}}{\mspace{4mu}}{\mspace{3mu}}{\mspace{2mu}}%
-    \mathopen{}%
-  }%
-  #1%
-  \endgroup%
-}
+\DeclarePairedDelimiter{\set}{\{}{\}}
 \swapstar{set}
 
 % Set builder notation
