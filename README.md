@@ -15,8 +15,10 @@ For historical information on the topic, consult the [historical references](#ad
 
 ## Download
 
+<!--
 > [!NOTE]
 > Solutions have not yet been written for all problems.
+-->
 
 Download in PDF format:
 <h3 align="center">
@@ -574,6 +576,12 @@ For a more complete historical overview, below are some additional resources.
     - URL: [https://arzamas.academy/materials/1148](https://web.archive.org/web/20171023084427/https://arzamas.academy/materials/1148)
       (also [here](https://web.archive.org/web/20161210142921/https://arzamas.academy/materials/1148))
 
+- Andrei Reznikov: _A few reminiscences about some peculiarities of getting a mathematical education in Moscow in the 80s_, 2007.
+    - URL: [https://u.math.biu.ac.il/~reznikov/pap/Haifa-conf.pdf](https://u.math.biu.ac.il/~reznikov/pap/Haifa-conf.pdf)
+      (archived [here](https://web.archive.org/web/20221224155536/https://u.math.biu.ac.il/~reznikov/pap/Haifa-conf.pdf)),
+      and [https://drive.google.com/file/d/1IsxJY4jBm_p-DYu-YXpO6W6u5lXw2EzT](https://drive.google.com/file/d/1IsxJY4jBm_p-DYu-YXpO6W6u5lXw2EzT/view)
+      (archived [here](https://web.archive.org/web/20260526211147/https://drive.usercontent.google.com/download?id=1IsxJY4jBm_p-DYu-YXpO6W6u5lXw2EzT))
+
 - Anatoly Moiseevich Vershik: _Admission to the mathematics faculty in Russia in the 1970s and 1980s_, 1994.
   In _The Mathematical Intelligencer_, volume 16.4, pages 4–5.
     - doi: [10.1142/9789812701169_0007](https://doi.org/https://www.lirmm.fr/~ashen/senderov/demidov.pdf)
@@ -594,7 +602,7 @@ For a more complete historical overview, below are some additional resources.
 - Valery Anatolievich Senderov: _Without partaking of the Buffalo — In memory of Bella Abramovna Subbotovskaya_, 2011.
     - URL: [https://volgograd.yabloko.ru/news/index.phtml?id=1871](https://web.archive.org/web/20190927215546/https://volgograd.yabloko.ru/news/index.phtml?id=1871)
 
-- _Bella Subbotovskaya and her University_, 2007.
+- _Bella Subbotovskaya and her University_ (Bella Subbotovskaya Memorial Conference), Haifa, 2007.
     - Part 1: [https://www.youtube.com/watch?v=Xyak7yINMsI](https://www.youtube.com/watch?v=Xyak7yINMsI)
     - Part 2: [https://www.youtube.com/watch?v=8CEN6nIN4Dk](https://www.youtube.com/watch?v=8CEN6nIN4Dk)
     - Part 3: [https://www.youtube.com/watch?v=NDmzWMM_8wQ](https://www.youtube.com/watch?v=NDmzWMM_8wQ)
@@ -741,35 +749,39 @@ For a more complete historical overview, below are some additional resources.
       (archived [here](https://web.archive.org/web/20260217211323/https://blog.tanyakhovanova.com/2022/04/arnolds-advice/))
 
 
-- Yevgeni Berkovich: _Editor's word_, 2003.
-  In _Notes on Jewish History_, Number 34.
-    - URL: [https://berkovich-zametki.com/Nomer34/Redakt0.htm](https://berkovich-zametki.com/Nomer34/Redakt0.htm)
-      (archived [here](https://web.archive.org/web/20120601130734/https://berkovich-zametki.com/Nomer34/Redakt0.htm))
-
 - Yevgeni Berkovich: _Mikhail Tsalenko_.
     - URL: [https://z.berkovich-zametki.com/avtory/calenko/](https://z.berkovich-zametki.com/avtory/calenko/)
       (archived [here](https://web.archive.org/web/20111012070346/https://berkovich-zametki.com/Avtory/Calenko.htm))
 
-- Mikhail Shamshonovich Tsalenko: _Facts that it is preferable not to remember_, 2009 (written in 1988).
+- Yevgeni Berkovich: _Editor's word_, in "Notes on Jewish History" issue 34, 2003.
+  In _Notes on Jewish History_, Number 34.
+    - URL: [https://berkovich-zametki.com/Nomer34/Redakt0.htm](https://berkovich-zametki.com/Nomer34/Redakt0.htm)
+      (archived [here](https://web.archive.org/web/20120601130734/https://berkovich-zametki.com/Nomer34/Redakt0.htm))
+
+- Mikhail Shamshonovich Tsalenko: _Facts that it is preferable not to remember_, in "Notes on Jewish History" issue 142, 2009 (written in 1988).
   (See also the comments).
     - URL: [https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php](https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php)
       (archived [here](https://web.archive.org/web/20260218071345/https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php))
 
-- Mikhail Shamshonovich Tsalenko: _Episodes of life_, 2011.
+- Mikhail Shamshonovich Tsalenko: _Episodes of life_, in "Notes on Jewish History" issue 144, 2011.
     - URL: [https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php](https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php)
       (archived [here](https://web.archive.org/web/20260301080722/https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php))
 
-- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Last month of Summer_, 2013.
-    - URL: [https://7iskusstv.com/2013/Nomer6/Calenko1.php](https://7iskusstv.com/2013/Nomer6/Calenko1.php)
-      (archived [here](https://web.archive.org/web/20241210235501/https://7iskusstv.com/2013/Nomer6/Calenko1.php))
+- Vladimir Ilyich Babitsky: _Smoke of the Fatherland_, in "Notes on Jewish History" issue 161, 2013.
+    - URL: [https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php](https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php)
+      (archived [here](https://web.archive.org/web/20241227041051/https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php))
 
-- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Time for change_, 2013.
+- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Time for change_, in "Seven Arts" number 43,5, 2013.
     - URL: [https://7iskusstv.com/2013/Nomer5/Calenko1.php](https://7iskusstv.com/2013/Nomer5/Calenko1.php)
       (archived [here](https://web.archive.org/web/20251217071520/https://7iskusstv.com/2013/Nomer5/Calenko1.php))
 
-- Vladimir Ilyich Babitsky: _Smoke of the Fatherland_, 2013.
-    - URL: [https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php](https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php)
-      (archived [here](https://web.archive.org/web/20241227041051/https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php))
+- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Last month of Summer_, in "Seven Arts" number 43.6, 2013.
+    - URL: [https://7iskusstv.com/2013/Nomer6/Calenko1.php](https://7iskusstv.com/2013/Nomer6/Calenko1.php)
+      (archived [here](https://web.archive.org/web/20241210235501/https://7iskusstv.com/2013/Nomer6/Calenko1.php))
+
+- Mikhail Arkadyevich Shifman: _Notes from the old Phystech_, in "Seven Arts" number 172.11, 2024.
+    - URL: [https://7i.7iskusstv.com/y2024/nomer11/mashifman/](https://7i.7iskusstv.com/y2024/nomer11/mashifman/)
+      (archive [here](\url{https://web.archive.org/web/20260306044624/https://7i.7iskusstv.com/y2024/nomer11/mashifman/))
 
 
 - Julia Schulman, Michael Hsieh: _Coffin Problems — How Soviet anti-Semitism buried Jewish scientists_, 2021.
