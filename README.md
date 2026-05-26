@@ -603,9 +603,12 @@ For a more complete historical overview, below are some additional resources.
     - URL: [https://volgograd.yabloko.ru/news/index.phtml?id=1871](https://web.archive.org/web/20190927215546/https://volgograd.yabloko.ru/news/index.phtml?id=1871)
 
 - _Bella Subbotovskaya and her University_ (Bella Subbotovskaya Memorial Conference), Haifa, 2007.
-    - Part 1: [https://www.youtube.com/watch?v=Xyak7yINMsI](https://www.youtube.com/watch?v=Xyak7yINMsI)
-    - Part 2: [https://www.youtube.com/watch?v=8CEN6nIN4Dk](https://www.youtube.com/watch?v=8CEN6nIN4Dk)
-    - Part 3: [https://www.youtube.com/watch?v=NDmzWMM_8wQ](https://www.youtube.com/watch?v=NDmzWMM_8wQ)
+    - Part 1: [https://www.youtube.com/watch?v=wLTijd4OKj8](https://www.youtube.com/watch?v=wLTijd4OKj8)
+      and [https://www.youtube.com/watch?v=Xyak7yINMsI](https://www.youtube.com/watch?v=Xyak7yINMsI)
+    - Part 2: [https://www.youtube.com/watch?v=QyErAlI149g](https://www.youtube.com/watch?v=QyErAlI149g)
+      and [https://www.youtube.com/watch?v=8CEN6nIN4Dk](https://www.youtube.com/watch?v=8CEN6nIN4Dk)
+    - Part 3: [https://www.youtube.com/watch?v=Cx2MK6tD8S4](https://www.youtube.com/watch?v=Cx2MK6tD8S4)
+      and [https://www.youtube.com/watch?v=NDmzWMM_8wQ](https://www.youtube.com/watch?v=NDmzWMM_8wQ)
 
 - Wikipedia: _Bella Abramovna Subbotovskaya_.
     - Russian page: [https://ru.wikipedia.org/wiki/Субботовская,_Белла_Абрамовна](https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D0%B1%D0%B1%D0%BE%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F,_%D0%91%D0%B5%D0%BB%D0%BB%D0%B0_%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D0%BD%D0%B0)
