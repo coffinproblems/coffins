@@ -59,6 +59,8 @@ The same are also available for the **generalisations of the problems**:
 | Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
 | Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions_minimal.pdf) | \[Not available\] | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-svg.epub) |
 
+<br>
+
 
 ## Status
 
@@ -70,9 +72,9 @@ The problems have been categorised by topic, as follows:
 - **Evaluations** (4 problems): problems that ask to determine the value of an expression;
 - **Comparisons** (6 problems): problems that ask to determine which of two numbers is greater than the other;
 - **Equations** (13 problems): problems that ask to solve an equation or system of equations over the real or complex numbers;
-- **Inequations** (6 problems): problems that ask to solve an inequation;
+- **Inequations** (6 problems): problems that ask to solve an inequality over the real numbers;
 - **Algebra and Number Theory** (13 problems): problems in Algebra or in Number Theory;
-- **Analysis** (7 problems): problems in Analysis;
+- **Analysis** (7 problems): problems in Analysis and Calculus;
 - **Plane Geometry** (27 problems): problems in planar Euclidean Geometry;
 - **Solid Geometry** (21 problems): problems in 3D Geometry;
 - **Geometric constructions** (12 problems): problems that ask to perform constructions via only straightedge and compass;
@@ -82,12 +84,6 @@ The problems have been categorised by topic, as follows:
 ## Contributing
 
 More details are provided in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-> [!IMPORTANT]
-> Please, when opening an issue or leaving a comment
-> about a coffin problems, hide in an expandable block of text
-> any information pertaining to the solution of the problem,
-> so that people who wish to solve the problems independently don't get accidental hints.
 
 A non-exhaustive list of welcomed contributions:
 - Submit coffin problems that are not already documented here.
@@ -99,8 +95,14 @@ A non-exhaustive list of welcomed contributions:
 - Propose additional solutions to problems, or improvements to the existing ones.
 - Suggest possible improvements to the LaTeX source code.
 - Sift through the references to see if any of them contain any information that was missed.
-- Sift through user discussions about relevant topics to see if there is any new information. See [here](CONTRIBUTING.md/#sift-through-sources) for details.
+- Sift through online user discussions about relevant topics to see if there is any new information. See [here](CONTRIBUTING.md/#sift-through-sources) for details.
 - Help to identify and contact people that might have useful information.
+
+> [!IMPORTANT]
+> Please, when opening an issue or leaving a comment
+> about a coffin problems, hide in an expandable block of text
+> any information pertaining to the solution of the problem,
+> so that people who wish to solve the problems independently don't get accidental hints.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
@@ -134,7 +136,8 @@ The resulting file is placed in the `output` directory (outside of `src`),
 and the intermediate auxiliary files are placed in the `build` directory (outside of `src`).
 
 > [!NOTE]
-> If the build process is carried out in a Docker container, the `output` directory should be mounted to the container in order to get access to the generated output files.
+> If the build process is carried out in a Docker container,
+> the `output` directory should be mounted to the container in order to get access to the generated output files.
 > Similarly, the `build` directory needs to be mounted in order to have access to the logs and the other auxiliary files.
 
 #### TeX engines
@@ -756,33 +759,39 @@ For a more complete historical overview, below are some additional resources.
     - URL: [https://z.berkovich-zametki.com/avtory/calenko/](https://z.berkovich-zametki.com/avtory/calenko/)
       (archived [here](https://web.archive.org/web/20111012070346/https://berkovich-zametki.com/Avtory/Calenko.htm))
 
-- Yevgeni Berkovich: _Editor's word_, in "Notes on Jewish History" issue 34, 2003.
-  In _Notes on Jewish History_, Number 34.
+- Yevgeni Berkovich: _Editor's word_, 2003.
+  In _Notes on Jewish History_, issue 34.
     - URL: [https://berkovich-zametki.com/Nomer34/Redakt0.htm](https://berkovich-zametki.com/Nomer34/Redakt0.htm)
       (archived [here](https://web.archive.org/web/20120601130734/https://berkovich-zametki.com/Nomer34/Redakt0.htm))
 
-- Mikhail Shamshonovich Tsalenko: _Facts that it is preferable not to remember_, in "Notes on Jewish History" issue 142, 2009 (written in 1988).
-  (See also the comments).
+- Mikhail Shamshonovich Tsalenko: _Facts that it is preferable not to remember_, 2009 (written in 1988).
+  In _Notes on Jewish History_, issue 142.
+  (See also the comments under the article).
     - URL: [https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php](https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php)
       (archived [here](https://web.archive.org/web/20260218071345/https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php))
 
-- Mikhail Shamshonovich Tsalenko: _Episodes of life_, in "Notes on Jewish History" issue 144, 2011.
+- Mikhail Shamshonovich Tsalenko: _Episodes of life_, 2011.
+  In _Notes on Jewish History_, issue 144.
     - URL: [https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php](https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php)
       (archived [here](https://web.archive.org/web/20260301080722/https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php))
 
-- Vladimir Ilyich Babitsky: _Smoke of the Fatherland_, in "Notes on Jewish History" issue 161, 2013.
+- Vladimir Ilyich Babitsky: _Smoke of the Fatherland_, 2013.
+  In _Notes on Jewish History_, issue 161.
     - URL: [https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php](https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php)
       (archived [here](https://web.archive.org/web/20241227041051/https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php))
 
-- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Time for change_, in "Seven Arts" number 43,5, 2013.
+- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Time for change_, 2013.
+  In _Seven Arts_, number 43.5.
     - URL: [https://7iskusstv.com/2013/Nomer5/Calenko1.php](https://7iskusstv.com/2013/Nomer5/Calenko1.php)
       (archived [here](https://web.archive.org/web/20251217071520/https://7iskusstv.com/2013/Nomer5/Calenko1.php))
 
-- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Last month of Summer_, in "Seven Arts" number 43.6, 2013.
+- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Last month of Summer_, 2013.
+  In _Seven Arts_, number 43.6.
     - URL: [https://7iskusstv.com/2013/Nomer6/Calenko1.php](https://7iskusstv.com/2013/Nomer6/Calenko1.php)
       (archived [here](https://web.archive.org/web/20241210235501/https://7iskusstv.com/2013/Nomer6/Calenko1.php))
 
-- Mikhail Arkadyevich Shifman: _Notes from the old Phystech_, in "Seven Arts" number 172.11, 2024.
+- Mikhail Arkadyevich Shifman: _Notes from the old Phystech_, 2024.
+  In _Seven Arts_, number 172.11.
     - URL: [https://7i.7iskusstv.com/y2024/nomer11/mashifman/](https://7i.7iskusstv.com/y2024/nomer11/mashifman/)
       (archive [here](\url{https://web.archive.org/web/20260306044624/https://7i.7iskusstv.com/y2024/nomer11/mashifman/))
 
