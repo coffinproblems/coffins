@@ -10,13 +10,13 @@
 
 % Part title: "Problems" / "Solutions"
 \newcounter{plistcount}
-\newcommand{\problemlist}[1]{
+\makeatletter
+\newcommand{\problemlist@star}[1]{%
+  % starred variant does not print the part title in minimal version
   \refstepcounter{plistcount}
   \ifdefined\MINIMAL
     \phantomsection
     \addcontentsline{toc}{section}{#1}
-    \part*{#1}
-    \vspace{2ex}
   \else
     \clearpage
     \phantomsection
@@ -26,16 +26,41 @@
     \thispagestyle{empty}
     \vspace*{\stretch{6}}
     \clearpage
-  \fi
+  \fi%
 }
+
+\newcommand{\problemlist@nostar}[1]{%
+  \refstepcounter{plistcount}
+  \ifdefined\MINIMAL
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}
+    \part*{#1}
+    \vspace{4ex}
+  \else
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}
+    \vspace*{\stretch{1}}
+    \part*{#1}
+    \thispagestyle{empty}
+    \vspace*{\stretch{6}}
+    \clearpage
+  \fi%
+}
+
+\newcommand{\problemlist}{%
+  \@ifstar{\problemlist@star}{\problemlist@nostar}%
+}
+\makeatother
 
 % Section for category of problems
 \newcounter{categorycount}[plistcount]
+
 \newcommand{\problemcategory}[1]{
   \ifcategorise  % whether to subdivide the problems in categories or not
     \refstepcounter{categorycount}
-    \vspace{3ex}
-    \ifdefined\MINIMAL
+    \ifnum\value{categorycount}=1
+      % avoid forcing a new page when starting the first section
     \else
       \newpage
     \fi
@@ -80,8 +105,8 @@
 
 % Style for the citation of sources for individual problems
 \newcommand{\sourceheading}{Source:}
-\newcommand{\problemsource}[1]{
+\newcommand{\problemsource}[1]{%
   \vspace{-1.2ex}
   {\small \hspace{0.04em} \textsl{\sourceheading\ #1}}
-  \vspace{0.8ex}
+  \vspace{0.8ex}%
 }

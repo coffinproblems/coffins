@@ -27,16 +27,16 @@
 
 
 \begin{document}
-\pagenumbering{roman}
-
-% Title
-\maketitle
-\thispagestyle{empty}
-\vspace{3cm}
-
 \ifdefined\MINIMAL
-\else \ifdefined\REDUCED
+  \maketitle
+  \vspace{4ex}
 \else
+  \pagenumbering{roman}
+
+  \maketitle
+  \thispagestyle{empty}
+  \vspace{4ex}
+
   \section*{Introduction} \addcontentsline{toc}{section}{Introduction}
   \input{sections/introduction}
 
@@ -44,9 +44,9 @@
   \clearpage
   \tableofcontents
   \clearpage
-\fi \fi
 
-\pagenumbering{arabic}
+  \pagenumbering{arabic}
+\fi
 
 
 % Original problems
