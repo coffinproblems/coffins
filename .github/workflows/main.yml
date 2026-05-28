@@ -225,6 +225,9 @@ jobs:
           pattern: pdf-first-build-publish-true-*
           merge-multiple: true
 
+      - name: Copy primary pdf under simpler name
+        run: sudo cp coffins_problems_and_solutions.pdf coffins.pdf
+
       - name: Move PDFs to publish directory
         run: sudo mv *.pdf ./publish
 

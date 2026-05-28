@@ -4,7 +4,7 @@
 \ifdefined\ONLYSOLUTIONS
 \else
 
-  \problemlist{Problems}
+  \problemlist*{Problems}
   \ifdefined\NOSOURCES
     \printsourcesfalse  % Disable printing the sources for each problem statement
   \else
@@ -23,13 +23,13 @@
 \else
 
   \ifdefined\ONLYSOLUTIONS
-    % This is the beginning of the document:
-    % do not force a new page (applies when the document is "MINIMAL")
+    % This is the beginning of the document: do not force a new page  (applies when the document is "MINIMAL")
+    \problemlist*{Solutions}
   \else
     \newpage
+    \problemlist{Solutions}
   \fi
 
-  \problemlist{Solutions}
   \ifdefined\ONLYSOLUTIONS
     \ifdefined\NOSOURCES
       \printsourcesfalse

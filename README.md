@@ -22,7 +22,7 @@ For historical information on the topic, consult the [historical references](#ad
 
 Download in PDF format:
 <h3 align="center">
-  <a href="https://coffinproblems.github.io/coffins/coffins_problems_and_solutions.pdf" download>
+  <a href="https://coffinproblems.github.io/coffins/coffins.pdf" download>
     Download
   </a>
 </h3>
@@ -39,7 +39,7 @@ Other formats are also provided:
 -->
 
 > [!WARNING]
-> At the moment, EPUB files with MathML are badly formatted, to the point of being unusable.
+> At the moment, EPUB files with MathML are badly formatted, to the point of being unusable.  
 > EPUB files with SVG exhibit only some small formatting issues.
 
 |                        | PDF              | Minimal PDF      | EPUB MathML      | EPUB SVG         |

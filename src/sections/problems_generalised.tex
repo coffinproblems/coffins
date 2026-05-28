@@ -9,7 +9,7 @@
     \problemlist{Generalised problems}
   \else
     % This is the beginning of the document: do not force a new page (applies when the document is "MINIMAL")
-    \problemlist{Problems}
+    \problemlist*{Problems}
   \fi
 
   \ifdefined\NOSOURCES
@@ -32,18 +32,18 @@
   \ifdefined\ONLYSOLUTIONS
     \ifdefined\ORIGINAL
       \newpage
+      \problemlist{Solutions to generalised problems}
     \else
-      % This is the beginning of the document:
-      % do not force a new page (applies when the document is "MINIMAL")
+      % This is the beginning of the document: do not force a new page (applies when the document is "MINIMAL")
+      \problemlist*{Solutions}
     \fi
   \else
     \newpage
-  \fi
-
-  \ifdefined\ORIGINAL
-    \problemlist{Solutions to generalised problems}
-  \else
-    \problemlist{Solutions}
+    \ifdefined\ORIGINAL
+      \problemlist{Solutions to generalised problems}
+    \else
+      \problemlist{Solutions}
+    \fi
   \fi
 
   \ifdefined\ONLYSOLUTIONS

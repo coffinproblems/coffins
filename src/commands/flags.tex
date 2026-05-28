@@ -18,8 +18,7 @@
 %   FORUMREFS:         print references to user discussions
 %   MERGEREFS:         print the references together instead of separating them
 %
-%   REDUCED:           omit introduction, table of contents, sources, and references
-%   MINIMAL:           omit introduction, table of contents, sources, and references; and reduce whitespace
+%   MINIMAL:           omit introduction, table of contents, sources, and references
 
 
 
@@ -64,11 +63,6 @@
   \else
     \def\ORIGINAL{}  % Print the original problems by default if nothing is specified
   \fi
-\fi
-
-\ifdefined\REDUCED
-  \def\NOSOURCES{}
-  \def\NOREFS{}
 \fi
 
 \ifdefined\MINIMAL
