@@ -754,6 +754,14 @@ For a more complete historical overview, below are some additional resources.
     - URL: [https://blog.tanyakhovanova.com/2011/05/the-oral-exam/](https://blog.tanyakhovanova.com/2011/05/the-oral-exam/)
       (archived [here](https://web.archive.org/web/20210224202653/https://blog.tanyakhovanova.com/2011/05/the-oral-exam/))
 
+- Tanya Khovanova: _This is Not a Consultation_, 2011.
+    - URL: [https://blog.tanyakhovanova.com/2011/10/this-is-not-a-consultation/](https://blog.tanyakhovanova.com/2011/10/this-is-not-a-consultation/)
+      (archived [here](https://web.archive.org/web/20260315014944/http://blog.tanyakhovanova.com/2011/10/this-is-not-a-consultation/))
+
+- Tanya Khovanova: _Jewish Problems_, 2011.
+    - URL: [https://blog.tanyakhovanova.com/2011/10/jewish-problems/](https://blog.tanyakhovanova.com/2011/10/jewish-problems/)
+      (archived [here](https://web.archive.org/web/20260124231151/https://blog.tanyakhovanova.com/2011/10/jewish-problems/))
+
 - Tanya Khovanova: _Arnold’s Advice_, 2022.
     - URL: [https://blog.tanyakhovanova.com/2022/04/arnolds-advice/](https://blog.tanyakhovanova.com/2022/04/arnolds-advice/)
       (archived [here](https://web.archive.org/web/20260217211323/https://blog.tanyakhovanova.com/2022/04/arnolds-advice/))
