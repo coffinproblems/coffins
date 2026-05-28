@@ -97,13 +97,13 @@ A non-exhaustive list of welcomed contributions:
 - Sift through online user discussions about relevant topics to see if there is any new information. See [here](CONTRIBUTING.md/#sift-through-sources) for details.
 - Help to identify and contact people that might have useful information.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
 > [!IMPORTANT]
 > Please, when opening an issue or leaving a comment
 > about a coffin problems, hide in an expandable block of text
 > any information pertaining to the solution of the problem,
 > so that people who wish to solve the problems independently don't get accidental hints.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 
 ## Building
@@ -480,7 +480,7 @@ See [LICENSE](LICENSE).
       another updated version, differing only in the last two pages, is available at
       [https://www.academia.edu/101548394/](https://www.academia.edu/101548394/Epilogue_May_6_2023_To_You_Just_Failed_Your_Math_Test_Comrade_Einstein_World_Scientific_Singapore_2005_)
 
-- Sergei Tabachnikov: _Review of “You failed your math test, Comrade Einstein” by M. Shifman_, 2020.
+- Sergei Lvovich Tabachnikov: _Review of “You failed your math test, Comrade Einstein” by M. Shifman_, 2020.
   In _The Mathematical Intelligencer_, volume 42, pages 83–87.
     - doi: [10.1007/s00283-020-09976-y](https://doi.org/10.1007/s00283-020-09976-y)
     - URL: [https://drive.google.com/file/d/1hrcikumwsJ-svqattfX_cvc76CaU-6HG/](https://drive.google.com/file/d/1hrcikumwsJ-svqattfX_cvc76CaU-6HG/)

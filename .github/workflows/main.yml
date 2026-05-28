@@ -121,7 +121,7 @@ jobs:
 
           - target: '_problems_and_solutions_minimal'
             flags: ''
-            pre_tex: '\def\TAGPDF{} \def\REDUCED{}'
+            pre_tex: '\def\TAGPDF{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
@@ -134,7 +134,7 @@ jobs:
 
           - target: '_problems_no_solutions_minimal'
             flags: ''
-            pre_tex: '\def\TAGPDF{} \def\NOSOLUTIONS{} \def\REDUCED{}'
+            pre_tex: '\def\TAGPDF{} \def\NOSOLUTIONS{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
@@ -147,7 +147,7 @@ jobs:
 
           - target: '_solutions_minimal'
             flags: ''
-            pre_tex: '\def\TAGPDF{} \def\ONLYSOLUTIONS{} \def\REDUCED{}'
+            pre_tex: '\def\TAGPDF{} \def\ONLYSOLUTIONS{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
@@ -161,7 +161,7 @@ jobs:
 
           - target: '_generalised_problems_and_solutions_minimal'
             flags: ''
-            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\REDUCED{}'
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
@@ -174,7 +174,7 @@ jobs:
 
           - target: '_generalised_problems_no_solutions_minimal'
             flags: ''
-            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\NOSOLUTIONS{} \def\REDUCED{}'
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\NOSOLUTIONS{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
@@ -187,7 +187,7 @@ jobs:
 
           - target: '_generalised_solutions_minimal'
             flags: ''
-            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\ONLYSOLUTIONS{} \def\REDUCED{}'
+            pre_tex: '\def\TAGPDF{} \def\GENERALISED{} \def\ONLYSOLUTIONS{} \def\MINIMAL{}'
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
