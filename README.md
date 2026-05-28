@@ -22,7 +22,7 @@ For historical information on the topic, consult the [historical references](#ad
 
 Download in PDF format:
 <h3 align="center">
-  <a href="https://coffinproblems.github.io/coffins/coffins_problems_and_solutions.pdf" download>
+  <a href="https://coffinproblems.github.io/coffins/coffins.pdf" download>
     Download
   </a>
 </h3>
