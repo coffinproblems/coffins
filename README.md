@@ -480,7 +480,7 @@ See [LICENSE](LICENSE).
       another updated version, differing only in the last two pages, is available at
       [https://www.academia.edu/101548394/](https://www.academia.edu/101548394/Epilogue_May_6_2023_To_You_Just_Failed_Your_Math_Test_Comrade_Einstein_World_Scientific_Singapore_2005_)
 
-- Sergei Tabachnikov: _Review of “You failed your math test, Comrade Einstein” by M. Shifman_, 2020.
+- Sergei Lvovich Tabachnikov: _Review of “You failed your math test, Comrade Einstein” by M. Shifman_, 2020.
   In _The Mathematical Intelligencer_, volume 42, pages 83–87.
     - doi: [10.1007/s00283-020-09976-y](https://doi.org/10.1007/s00283-020-09976-y)
     - URL: [https://drive.google.com/file/d/1hrcikumwsJ-svqattfX_cvc76CaU-6HG/](https://drive.google.com/file/d/1hrcikumwsJ-svqattfX_cvc76CaU-6HG/)
