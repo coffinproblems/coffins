@@ -13,10 +13,13 @@
 %
 %   NOSOURCES:         omit printing the sources at each problem statement
 %
+%   NOREFS:            omit printing the references
 %   MOREREFS:          print additional references at the end of the document for further reading
-%   FORUMREFS          print references to user discussions
+%   FORUMREFS:         print references to user discussions
+%   MERGEREFS:         print the references together instead of separating them
 %
-%   MINIMAL:           omit introduction, table of contents, sources, and references
+%   REDUCED:           omit introduction, table of contents, sources, and references
+%   MINIMAL:           omit introduction, table of contents, sources, and references; and reduce whitespace
 
 
 
@@ -63,6 +66,16 @@
   \fi
 \fi
 
+\ifdefined\REDUCED
+  \def\NOSOURCES{}
+  \def\NOREFS{}
+\fi
+
 \ifdefined\MINIMAL
+  \def\NOSOURCES{}
+  \def\NOREFS{}
+\fi
+
+\ifdefined\NOREFS
   \def\NOSOURCES{}
 \fi

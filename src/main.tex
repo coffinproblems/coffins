@@ -35,6 +35,7 @@
 \vspace{3cm}
 
 \ifdefined\MINIMAL
+\else \ifdefined\REDUCED
 \else
   \section*{Introduction} \addcontentsline{toc}{section}{Introduction}
   \input{sections/introduction}
@@ -43,7 +44,7 @@
   \clearpage
   \tableofcontents
   \clearpage
-\fi
+\fi \fi
 
 \pagenumbering{arabic}
 
@@ -60,28 +61,34 @@
 
 
 % References
-\ifdefined\MINIMAL
+\ifdefined\NOREFS
 \else
 
-  \ifdefined\MOREREFS
+  \ifdefined\MERGEREFS
 
     \newpage
     \nocite{*}
-    \printbibliography[heading=bibintoc, category=main]
-
-    \newpage
-    \nocite{*}
-    \printbibliography[heading=bibintoc, title={Further reading}, category=additional]
-
-    \ifdefined\FORUMREFS
-      \newpage
-      \nocite{*}
-      \printbibliography[heading=bibintoc, title={Discussions}, category=discussions]
-    \fi
+    \printbibliography[heading=bibintoc]
 
   \else
 
-    \ifdefined\FORUMREFS
+    \ifdefined\MOREREFS
+
+      \newpage
+      \nocite{*}
+      \printbibliography[heading=bibintoc, category=main]
+
+      \newpage
+      \nocite{*}
+      \printbibliography[heading=bibintoc, title={Further reading}, category=additional]
+
+      \ifdefined\FORUMREFS
+        \newpage
+        \nocite{*}
+        \printbibliography[heading=bibintoc, title={Discussions}, category=discussions]
+      \fi
+
+    \else \ifdefined\FORUMREFS
 
       \newpage
       \nocite{*}
@@ -97,8 +104,7 @@
       \nocite{*}
       \printbibliography[heading=bibintoc]
 
-    \fi
-
+    \fi \fi
   \fi
 \fi
 
