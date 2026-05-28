@@ -97,13 +97,13 @@ A non-exhaustive list of welcomed contributions:
 - Sift through online user discussions about relevant topics to see if there is any new information. See [here](CONTRIBUTING.md/#sift-through-sources) for details.
 - Help to identify and contact people that might have useful information.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
 > [!IMPORTANT]
 > Please, when opening an issue or leaving a comment
 > about a coffin problems, hide in an expandable block of text
 > any information pertaining to the solution of the problem,
 > so that people who wish to solve the problems independently don't get accidental hints.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 
 ## Building
