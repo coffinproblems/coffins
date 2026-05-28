@@ -168,8 +168,7 @@ tex4ebook --build-dir ../build_epub3 --output-dir ../output -f epub3 main.tex ma
 This generates the document in `EPUB` version 3, with mathematical notation encoded in the `MathML` format.
 > [!IMPORTANT]
 > The `MathML`-encoded results are currently broken:
-> the generated documents have incomplete formulas, and messed up text and formatting,
-> or fail to build entirely.  
+> the generated documents have incomplete formulas, and messed up text and formatting.  
 > Encoding Maths content as `svg` or `png` produces more usable results,
 > though some issues persist.
 
@@ -291,8 +290,8 @@ tex4ebook -B ../build_ebook_svg -d ../output -f epub main.tex svg "" "" '\\def\\
 PDF builds are reproducible.  
 In order to reproduce a PDF build,
 use the same TeX distribution, version, and engine as the target file,
-set the environment variable `SOURCE_DATE_EPOCH` to match that of the target build
-(and consider setting `FORCE_SOURCE_DATE=1` too),
+set the environment variable `SOURCE_DATE_EPOCH` to match that of the target build,
+set `FORCE_SOURCE_DATE=1`,
 set the same compilation options (if any),
 and use the same `-jobname`:
 ```shell
