@@ -222,8 +222,7 @@ They are identified by the following keywords:
 > [!NOTE]
 > `NOREFS` overrides `MOREREFS` and `FORUMREFS`.
 
-- `REDUCED`: to omit introduction, table of contents, sources, and references
-- `MINIMAL`: to omit introduction, table of contents, sources, and references, and to reduce whitespace.
+- `MINIMAL`: to omit introduction, table of contents, sources, and references.
 
 <br>
 
