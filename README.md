@@ -662,7 +662,7 @@ For a more complete historical overview, below are some additional resources.
 - Natalia Demina, Anatoly Moiseevich Vershik: _Through the eyes of a mathematician_, 2013.
     - URL: [https://polit.ru/article/2013/02/25/vershik1/](https://web.archive.org/web/20161109084614/https://polit.ru/article/2013/02/25/vershik1/)
 
-- Joseph Polterovich: _Valery Senderov, righteous of the world_, 2012.
+- Joseph Viktorovich Polterovich: _Valery Senderov, righteous of the world_, 2012.
     - URL: [https://polit.ru/article/2012/11/11/senderov/](https://web.archive.org/web/20201022095751/https://polit.ru/article/2012/11/11/senderov/)
 
 - Natalia Demina, Valery Anatolievich Senderov: _Against the tide_, 2014.
@@ -707,7 +707,7 @@ For a more complete historical overview, below are some additional resources.
     - URL: [https://www.trv-science.ru/2016/08/ya-grazhdanin-evropy/](https://web.archive.org/web/20231024053243/https://www.trv-science.ru/2016/08/ya-grazhdanin-evropy/)
 
 
-- Igor Pak: _College admissions I. Discrimination and lies, Jews and Harvard_, 2012.
+- Igor Markovich Pak: _College admissions I. Discrimination and lies, Jews and Harvard_, 2012.
     - URL: [https://igorpak.wordpress.com/2012/12/26/college-admissions-discrimination/](https://igorpak.wordpress.com/2012/12/26/college-admissions-discrimination/)
       (archived [here](https://web.archive.org/web/20260227175113/https://igorpak.wordpress.com/2012/12/26/college-admissions-discrimination/))
 
