@@ -1,24 +1,18 @@
 # Coffin problems
 
-This project catalogues the so-called _Coffin problems_:
-mathematical problems that in the 1960s, 1970s, and 1980s
+_Coffin problems_ are mathematical problems that in the 1960s, 1970s, and 1980s
 were administered at the entrance examinations of some Soviet universities
 for the purpose of preventing the enrolment of applicants who were deemed undesirable,
 category which mainly included people of Jewish descent.
 The problems were given at the oral exams to the 'undesirable' candidates.
 
-This repository's goal is to exhaustively catalogue these problems, and to provide solutions.
-Some problems also admit interesting generalisations, which are also catalogued.
+The goal of this project is to exhaustively catalogue these problems, and to provide solutions.
+Some problems also admit interesting generalisations, which are also collected, separately.
 
 For historical information on the topic, consult the [historical references](#additional-references).
 
 
 ## Download
-
-<!--
-> [!NOTE]
-> Solutions have not yet been written for all problems.
--->
 
 Download in PDF format:
 <h3 align="center">
@@ -57,8 +51,6 @@ The same are also available for the **generalisations of the problems**:
 | Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions_minimal.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-svg.epub)  |
 | Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
 | Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions_minimal.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-svg.epub) |
-
-<br>
 
 
 ## Status
@@ -152,9 +144,6 @@ or change `$pdf_mode = 4` to `$pdf_mode = 1` in the `latexmkrc` file (located in
 
 ### Generate ebook
 
-> [!WARNING]
-> ebook generation is currently not reliable.
-
 > [!NOTE]
 > The following instructions utilize the [`tex4ebook`](https://github.com/michal-h21/tex4ebook) command,
 > which is generally already included with TeX distributions.  
@@ -166,7 +155,7 @@ For generating an ebook in `EPUB3` format, run this command from within the `src
 tex4ebook --build-dir ../build_epub3 --output-dir ../output -f epub3 main.tex mathml
 ```
 This generates the document in `EPUB` version 3, with mathematical notation encoded in the `MathML` format.
-> [!IMPORTANT]
+> [!NOTE]
 > The `MathML`-encoded results are currently broken:
 > the generated documents have incomplete formulas, and messed up text and formatting.  
 > Encoding Maths content as `svg` or `png` produces more usable results,
@@ -210,7 +199,7 @@ They are identified by the following keywords:
 
 - `NOSOLUTIONS`: to not print the solutions
 - `ONLYSOLUTIONS`: to only print the solutions
-> [!WARNING]
+> [!NOTE]
 > Setting both `NOSOLUTIONS` and `ONLYSOLUTIONS` will result in an empty document.
 
 - `NOSOURCES`: to omit printing the sources at each problem statement
@@ -218,7 +207,7 @@ They are identified by the following keywords:
 - `NOREFS`: to omit printing any references (automatically sets `NOSOURCES` as well)
 - `MOREREFS`: to print additional references for further reading (at the end of the document, after the main references)
 - `FORUMREFS`: to print references to user discussions (at the end of the document, after the other references)
-- `MERGEREFS`: to print the references all toghether instead of separating them in distinct lists
+- `MERGEREFS`: to print the references all together instead of separating them in distinct lists
 > [!NOTE]
 > `NOREFS` overrides `MOREREFS` and `FORUMREFS`.
 
@@ -239,11 +228,11 @@ at the end of the `tex4ebook` command, like this:
 ```shell
 tex4ebook --build-dir ../build_ebook_svg --output-dir ../output -f epub -e main.tex svg "" "" '\\def\\OPTION{} \\def\\OPTION{}'
 ```
-> [!IMPORTANT]
+> [!WARNING]
 > Make sure to enclose the string of options in single quotes,
 > or escape the backslashes if using double quotes: `"\\\\def\\\\OPTION{} \\\\def\\\\OPTION{}"`.
-> Make sure that the string containing the options is the fifth positional argument;
-> if omitting the `svg` or `png` or `mathml` argument, then an extra empty string `""` is needed in its place.
+> Make sure that the string containing the options is the fifth positional argument of the command:
+> if omitting the `svg`/`png`/`mathml` argument, then an extra empty string `""` is needed in its place.
 
 <br>
 
