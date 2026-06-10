@@ -1,1 +1,51 @@
-To do
+Observe that for each $n \in \mathbb{Z}^{+}$,
+the binomial coefficient $\mbinom{2 n - 1}{n}$ is a multiple of the primes in the range $n < p \leq 2 n - 1$,
+and thus:
+\begin{equation*}
+  \prod\limits_{\underset{\scriptstyle{p \text{ prime}}}{n < p < 2 n}} {\mspace{-10mu} p}  \mspace{2mu}
+  \leq \binom{2 n - 1}{n}
+  \leq \, 4^{n - 1}
+\end{equation*}
+where the last inequality comes from:
+\begin{equation*}
+  2 \, \binom{2 n - 1}{n}
+  = \binom{2 n - 1}{n} + \binom{2 n - 1}{n - 1}
+  \leq \, \sum\limits_{k = 0}^{2 n - 1} {\binom{2 n - 1}{k}}
+  = \paren{1 + 1}^{2 n - 1}
+  = 2 \cdot 4^{n - 1}
+\end{equation*}
+
+Now, notice that it sufficies to prove the claimed statement for $x$ integer.
+For $x = 1$ and $x = 2$ it is immediate to verify its validity.
+Inductively, if $x > 2$ is even, then, trivially (using that $x$ is not a prime):
+\begin{equation*}
+  \prod\limits_{\underset{\scriptstyle{p \text{ prime}}}{1 \leq p \leq x}} {\mspace{-6mu} p}  \mspace{6mu}
+  = \mspace{-9mu} \prod\limits_{\underset{\scriptstyle{p \text{ prime}}}{1 \leq p \leq x - 1}} {\mspace{-12mu} p}  \mspace{3mu}
+  \leq \mspace{1.2mu} 4^{x - 2}
+  < 4^{x - 1}
+\end{equation*}
+If $x$ is odd, let $x = 2 m - 1$ for some integer $m > 1$; then:
+\begin{equation*}
+  \prod\limits_{\underset{\scriptstyle{p \text{ prime}}}{1 \leq p \leq x}} {\mspace{-6mu} p}  \mspace{2mu}
+  = \prod\limits_{\underset{\scriptstyle{p \text{ prime}}}{1 \leq p \leq m}} {\mspace{-6mu} p}  \mspace{2mu}
+    \mspace{6mu} \cdot \mspace{-8mu}
+    \prod\limits_{\underset{\scriptstyle{p \text{ prime}}}{m < p < 2 m}} {\mspace{-10mu} p}  \mspace{2mu}
+  \leq \, 4^{m - 1} \cdot 4^{m - 1}
+  = 4^{x - 1}
+\end{equation*}
+
+
+% For $1 \leq x \leq 4$ the claim is trivially verified to hold true.
+% Inductively, if the claim holds for every $2^{k - 1} \leq y \leq 2^{k}$, then,
+% letting $2^{k} \leq x \leq 2^{k + 1}$ and denoting $t = \frac{\floor{x}}{2}$,
+% it holds that $2^{k - 1} \leq t \leq 2^{k}$, so:
+% \begin{equation*}
+%   \prod\limits_{\underset{\scriptstyle{\text{$p$ prime}}}{1 \leq p \leq x}} {\mspace{-8mu} p}  \mspace{2mu}
+%   \leq \prod\limits_{\underset{\scriptstyle{\text{$p$ prime}}}{1 \leq p \leq \ceil{t}}} {\mspace{-8mu} p}
+%        \mspace{4mu} \cdot \mspace{-4mu}
+%        \prod\limits_{\underset{\scriptstyle{\text{$p$ prime}}}{\ceil{t} < p \leq 2 \ceil{t}}} {\mspace{-8mu} p}  \mspace{2mu}
+%   \leq \mspace{2mu} 4^{\ceil{t} - 1} \cdot 4^{\ceil{t} - 1}
+%   = 4^{2 \ceil{t} - 2}
+%   \leq 4^{x - 1}
+% \end{equation*}
+% having used that $2 \ceil{t} \geq \floor{x}$ and that $2 \ceil{t}$ itself is not prime, since $t > 1$.
