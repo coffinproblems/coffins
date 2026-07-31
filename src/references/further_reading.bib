@@ -54,7 +54,7 @@
   year     = {1979},
   doi      = {10.1126/science.203.4380.501.c},
   url      = {https://www.science.org/doi/10.1126/science.203.4380.501.c},
-  addendum = {Archive: \url{https://web.archive.org/web/20240310231109im_/https://www.science.org/cms/10.1126/science.203.4380.501.a/asset/660b82a2-8d72-45c6-b611-f99c4f61ba33/assets/science.203.4380.501.a.fp.png}.},
+  addendum = {Archive: \url{https://web.archive.org/web/20260704210009/https://www.science.org/cms/10.1126/science.203.4380.501.c/asset/4122bd21-ae6e-4f36-b8e1-d83085ea8e3a/assets/science.203.4380.501.c.fp.png}.},
 }
 
 @Article{pontryagin1979reply,
@@ -223,13 +223,14 @@
               and at \url{https://web.archive.org/web/20090711093724/https://www.svobodanews.ru/content/article/126672.html}.},
 }
 
-@Book{kosharovsky_jews_again,
+@inbook{kosharovsky_jews_again,
   author   = {Yuli Kosharovsky},
   title    = {We are Jews again: Jewish activism in the Soviet Union},
-  url      = {https://web.archive.org/web/20250613231740/https://pubs.ejwiki.org/wiki/Юлий_Кошаровский%E2%97%8F%E2%97%8FМы_снова_евреи},
-  addendum = {The relevant excerpt is at Volume 2, Part 5, chapter 31,
-              available at \url{https://web.archive.org/web/20260121124848/https://pubs.ejwiki.org/wiki/Юлий_Кошаровский\%E2\%97\%8F\%E2\%97\%8FМы_снова_евреи\%E2\%97\%8FГлава_31}
-              and at \url{https://web.archive.org/web/20220707140409/https://kosharovsky.com/глава-31-дети-в-отказе/}.},
+  note     = {Volume~2, Part~5},
+  chapter  = {31},
+  url      = {https://web.archive.org/web/20220707140409/https://kosharovsky.com/глава-31-дети-в-отказе/},
+  addendum = {Also available at \url{https://web.archive.org/web/20260121124848/https://pubs.ejwiki.org/wiki/Юлий_Кошаровский\%E2\%97\%8F\%E2\%97\%8FМы_снова_евреи\%E2\%97\%8FГлава_31}.
+              Book: \url{https://web.archive.org/web/20250613231740/https://pubs.ejwiki.org/wiki/Юлий_Кошаровский\%E2\%97\%8F\%E2\%97\%8FМы_снова_евреи}.},
 }
 
 
@@ -349,18 +350,22 @@
   title     = {Nobel Lectures in Physics (2006--2010)},
   publisher = {World Scientific},
   year      = {2014},
+  doi       = {10.1142/9210},
   isbn      = {978-981-4612-67-8},
-  url       = {https://archive.org/details/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29/}
+  url       = {https://archive.org/details/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29/},
+  options   = {dataonly},
 }
 
-@incollection{nobel2010geim,
+@article{nobel2010geim,
   author    = {Karl Grandin},
   title     = {Andre Geim --- Biographical},
-  booktitle = {Nobel Lectures in Physics (2006--2010)},
-  publisher = {The Nobel Foundation},
+  journal   = {The Nobel Foundation},
   year      = {2010},
-  crossref  = {nobellectures2014},
-  pages     = {297--309},
+
+  related       = {nobellectures2014},
+  relatedtype   = {reprintas},
+  relatedstring = {Pages 297--309 in},
+
   url       = {https://www.nobelprize.org/prizes/physics/2010/geim/biographical/},
   addendum  = {Archive: \url{https://web.archive.org/web/20260215111152/https://www.nobelprize.org/prizes/physics/2010/geim/biographical/}.},
 }
@@ -637,4 +642,6 @@
   url       = {https://www.bookbrowse.com/mag/btb/index.cfm/book_number/4131/the-nesting-dolls},
   note      = {Fictional story inspired by the real historic events.},
   addendum  = {Archive: \url{https://web.archive.org/web/20250906141906/https://www.bookbrowse.com/mag/btb/index.cfm/book_number/4131/the-nesting-dolls}.},
+
+  presort   = {zzz},
 }
