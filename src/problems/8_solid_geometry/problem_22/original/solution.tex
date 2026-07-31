@@ -1,0 +1,47 @@
+Consider a sphere of radius $r$.
+Its volume is $\mfrac{4}{3} \pi r^3$.
+The regular tetrahedron inscribed in the sphere has side length $a = \mfrac{2}{3} \sqrt{6 \mspace{1mu}} \mspace{1mu} r$,
+and thus its volume is $\mfrac{\sqrt{2}}{12} a^3 = \mfrac{8}{27} \sqrt{3 \mspace{1mu}} \mspace{1mu} r^3$.
+The ratio of the volume of the tetrahedron to the volume of the sphere is $\mfrac{2 \sqrt{3}}{9 \pi} < \mfrac{1}{8}$.
+
+Thus, if the inscribed regular tetrahedron is the tetrahedron of highest volume contained in a sphere,
+then a ratio of volumes greater than or equal to $\mfrac{1}{8}$ cannot be achieved, for a sphere.
+Then, considering a polyhedron contained in the sphere that sufficiently approximates the sphere,
+the same can be said for that polyhedron.
+
+TODO: show that $\mfrac{2 \sqrt{3}}{9 \pi} < \mfrac{1}{8}$;
+show that the inscribed regular tetrahedron is the tetrahedron of highest volume contained in a sphere;
+show rigorously that the fact still holds for a ``sufficiently spherical'' polyhedron.
+
+\vspace{1ex}
+
+Now for the second part of the problem.
+
+Let $d$ be the maximum distance between any two vertices of the polyhedron,
+and let $A$ and $B$ be two vertices at distance $d$.
+The vertices of the polyhedron, and therefore also the polyhedron itself,
+are contained between the two planes orthogonal to $\overline{AB}$ that pass, respectively, through $A$ and through $B$.
+This is because any point outside of that region has distance to $A$ or to $B$ greater than $d$.
+
+Let $C$ be a vertex of the polyhedron at maximal distance to the line $AB$,
+and let $r$ be that distance.
+Let $\alpha$ be the plane on which $A$, $B$ and $C$ lie.
+The vertices of the polyhedron, and therefore also the polyhedron itself,
+are contained between the two planes at distance $r$ from the line $AB$ that are perpendicular to $\alpha$ and to the previous pair of planes.
+This is because any point outside of that region has distance to $AB$ greater than $r$.
+
+Let $D$ be a vertex of the polyhedron at maximal distance to the plane $\alpha$,
+and let $s$ be that distance.
+The vertices of the polyhedron, and therefore also the polyhedron itself,
+are contained between the two planes parallel to $\alpha$ at distance $s$ from $\alpha$.
+This is because any point outside of that region has distance to $\alpha$ greater than $s$.
+
+Therefore, the polyhedron is contained in the intersection of the three regions,
+which is a rectangular parallelepiped of side lengths $d$, $2 r$ and $2 s$.
+
+The tetrahedron $ABCD$ is contained in the polyhedron (by convexity),
+and has volume $\mfrac{1}{6} r s d$.
+The polyhedron has volume less than or equal to $4 r s d$ (the volume of the parallelepiped containing it).
+Hence, the tetrahedron's volume is at least $\mfrac{1}{24}$ times the polyhedron's volume.
+
+(This greedy argument suggests that in dimension $n$, the fraction is at least $\mfrac{1}{n! \cdot 2^{n - 1}}$).

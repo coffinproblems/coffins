@@ -1,0 +1,87 @@
+Consider the polynomial identity:
+\begin{equation*}
+  x^3 + y^3 + z^3 - 3 x y z = \paren{x + y + z} \paren{x^2 + y^2 + z^2 - x y - y z - z x}
+\end{equation*}
+Let the polynomial $p\paren{x, y, z} = x^2 + y^2 + z^2 - x y - y z - z x$.
+Then:
+\begin{equation*}
+  \frac{1}{\mspace{1mu}
+           \sqrt[3]{a \vphantom{bc} \mspace{2mu}} \,
+           + \sqrt[3]{b \vphantom{ac} \mspace{2mu}} \,
+           + \sqrt[3]{c \vphantom{ab} \mspace{2mu}}
+          \mspace{1mu}}
+  = \frac{1}{\mspace{1mu}
+             \sqrt[3]{a \vphantom{bc} \mspace{2mu}} \,
+             + \sqrt[3]{b \vphantom{ac} \mspace{2mu}} \,
+             + \sqrt[3]{c \vphantom{ab} \mspace{2mu}}
+            \mspace{1mu}}
+    \cdot \frac{p\paren*[\big]{\mspace{-2mu}
+                               \sqrt[3]{a \vphantom{bc} \mspace{2mu}}, \mspace{1mu}
+                               \sqrt[3]{b \vphantom{ac} \mspace{2mu}}, \mspace{1mu}
+                               \sqrt[3]{c \vphantom{ab} \mspace{2mu}} \mspace{1mu}}}
+               {p\paren*[\big]{\mspace{-2mu}
+                               \sqrt[3]{a \vphantom{bc} \mspace{2mu}}, \mspace{1mu}
+                               \sqrt[3]{b \vphantom{ac} \mspace{2mu}}, \mspace{1mu}
+                               \sqrt[3]{c \vphantom{ab} \mspace{2mu}} \mspace{1mu}}}
+  = \frac{p\paren*[\big]{\mspace{-2mu}
+                         \sqrt[3]{a \vphantom{bc} \mspace{2mu}}, \mspace{1mu}
+                         \sqrt[3]{b \vphantom{ac} \mspace{2mu}}, \mspace{1mu}
+                         \sqrt[3]{c \vphantom{ab} \mspace{2mu}} \mspace{1mu}}}
+         {\mspace{2mu} a + b + c - 3 \sqrt[3]{a b c \mspace{2mu}} \mspace{2mu}}
+\end{equation*}
+The new denominator has only one radical.
+Let $u = a + b + c$ and $v = 3 \sqrt[3]{a b c \mspace{2mu}}$. Now:
+\begin{equation*}
+  \frac{1}{\mspace{1mu}
+           \sqrt[3]{a \vphantom{bc} \mspace{2mu}} \,
+           + \sqrt[3]{b \vphantom{ac} \mspace{2mu}} \,
+           + \sqrt[3]{c \vphantom{ab} \mspace{2mu}}
+          \mspace{1mu}}
+  = \frac{p\paren*[\big]{\mspace{-2mu}
+                         \sqrt[3]{a \vphantom{bc} \mspace{2mu}}, \mspace{1mu}
+                         \sqrt[3]{b \vphantom{ac} \mspace{2mu}}, \mspace{1mu}
+                         \sqrt[3]{c \vphantom{ab} \mspace{2mu}} \mspace{1mu}}}
+         {\mspace{2mu} u - v \mspace{2mu}}
+    \cdot \frac{\mspace{2mu} u^2 + u v + v^2 \mspace{2mu}}
+               {\mspace{2mu} u^2 + u v + v^2 \mspace{2mu}}
+  = \frac{p\paren*[\big]{\mspace{-2mu}
+                         \sqrt[3]{a \vphantom{bc} \mspace{2mu}}, \mspace{1mu}
+                         \sqrt[3]{b \vphantom{ac} \mspace{2mu}}, \mspace{1mu}
+                         \sqrt[3]{c \vphantom{ab} \mspace{2mu}} \mspace{1mu}}
+          \mspace{-1mu} \cdot \mspace{-1mu}
+          \paren{u^2 + u v + v^2}}
+         {\mspace{1mu} u^3 - v^3 \mspace{1mu}}
+\end{equation*}
+Now the denominator is free of radicals;
+in conclusion, the fraction can be written as:
+\begin{equation*}
+  \frac{\paren{ \!
+          \sqrt[3]{a^2 \vphantom{b^2 c^2} \mspace{2mu}}
+          + \sqrt[3]{b^2 \vphantom{a^2 c^2} \mspace{2mu}}
+          + \sqrt[3]{c^2 \vphantom{a^2 b^2} \mspace{2mu}}
+          - \sqrt[3]{a b \vphantom{c} \mspace{2mu}}
+          - \sqrt[3]{b c \vphantom{a} \mspace{2mu}}
+          - \sqrt[3]{c a \vphantom{b} \mspace{2mu}}
+        } \! \cdot \!
+        \paren{
+          \paren{a + b + c}^2
+          + 3 \paren{a + b + c} \sqrt[3]{a b c \mspace{2mu}}
+          + 9 \sqrt[3]{a^2 b^2 c^2 \mspace{2mu}}
+        }}
+       {\mspace{1mu} \paren{a + b + c}^3 - 27 a b c \mspace{1mu}}
+\end{equation*}
+
+Observe that the numerator can be further factorised:
+let the polynomials $q\paren{x, y} = x^2 - x y + y^2$ and
+$s\paren{x, y, z} =
+ p\paren{x, y, z}
+ \cdot q\paren{x + y, z} \cdot q\paren{y + z, x} \cdot q\paren{z + x, y}$.
+Then, the numerator is
+$s\paren*[\big]{\mspace{-2mu}
+                \sqrt[3]{a \vphantom{b c} \mspace{2mu}}, \mspace{1mu}
+                \sqrt[3]{b \vphantom{c a} \mspace{2mu}}, \mspace{1mu}
+                \sqrt[3]{c \vphantom{a b} \mspace{2mu}} \mspace{1mu}}$.
+And, letting the polynomial
+$t\paren{x, y, z} = \paren{x + y + z}^3 - 27 x y z$,
+it holds that
+$t\paren{x^3, y^3, z^3} = \paren{x + y + z} \cdot s\paren{x, y, z}$.

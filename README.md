@@ -32,43 +32,43 @@ Other formats are also provided:
 - **TeX source**: standalone `.tex` file.
 -->
 
-> [!WARNING]
+> [!NOTE]
 > At the moment, EPUB files with MathML are badly formatted, to the point of being unusable.  
 > EPUB files with SVG exhibit only some small formatting issues.
 
-|                        | PDF              | Minimal PDF      | EPUB MathML      | EPUB SVG         |
-|:----------------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions_minimal.pdf)        | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions-svg.epub)  |
-| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions_minimal.pdf)                    | [Download](https://coffinproblems.github.io/coffins/coffins_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_solutions-svg.epub)              |
+|                        | PDF          | Minimal PDF  | EPUB MathML  | EPUB SVG     |
+|:----------------------:|:------------:|:------------:|:------------:|:------------:|
+| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions_minimal.pdf)        | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions-mathml.epub)  | [Download](https://coffinproblems.github.io/coffins/coffins_problems_no_solutions-svg.epub)  |
+| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions_minimal.pdf)                    | [Download](https://coffinproblems.github.io/coffins/coffins_solutions-mathml.epub)              | [Download](https://coffinproblems.github.io/coffins/coffins_solutions-svg.epub)              |
 | Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions_minimal.pdf)       | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_problems_and_solutions-svg.epub) |
 
 <br>
 
 The same are also available for the **generalisations of the problems**:
 
-|                        | PDF              | Minimal PDF       | EPUB MathML       | EPUB SVG         |
-|:----------------------:|:----------------:|:-----------------:|:-----------------:|:----------------:|
-| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions_minimal.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-svg.epub)  |
-| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
+|                        | PDF          | Minimal PDF  | EPUB MathML  | EPUB SVG     |
+|:----------------------:|:------------:|:------------:|:------------:|:------------:|
+| Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions_minimal.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-mathml.epub)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-svg.epub)  |
+| Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-mathml.epub)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
 | Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions_minimal.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-svg.epub) |
 
 
 ## Status
 
-The current number of documented problems is: 111.
+The current number of documented problems is: 123.
 
 Currently, not all solutions have been written.
 
 The problems have been categorised by topic, as follows:
 - **Evaluations** (4 problems): problems that ask to determine the value of an expression;
-- **Comparisons** (6 problems): problems that ask to determine which of two numbers is greater than the other;
+- **Comparisons** (7 problems): problems that ask to determine which of two numbers is greater than the other;
 - **Equations** (13 problems): problems that ask to solve an equation or system of equations over the real or complex numbers;
 - **Inequations** (6 problems): problems that ask to solve an inequality over the real numbers;
-- **Algebra and Number Theory** (13 problems): problems in Algebra or in Number Theory;
-- **Analysis** (7 problems): problems in Analysis and Calculus;
-- **Plane Geometry** (27 problems): problems in planar Euclidean Geometry;
-- **Solid Geometry** (21 problems): problems in 3D Geometry;
-- **Geometric constructions** (12 problems): problems that ask to perform constructions via only straightedge and compass;
+- **Algebra and Number Theory** (16 problems): problems in Algebra or in Number Theory;
+- **Analysis** (10 problems): problems in Analysis and Calculus;
+- **Plane Geometry** (30 problems): problems in planar Euclidean Geometry;
+- **Solid Geometry** (22 problems): problems in 3D Geometry;
+- **Geometric constructions** (13 problems): problems that ask to perform constructions via only straightedge and compass;
 - **Other problems** (2 problems): problems that do not fit in any specific category.
 
 
@@ -118,12 +118,12 @@ In the branch `alt`, those subdirectories are renamed to only numbers to make th
 
 ### Generate PDF
 
-The following command, run from within the `src` directory, generates the "default" PDF file,
+The following command, run from within the directory `src`, generates the "default" PDF file,
 containing the original problems (with the statements in the first part of the document, and the solutions in the second part):
 ```shell
 latexmk main.tex
 ```
-The resulting file is placed in the `output` directory (outside of `src`),
+The resulting file is placed in the directory `output` (outside of `src`),
 and the intermediate auxiliary files are placed in the `build` directory (outside of `src`).
 
 > [!NOTE]
@@ -504,24 +504,24 @@ See [LICENSE](LICENSE).
     - URL: [https://avzel.blogspot.com/2009/07/blog-post_30.html?showComment=1254948495163#c1386969495227008652](https://avzel.blogspot.com/2009/07/blog-post_30.html?showComment=1254948495163#c1386969495227008652)
       (archived [here](https://web.archive.org/web/20190610091539/https://avzel.blogspot.com/2009/07/blog-post_30.html?showComment=1254948495163#c1386969495227008652))
 
-- _Selected entrance examination problems at the Faculty of Mechanics and Mathematics of Moscow State University in 1979_.
+- _Selected problems of the oral examination in Mathematics, Mekhmat MSU, 1979_.
     - URL: [https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu](https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu)
       (archived [here](https://web.archive.org/web/20260227111932/https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu))
 
-- _Selected entrance examination problems at the Faculty of Mechanics and Mathematics of Moscow State University in 1982_.
+- _Selected problems of entrance examinations, Mekhmat MSU, 1982_.
     - URL: [https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu](https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu)
       (archived [here](https://web.archive.org/web/20260223071158/https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu))
 
-- _Selected entrance examination problems at the Faculty of Mechanics and Mathematics of Moscow State University in 1986_.
+- _Selected problems of entrance examinations, Mekhmat MSU in 1986_.
     - URL: [https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu](https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu)
       (archived [here](https://web.archive.org/web/20260226060451/https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu))
 
 
 ### Additional references
 
-For a more complete historical overview, below are some additional resources.
+These are additional resources for a more complete historical overview.
 > [!NOTE]
-> These additional resources are also listed in `bib` format in the file [`further_reading.bib`](/src/references/further_reading.bib).
+> They are also listed in `bib` format in the file [`further_reading.bib`](/src/references/further_reading.bib).
 
 - Alexander Khaniyevich Shen: _Materials related to entrance exams_.
   Collection of many resources.
@@ -549,7 +549,7 @@ For a more complete historical overview, below are some additional resources.
   In _Science_, volume 203.4380, page 501.
     - doi: [10.1126/science.203.4380.501.c](https://doi.org/10.1126/science.203.4380.501.c)
     - URL: [https://www.science.org/doi/10.1126/science.203.4380.501.c](https://www.science.org/doi/10.1126/science.203.4380.501.c)
-      (archived [here](https://web.archive.org/web/20240310231109im_/https://www.science.org/cms/10.1126/science.203.4380.501.a/asset/660b82a2-8d72-45c6-b611-f99c4f61ba33/assets/science.203.4380.501.a.fp.png))
+      (archived [here](https://web.archive.org/web/20260704210009/https://www.science.org/cms/10.1126/science.203.4380.501.c/asset/4122bd21-ae6e-4f36-b8e1-d83085ea8e3a/assets/science.203.4380.501.c.fp.png))
 
 - Lev Semyonovich Pontryagin: _Soviet anti-semitism: reply by Pontryagin_, 1979 (in response to _Anti-semitism alleged in Soviet Mathematics_ by Gina Bari Kolata).
   In _Science_, volume 205.4411, pages 1083–1084.
@@ -690,6 +690,8 @@ For a more complete historical overview, below are some additional resources.
     - URL: [https://www.nobelprize.org/prizes/physics/2010/geim/biographical/](https://www.nobelprize.org/prizes/physics/2010/geim/biographical/)
       (archived [here](https://web.archive.org/web/20260215111152/https://www.nobelprize.org/prizes/physics/2010/geim/biographical/))
     - Book: [https://archive.org/details/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/](https://archive.org/details/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29/)
+      (direct link: [https://archive.org/download/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29.pdf](https://archive.org/download/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29.pdf))
+    - Book doi: [10.1142/9210](https://doi.org/10.1142/9210)
     - Book ISBN: 978-981-4612-67-8 and 978-981-4612-68-5
 
 - Natalia Demina, Andre Geim: _«I — European citizen»_, 2016.
@@ -793,7 +795,7 @@ For a more complete historical overview, below are some additional resources.
 - Mikhail Arkadyevich Shifman: _Notes from the old Phystech_, 2024.
   In _Seven Arts_, number 172.11.
     - URL: [https://7i.7iskusstv.com/y2024/nomer11/mashifman/](https://7i.7iskusstv.com/y2024/nomer11/mashifman/)
-      (archive [here](\url{https://web.archive.org/web/20260306044624/https://7i.7iskusstv.com/y2024/nomer11/mashifman/))
+      (archive [here](https://web.archive.org/web/20260306044624/https://7i.7iskusstv.com/y2024/nomer11/mashifman/))
 
 
 - Julia Schulman, Michael Hsieh: _Coffin Problems — How Soviet anti-Semitism buried Jewish scientists_, 2021.
@@ -831,7 +833,7 @@ For a more complete historical overview, below are some additional resources.
 
 Relevant user discussions and forum posts.
 > [!NOTE]
-> These references are also listed in `bib` format in the file [`discussions.bib`](/src/references/discussions.bib).
+> These are also listed in `bib` format in the file [`discussions.bib`](/src/references/discussions.bib).
 
 
 - Alexander Khaniyevich Shen: _Some more texts by Senderov and others_, 2014.
@@ -1022,23 +1024,23 @@ Relevant user discussions and forum posts.
     - URL: [https://sumlenny.livejournal.com/1360919.html](https://web.archive.org/web/20121219070619/https://sumlenny.livejournal.com/1360919.html)
 
 
-- Discussion about _Soviet College Admission — My Dad's Story (1970)_ by Ilya Volodarsky.
+- Discussion on Hacker News about _Soviet College Admission — My Dad's Story (1970)_ by Ilya Volodarsky.
     - URL: [https://news.ycombinator.com/item?id=5340553](https://news.ycombinator.com/item?id=5340553)
       (archived [here](https://web.archive.org/web/20201011224757/https://news.ycombinator.com/item?id=5340553))
 
-- Discussion about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
+- Discussion on Hacker News about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
     - URL: [https://news.ycombinator.com/item?id=4752047](https://news.ycombinator.com/item?id=4752047)
       (archived [here](https://web.archive.org/web/20171106013949/https://news.ycombinator.com/item?id=4752047))
 
-- Another discussion about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
+- Another discussion on Hacker News about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
     - URL: [https://news.ycombinator.com/item?id=6999846](https://news.ycombinator.com/item?id=6999846)
       (archived [here](https://web.archive.org/web/20260306193655/https://news.ycombinator.com/item?id=6999846))
 
-- Discussion about _Jewish problems_ by Tanya Khovanova.
+- Discussion on Hacker News about _Jewish problems_ by Tanya Khovanova.
     - URL: [https://news.ycombinator.com/item?id=4759642](https://news.ycombinator.com/item?id=4759642)
       (archived [here](https://web.archive.org/web/20171110234423/https://news.ycombinator.com/item?id=4759642))
 
 
-- _Was there discrimination against Jewish people at the entrance exams to the most prestigious universities in the USSR?_, 2013.
+- (Question on History StackExchange) _Was there discrimination against Jewish people at the entrance exams to the most prestigious universities in the USSR?_, 2013.
     - URL: [https://history.stackexchange.com/questions/8774/](https://history.stackexchange.com/questions/8774/was-there-discrimination-against-jewish-people-at-the-entrance-exams-to-the-most)
       (archived [here](https://web.archive.org/web/20220407183721/https://history.stackexchange.com/questions/8774/was-there-discrimination-against-jewish-people-at-the-entrance-exams-to-the-most))

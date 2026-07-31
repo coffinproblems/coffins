@@ -1,13 +1,23 @@
 \usepackage[
-      backend = biber,
-        style = numeric,
-   giveninits = false,
-      sorting = nyt,
-          doi = true,
-          url = true,
-  maxbibnames = 99,
-  minbibnames = 99,
-     hyperref = true
+       backend = biber,
+         style = numeric,
+    giveninits = false,
+       sorting = nyt,
+  defernumbers = true,
+           doi = true,
+           url = true,
+   maxbibnames = 99,
+   minbibnames = 99,
+      hyperref = true
 ]{biblatex}
+
+\ifpdftex
+\else
+  \DeclareFieldFormat{url}{%
+    \mkbibacro{URL}\addcolon\space
+    \ifhyperref{\href{#1}{\nolinkurl{\thefield{urlraw}}}}
+               {\nolinkurl{\thefield{urlraw}}}%
+  }
+\fi
 
 \input{references/include_references}
