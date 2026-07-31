@@ -61,10 +61,13 @@
 
 
 % References
-\ifdefined\NOREFS
+\ifdefined\NOREFS  % No printing references
+
 \else
 
-  \ifdefined\MERGEREFS
+  \defbibnote{discussionrefs}{Online forum posts and user discussions on the topic, containing related information and first-hand accounts.}
+
+  \ifdefined\MERGEREFS  % All references in a single list
 
     \newpage
     \nocite{*}
@@ -72,7 +75,7 @@
 
   \else
 
-    \ifdefined\MOREREFS
+    \ifdefined\MOREREFS  % Separately print additional references
 
       \newpage
       \nocite{*}
@@ -82,10 +85,10 @@
       \nocite{*}
       \printbibliography[heading=bibintoc, title={Further reading}, category=additional]
 
-      \ifdefined\FORUMREFS
+      \ifdefined\FORUMREFS  % Separately print references to online user discussions
         \newpage
         \nocite{*}
-        \printbibliography[heading=bibintoc, title={Discussions}, category=discussions]
+        \printbibliography[heading=bibintoc, title={Discussions}, category=discussions, prenote=discussionrefs]
       \fi
 
     \else \ifdefined\FORUMREFS
@@ -96,9 +99,9 @@
 
       \newpage
       \nocite{*}
-      \printbibliography[heading=bibintoc, title={Discussions}, category=discussions]
+      \printbibliography[heading=bibintoc, title={Discussions}, category=discussions, prenote=discussionrefs]
 
-    \else
+    \else  % Only print the standard references
 
       \newpage
       \nocite{*}
