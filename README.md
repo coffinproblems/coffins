@@ -12,19 +12,22 @@ Some problems also admit interesting generalisations, which are also collected, 
 For historical information on the topic, consult the [historical references](#additional-references).
 
 
-## Download
+## The problems
 
-Download in PDF format:
+The collected coffin problems can be seen in the following PDF document:
 <h3 align="center">
   <a href="https://coffinproblems.github.io/coffins/coffins.pdf" download>
-    Download
+    Coffin problems
   </a>
 </h3>
-<br>
+It contains first all the problem statements, then the solutions.
 
 
-Alternate download options are also available, for downloading separately the problem statements and the solutions.  
-Other formats are also provided:
+### Other formats
+
+Other formats are also available, as well as separate files for problems and solutions.
+
+The provided download formats are:
 - **minimal PDF**: PDF file without introduction, table of contents, and references;
 - **EPUB MathML**: reflowable ebook, with math content in MathML format;
 - **EPUB SVG**: reflowable ebook, with math content rendered as SVG;
@@ -51,6 +54,8 @@ The same are also available for the **generalisations of the problems**:
 | Problems               | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions_minimal.pdf)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-mathml.epub)  | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_no_solutions-svg.epub)  |
 | Solutions              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions_minimal.pdf)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-mathml.epub)              | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_solutions-svg.epub)              |
 | Problems and solutions | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions_minimal.pdf) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-mathml.epub) | [Download](https://coffinproblems.github.io/coffins/coffins_generalised_problems_and_solutions-svg.epub) |
+
+<br>
 
 
 ## Status
