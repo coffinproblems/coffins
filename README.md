@@ -380,6 +380,22 @@ See [LICENSE](LICENSE).
 > [!NOTE]
 > The references are also available in `bib` format in the file [`references.bib`](/src/references/references.bib)
 
+
+- Tanya Khovanova: notes taken at the Soviet 1975 IMO training camp.
+    - original: [https://github.com/coffinproblems/resources/tree/main/src/documents/khovanova-notes/original_document](https://github.com/coffinproblems/resources/tree/main/src/documents/khovanova-notes/original_document)
+    - ranscription: [https://coffinproblems.github.io/resources/khovanova-notes.pdf](https://coffinproblems.github.io/resources/khovanova-notes.pdf)
+    - translation: [https://coffinproblems.github.io/resources/khovanova-notes-en.pdf](https://coffinproblems.github.io/resources/khovanova-notes-en.pdf)
+
+- Tanya Khovanova: notes taken at the Soviet 1975 IMO training camp.
+    - original: [https://github.com/coffinproblems/resources/tree/main/src/documents/khovanova-notebook-1/original_document](https://github.com/coffinproblems/resources/tree/main/src/documents/khovanova-notebook-1/original_document)
+    - transcription: [https://coffinproblems.github.io/resources/khovanova-notebook-1.pdf](https://coffinproblems.github.io/resources/khovanova-notebook-1.pdf)
+    - translation: [https://coffinproblems.github.io/resources/khovanova-notebook-1-en.pdf](https://coffinproblems.github.io/resources/khovanova-notebook-1-en.pdf)
+
+- Tanya Khovanova: _Problems from N1 -- N44_, 1975. (Taken at the 1975 Soviet training camp for IMO).
+    - original: [https://github.com/coffinproblems/resources/tree/main/src/documents/khovanova-notebook-2/original_document](https://github.com/coffinproblems/resources/tree/main/src/documents/khovanova-notebook-2/original_document)
+    - transcription: [https://coffinproblems.github.io/resources/khovanova-notebook-2.pdf](https://coffinproblems.github.io/resources/khovanova-notebook-2.pdf)
+    - translation: [https://coffinproblems.github.io/resources/khovanova-notebook-2-en.pdf](https://coffinproblems.github.io/resources/khovanova-notebook-2-en.pdf)
+
 - Tanya Khovanova, Alexey Radul: _Jewish Problems_, 2011. (Preprint of _Killer Problems_).
     - doi: [10.48550/arXiv.1110.1556](https://doi.org/10.48550/arXiv.1110.1556)
     - URL: [https://arxiv.org/abs/1110.1556](https://arxiv.org/abs/1110.1556)
